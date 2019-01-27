@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz - One Big, Ugly Form</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/creditcard.js"></script>
+</head>
+<body>
+  <header>
+    <span class="company-name">🂡 Cam's Company 🂡</span>
+    <span class="company-page">Checkout Page</span>
+  </header>
+  <section class="progress-bar">
+    <span>Progress: </span>
+    <progress id="progbar" name="progbar" max="6" value="0">0/8</progress>
+  </section>
+  <section class="order-review">
+    <h3>Your Order</h3>
+    <div class="your-order">
+      <div class="order-item">
+        <div class="order-item-lbl">Game Console 2015 test long long name</div>
+        <div class="order-item-cost">$500.00</div>
+        <div class="order-item-cost">x</div>
+        <div class="order-item-cost">1</div>
+        <div class="order-item-cost">=</div>
+        <div class="order-item-cost">$500.00</div>
+      </div>
+      <div class="order-item">
+        <div class="order-item-lbl">Platformer Bros 3D</div>
+        <div class="order-item-cost">$50.00</div>
+        <div class="order-item-cost">x</div>
+        <div class="order-item-cost">1</div>
+        <div class="order-item-cost">=</div>
+        <div class="order-item-cost">$50.00</div>
+      </div>
+      <div class="order-item total">
+          <div class="order-item-lbl">Total</div>
+          <div class="order-item-cost">$550.00</div>
+        </div>
+    </div>      
+  </section>
+  <section class="form">
+      <h3>Shipping Address</h3>
+      <div class="ship-info">
+        <label>
+          <input class="name" type="text" placeholder="Full name" autocomplete="name"  required autofocus>
+        </label>   
+        <label>
+          <input class="address-line1" type="text" placeholder="Address line 1" autocomplete="address-line1" required>
+        </label>
+        <label>
+          <input class="address-line2" type="text" placeholder="Address line 2" autocomplete="address-line2">
+        </label>
+        <label>
+          <input class="address-line3" type="text" placeholder="Address line 3 (optional)" autocomplete="address-line3">
+        </label>
+        <label>
+          <input class="address-line4" type="text" placeholder="Address line 4 (optional)" autocomplete="address-line4">
+        </label>
+        <label>
+          <input class="country" type="text" placeholder="Country" autocomplete="country">
+        </label>     
+      </div>  
+    
+
+    <h3>Credit Card</h3>
+    <div id="cc-info" class="cc-info">
+      <div class="cc-warning"><em>Note: don't enter any actual credit card info!</em></div>
+      <div>
+        <label>
+          <input type="text" class="cc-number" placeholder="**** **** **** ****" required>
+        </label>
+      </div>
+      <label>
+        <input type="text" class="cc-type" placeholder="Card Type" disabled>      
+      </label>
+      <label class="inline">Expiration date:
+        <input type="text" class="cc-expdate inline" placeholder="MM/DD" pattern="[01][0-2]/[0-9]{2}" maxlength="5" required>
+      </label>
+      <label class="inline">CVV:
+        <input type="number" class="cc-cvv inline" min="0" max="9999" maxlength="4" placeholder="***" required>
+      </label>
+  </div>
+    <label for="dif-billing-address">Use a different billing address?
+      <input id="dif-billing-address" class="inline" type="checkbox">
+    </label>
+    <div class="billing-address invisible">
+      <label>
+        <input class="name" type="text" placeholder="Full name" autocomplete="name" autofocus>
+      </label>   
+      <label>
+        <input class="address-line1" type="text" placeholder="Address line 1" autocomplete="address-line1">
+      </label>
+      <label>
+        <input class="address-line2" type="text" placeholder="Address line 2" autocomplete="address-line2">
+      </label>
+      <label>
+        <input class="address-line3" type="text" placeholder="Address line 3 (optional)" autocomplete="address-line3">
+      </label>
+      <label>
+        <input class="address-line4" type="text" placeholder="Address line 4 (optional)" autocomplete="address-line4">
+      </label>
+      <label>
+        <input class="country" type="text" placeholder="Country" autocomplete="country">
+      </label>  
+    </div>    
+
+    <h3>Email to track your order</h3>
+    <label>
+      <input id="email" type="email" placeholder="email@domain.com" autocomplete="email" required>
+    </label>    
+    <label for="need-mails">Use this email for some discount propositions?
+      <input id="need-mails" class="inline" type="checkbox" title="Yes">
+    </label>
+    <button id="submit">Place order</button>
+  </section>
+
+  
+  <script src="js/main.js"></script>
+</body>
+</html>
