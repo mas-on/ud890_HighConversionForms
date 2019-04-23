@@ -1,0 +1,39 @@
+<html>
+    <head>        
+        <title>Event planner</title>        
+    </head>
+    <body>
+        <header>
+            <span>Add new event</span>                      
+        </header>
+        <section class="form">
+            <label>
+                <input class="event-name" type="text" placeholder="Name" required>
+            </label>
+            <label>
+                <select class="event-type" required>
+                    <option>Choose  or enter event type</option>
+                </select>
+            </label>
+            <label>
+                <input class="event-host" type="text" placeholder="Host" required>
+            </label>
+            <label>
+                <input class="event-start" type="datetime-local" placeholder="Start" required>
+            </label>
+            <label>
+                <input class="event-end" type="datetime-local" placeholder="End" >
+            </label>
+            <label>
+                <input class="event-guests" type="text" placeholder="Guest list">
+            </label>
+            <label>
+                <input class="event-location" type="text" placeholder="Location">
+            </label>
+            <label>
+                <input class="event-msg" type="text" placeholder="Message to the guests">
+            </label>
+            <button id="submit">Save</button>
+        </section>        
+    </body>
+</html>

@@ -1,0 +1,1 @@
+//common js code for log in/out
