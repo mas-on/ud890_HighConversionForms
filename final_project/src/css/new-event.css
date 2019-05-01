@@ -1,0 +1,40 @@
+header {
+    font-weight: bold;
+    padding: 0 0 1em 0;
+}
+
+section.form {
+    width: 320px; 
+}
+
+section.form label {
+    display: block;
+    padding: 0 0 1em 0;    
+}
+
+.event-name, .event-type, .event-host, .event-guests, .event-location, .event-msg {
+    width: 100%;
+}
+
+section.form .lbl {
+    width: 15%;
+    display: inline-block;
+}
+
+section.form .date {
+    width: 40%;
+}
+
+section.form .time {
+    width: 23%;
+}
+
+.save-btn {
+    float: right;
+}
+
+/*validation*/
+section.form.submitted input:invalid {
+    border: 2px dashed red;
+    background:  rgb(252, 174, 174) 
+  }

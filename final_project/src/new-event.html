@@ -4,11 +4,11 @@
     </head>
     <body>
         <header>
-            <span>Add new event</span>                      
+            <span>New event:</span>                      
         </header>
         <section class="form">
             <label>
-                <input class="event-name" type="text" placeholder="Name" required>
+                <input class="event-name" type="text" placeholder="Event name" required>
             </label>
             <label>
                 <select class="event-type" required>
@@ -16,16 +16,20 @@
                 </select>
             </label>
             <label>
-                <input class="event-host" type="text" placeholder="Host" required>
+                <input class="event-host" type="text" placeholder="Host name" required>
+            </label>
+            <label for="start-date" class="event-start">
+                <div class="lbl">Start:</div>                
+                <input id="start-date" class=" date" type="date" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>                      
+                <input class="time" type="time" placeholder="hh:mm" pattern="[0-9]{2}:[0-9]{2}" required>
+            </label>
+            <label for="end-date" class="event-end">
+                <div class="lbl">End:</div>
+                <input id="end-date" class="date" type="date" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" >                          
+                <input class="time" type="time" placeholder="hh:mm" pattern="[0-9]{2}:[0-9]{2}" >
             </label>
             <label>
-                <input class="event-start" type="datetime-local" placeholder="Start" required>
-            </label>
-            <label>
-                <input class="event-end" type="datetime-local" placeholder="End" >
-            </label>
-            <label>
-                <input class="event-guests" type="text" placeholder="Guest list">
+                <textarea class="event-guests" type="textarea" rows="5" placeholder="Guest list"></textarea>
             </label>
             <label>
                 <input class="event-location" type="text" placeholder="Location">
@@ -33,7 +37,7 @@
             <label>
                 <input class="event-msg" type="text" placeholder="Message to the guests">
             </label>
-            <button id="submit">Save</button>
+            <button id="submit" class="save-btn">Save</button>
         </section>        
     </body>
 </html>

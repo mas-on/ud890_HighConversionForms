@@ -97,6 +97,17 @@ eval("exports = module.exports = __webpack_require__(/*! ../../css-loader/dist/r
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/css/new-event.css":
+/*!*********************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/css/new-event.css ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"header {\\r\\n    font-weight: bold;\\r\\n    padding: 0 0 1em 0;\\r\\n}\\r\\n\\r\\nsection.form {\\r\\n    width: 320px; \\r\\n}\\r\\n\\r\\nsection.form label {\\r\\n    display: block;\\r\\n    padding: 0 0 1em 0;    \\r\\n}\\r\\n\\r\\n.event-name, .event-type, .event-host, .event-guests, .event-location, .event-msg {\\r\\n    width: 100%;\\r\\n}\\r\\n\\r\\nsection.form .lbl {\\r\\n    width: 15%;\\r\\n    display: inline-block;\\r\\n}\\r\\n\\r\\nsection.form .date {\\r\\n    width: 40%;\\r\\n}\\r\\n\\r\\nsection.form .time {\\r\\n    width: 23%;\\r\\n}\\r\\n\\r\\n.save-btn {\\r\\n    float: right;\\r\\n}\\r\\n\\r\\n/*validation*/\\r\\nsection.form.submitted input:invalid {\\r\\n    border: 2px dashed red;\\r\\n    background:  rgb(252, 174, 174) \\r\\n  }\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/css/new-event.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/runtime/api.js":
 /*!*****************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/api.js ***!
@@ -153,6 +164,17 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 
 /***/ }),
 
+/***/ "./src/css/new-event.css":
+/*!*******************************!*\
+  !*** ./src/css/new-event.css ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./new-event.css */ \"./node_modules/css-loader/dist/cjs.js!./src/css/new-event.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/css/new-event.css?");
+
+/***/ }),
+
 /***/ "./src/js/new-event.js":
 /*!*****************************!*\
   !*** ./src/js/new-event.js ***!
@@ -161,7 +183,7 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery_editable_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery-editable-select */ \"./node_modules/jquery-editable-select/dist/jquery-editable-select.min.js\");\n/* harmony import */ var jquery_editable_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_editable_select__WEBPACK_IMPORTED_MODULE_0__);\n//The import and export statements have been standardized in ES2015. Although they are not supported in most browsers yet, webpack does support them out of the box.\r\n\r\n__webpack_require__(/*! jquery-editable-select/dist/jquery-editable-select.css */ \"./node_modules/jquery-editable-select/dist/jquery-editable-select.css\");\r\n\r\n$(function() {\r\n  // jquery-editable-select is required for this line to work\r\n  $('.event-type').editableSelect();\r\n  $('.event-type.es-input').attr('placeholder','Choose or enter event type');\r\n});\r\n\r\n\n\n//# sourceURL=webpack:///./src/js/new-event.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery_editable_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery-editable-select */ \"./node_modules/jquery-editable-select/dist/jquery-editable-select.min.js\");\n/* harmony import */ var jquery_editable_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_editable_select__WEBPACK_IMPORTED_MODULE_0__);\n//The import and export statements have been standardized in ES2015. Although they are not supported in most browsers yet, webpack does support them out of the box.\r\n\r\n__webpack_require__(/*! jquery-editable-select/dist/jquery-editable-select.css */ \"./node_modules/jquery-editable-select/dist/jquery-editable-select.css\");\r\n__webpack_require__(/*! ../css/new-event.css */ \"./src/css/new-event.css\");\r\n\r\n$(function() {\r\n  // jquery-editable-select is required for this line to work\r\n  $('.event-type').editableSelect();\r\n  $('.event-type.es-input').attr('placeholder','Choose or enter event type');  \r\n  \r\n  var start = new Date();  \r\n  var end = new Date();\r\n  start.setHours(start.getHours() + 1); //next hour for default event start time\r\n  end.setHours(end.getHours() + 2);\r\n  \r\n  //set default event time\r\n  var frmStart = formatDate(start);\r\n  \r\n  var startDInput = $('.event-start .date').val(frmStart).attr('min',frmStart);\r\n  var endDInput = $('.event-end .date').val(formatDate(end)).attr('min',frmStart);\r\n  var startTInput = $('.event-start .time').val(formatTime(start.getHours(),0));  \r\n  var endTInput = $('.event-end .time').val(formatTime(end.getHours(),0));\r\n  \r\n  startDInput.blur(checkEndDatetime);\r\n  startTInput.blur(checkEndDatetime);\r\n\r\n  //validate and save event\r\n  $('#submit').click(function () {\r\n    $(\".form\").addClass(\"submitted\");\r\n    if ($(\".form input:invalid\").length == 0) \r\n      alert(\"All of your information was valid\\n\\nThanks for your submission!\");\r\n  });  \r\n  \r\n  function checkEndDatetime() {    \r\n    try {\r\n      var tStart = startTInput.val() === '' ? [0,0] : startTInput.val().split(':');\r\n      var tEnd = endTInput.val() === '' ? [0,0] : endTInput.val().split(':');\r\n      \r\n      var dtStart = new Date(startDInput.val());\r\n      dtStart.setHours(tStart[0],tStart[1]);    \r\n      var dtEnd = new Date(endDInput.val());\r\n      dtEnd.setHours(tEnd[0],tEnd[1]);  \r\n  \r\n      if (dtEnd < dtStart) {\r\n        dtEnd = dtStart;\r\n        dtEnd.setHours(dtEnd.getHours() + 1);\r\n        var frmEnd = formatDate(dtEnd); \r\n        endDInput.val(frmEnd).attr('min',formatDate(dtStart));\r\n        endTInput.val(formatTime(dtEnd.getHours(), dtEnd.getMinutes()));   \r\n      }\r\n    }\r\n    catch(e) { \r\n      console.log(\"can't convert input: \" + e);\r\n    }   \r\n  }\r\n\r\n});\r\n\r\n/* function isDateSupported() {\r\n  var test = document.createElement(\"div\");\r\n  test.innerHTML = \"<input type='date'>\";  \r\n  return (test.firstChild.type === 'date');\r\n} */\r\n\r\nfunction formatDate(dt) {\r\n  var year = dt.getFullYear();\r\n  var month = dt.getMonth()+1;\r\n  var day = dt.getDate();\r\n  return year + '-' + (month>9 ? month : '0' + month) + '-' + (day>9 ? day : '0' + day);\r\n}\r\n\r\nfunction formatTime(h,m) {\r\n  return (h>9 ? h : '0' + h) + ':' + (m>9 ? m : '0' + m);\r\n}\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/js/new-event.js?");
 
 /***/ })
 
