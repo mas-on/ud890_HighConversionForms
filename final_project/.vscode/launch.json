@@ -11,6 +11,12 @@
             "name": "Launch Chrome against localhost",
             "url": "http://localhost:8080",
             "webRoot": "${workspaceFolder}"
-        }
+        },
+        {
+            "name": "Launch Chrome against index.html",
+            "type": "chrome",
+            "request": "launch",
+            "file": "${workspaceFolder}/dist/index.html"
+        },
     ]
 }

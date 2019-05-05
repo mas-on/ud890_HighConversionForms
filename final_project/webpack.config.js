@@ -35,11 +35,18 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-        //hash: true,
+        hash: true,
         template: './src/new-event.html',
         chunks: ['vendor', 'newevent'],
         chunksSortMode: 'manual',
         filename: 'new-event.html' //relative to root of the application
-    })
+    }),
+    new HtmlWebpackPlugin({    
+      hash: true,  
+      template: './src/index.html',
+      //chunks: ['vendor', 'index'],
+      //chunksSortMode: 'manual',
+      filename: 'index.html'
+  })
   ]
 };

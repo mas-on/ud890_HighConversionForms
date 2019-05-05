@@ -1,3 +1,4 @@
+/*base rules*/
 header {
     font-weight: bold;
     padding: 0 0 1em 0;
@@ -10,10 +11,6 @@ section.form {
 section.form label {
     display: block;
     padding: 0 0 1em 0;    
-}
-
-.event-name, .event-type, .event-host, .event-guests, .event-location, .event-msg {
-    width: 100%;
 }
 
 section.form .lbl {
@@ -29,12 +26,38 @@ section.form .time {
     width: 23%;
 }
 
+.lbl-tip {
+    color:grey;
+    font-size: small;
+}
+
+/*concrete elements rules*/
+.event-name, .event-type, .event-host, .event-guests, .event-location, .event-msg {
+    width: 100%;
+}
+
+section.form .opt-lbl-row {
+    padding-bottom: 0.5em;
+}
+
+.event-end input{
+    vertical-align: top;
+}
+
+.event-end .lbl {
+    margin-top: 0.15em;
+}
+
+
+
 .save-btn {
     float: right;
 }
 
+
+
 /*validation*/
-section.form.submitted input:invalid {
-    border: 2px dashed red;
-    background:  rgb(252, 174, 174) 
+section.form.submitted input:invalid, .invalid {
+    border: 1px dashed red;
+    background:  rgb(252, 174, 174, 0.2) 
   }

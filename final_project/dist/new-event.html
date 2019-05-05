@@ -23,21 +23,24 @@
                 <input id="start-date" class=" date" type="date" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>                      
                 <input class="time" type="time" placeholder="hh:mm" pattern="[0-9]{2}:[0-9]{2}" required>
             </label>
-            <label for="end-date" class="event-end">
-                <div class="lbl">End:</div>
+            <label for="end-date" class="event-end opt-lbl-row">
+                <div class="lbl">
+                    End:
+                    <span class="lbl-tip">optional</span>
+                </div>
                 <input id="end-date" class="date" type="date" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" >                          
                 <input class="time" type="time" placeholder="hh:mm" pattern="[0-9]{2}:[0-9]{2}" >
             </label>
             <label>
-                <textarea class="event-guests" type="textarea" rows="5" placeholder="Guest list"></textarea>
+                <input class="event-location" type="text" placeholder="Location" required>
             </label>
             <label>
-                <input class="event-location" type="text" placeholder="Location">
+                <textarea class="event-guests" type="textarea" rows="5" placeholder="Guest list [optional]"></textarea>
             </label>
             <label>
-                <input class="event-msg" type="text" placeholder="Message to the guests">
+                <input class="event-msg" type="text" placeholder="Message to the guests [optional]">
             </label>
             <button id="submit" class="save-btn">Save</button>
         </section>        
-    <script type="text/javascript" src="./js/vendor.bundle.js"></script><script type="text/javascript" src="./js/newevent.bundle.js"></script></body>
+    <script type="text/javascript" src="./js/vendor.bundle.js?a9a5349e2488712ecf70"></script><script type="text/javascript" src="./js/newevent.bundle.js?a9a5349e2488712ecf70"></script></body>
 </html>

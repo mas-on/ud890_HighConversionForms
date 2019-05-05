@@ -6,7 +6,8 @@ require("../css/new-event.css");
 $(function() {
   // jquery-editable-select is required for this line to work
   $('.event-type').editableSelect();
-  $('.event-type.es-input').attr('placeholder','Choose or enter event type');  
+  $('.event-type.es-input').attr('placeholder','Choose or enter event type');
+  
   
   var start = new Date();  
   var end = new Date();
@@ -21,37 +22,94 @@ $(function() {
   var startTInput = $('.event-start .time').val(formatTime(start.getHours(),0));  
   var endTInput = $('.event-end .time').val(formatTime(end.getHours(),0));
   
-  startDInput.blur(checkEndDatetime);
-  startTInput.blur(checkEndDatetime);
+  startDInput.blur(function() {
+    checkMinValue(startDInput, startTInput);
+    checkEndDatetime();
+  });
+
+  startTInput.blur(function() {
+    checkMinValue(startDInput, startTInput);
+    checkEndDatetime();
+  });
+
+  endDInput.blur(function() {
+    checkMinValue(endDInput, endTInput);
+    checkEndDatetime();
+  });
+
+  endTInput.blur(function() {
+    checkMinValue(endDInput, endTInput);
+    checkEndDatetime();
+  });
+
+  //validate on blur
+  $('.form input,textarea,select').filter('[required]:visible')
+    .blur(function() {      
+      if (this.checkValidity())
+        $(this).removeClass("invalid");
+      else
+        $(this).addClass("invalid");
+    });
 
   //validate and save event
   $('#submit').click(function () {
     $(".form").addClass("submitted");
+    //add validation report
+
     if ($(".form input:invalid").length == 0) 
       alert("All of your information was valid\n\nThanks for your submission!");
   });  
   
-  function checkEndDatetime() {    
-    try {
-      var tStart = startTInput.val() === '' ? [0,0] : startTInput.val().split(':');
-      var tEnd = endTInput.val() === '' ? [0,0] : endTInput.val().split(':');
-      
-      var dtStart = new Date(startDInput.val());
-      dtStart.setHours(tStart[0],tStart[1]);    
-      var dtEnd = new Date(endDInput.val());
-      dtEnd.setHours(tEnd[0],tEnd[1]);  
-  
-      if (dtEnd < dtStart) {
-        dtEnd = dtStart;
-        dtEnd.setHours(dtEnd.getHours() + 1);
-        var frmEnd = formatDate(dtEnd); 
-        endDInput.val(frmEnd).attr('min',formatDate(dtStart));
-        endTInput.val(formatTime(dtEnd.getHours(), dtEnd.getMinutes()));   
+  function checkEndDatetime() {            
+    var dtStart = getAndFixDateFrom(startDInput, startTInput);
+    var dtEnd =  getAndFixDateFrom(endDInput, endTInput);
+
+    if (dtEnd !== undefined && dtEnd < dtStart) {
+      dtEnd = dtStart;
+      var frmEnd = formatDate(dtEnd); 
+      endDInput.val(frmEnd).attr('min',formatDate(dtStart));
+      endTInput.val(formatTime(dtEnd.getHours(), dtEnd.getMinutes()));   
+    }    
+  }
+
+  function getAndFixDateFrom(dateInput, timeInput) {
+    
+    var dt = new Date(dateInput.val());      
+    if (!isValidDate(dt)) {
+      if (dateInput.prop('required')) {
+        dt = new Date();
+        dt.setMinutes(dt.getMinutes() + 1);
+        dateInput.val(formatDate(dt));
+      }
+      else {
+        dt = undefined;
+        dateInput.val('');
       }
     }
-    catch(e) { 
-      console.log("can't convert input: " + e);
-    }   
+
+    var t = (timeInput.val() === '' || timeInput.val() === undefined) ? [0,0] : timeInput.val().split(':');
+    if (t.length != 2 || t[0].length != 2 || t[1].length != 2) {
+      if (timeInput.prop('required')) {
+        timeInput.val(formatTime(0,0));
+      }
+      else {
+        timeInput.val('');
+      }
+      t = [0,0];
+    }
+    if (dt !== undefined)
+      dt.setHours(t[0],t[1]);
+        
+    return dt;
+  }
+
+  function checkMinValue(dateInput, timeInput) {
+    var now = new Date();
+    var dt = getAndFixDateFrom(dateInput, timeInput);
+    if (dt !== undefined && dt<now) {
+      dateInput.val(formatDate(now));
+      timeInput.val(formatTime(now.getHours(), now.getMinutes()));
+    }
   }
 
 });
@@ -73,5 +131,8 @@ function formatTime(h,m) {
   return (h>9 ? h : '0' + h) + ':' + (m>9 ? m : '0' + m);
 }
 
+function isValidDate(d) {
+  return d instanceof Date && !isNaN(d);
+}
 
 
