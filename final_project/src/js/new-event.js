@@ -46,10 +46,13 @@ $(function() {
       if (!checkStorage()) 
         return;
       
-      saveEventDetails();      
+      checkType(eType);
+      saveEventDetails(); 
+      location.href='events.html';     
     }
   });  
   
+  /*********functions*****************/
   function fillEventTypes(el) {
     var types = getFromStorage('evt-types');
     $.each(types, function(i,t) { 
@@ -152,7 +155,7 @@ $(function() {
     }
     return true;
   }
-  
+
 });
 
 /* function isDateSupported() {
@@ -201,9 +204,7 @@ function checkType(el) {
   localStorage.setItem('evt-types', JSON.stringify(types));
 }
 
-function saveEventDetails() {    
-  checkType(eType);
-  
+function saveEventDetails() {        
   var events = getFromStorage('events');
   var evt = {};
   $(".form input,textarea:visible").each(function() {

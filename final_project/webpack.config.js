@@ -47,6 +47,13 @@ module.exports = {
       //chunks: ['vendor', 'index'],
       //chunksSortMode: 'manual',
       filename: 'index.html'
-  })
+  }),
+  new HtmlWebpackPlugin({    
+    hash: true,  
+    template: './src/events.html',
+    chunks: ['vendor', 'events'],
+    chunksSortMode: 'manual',
+    filename: 'events.html'
+})
   ]
 };
