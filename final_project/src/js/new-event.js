@@ -3,44 +3,27 @@ import jquery_editable_select from 'jquery-editable-select';
 require("jquery-editable-select/dist/jquery-editable-select.css");
 require("../css/new-event.css");
 
-$(function() {
+$(function() {  
+  var eType = $('#event-type');
+  var eTypeText = $('#event-type.es-input');
+  
+  var startDInput = $('.event-start .date');
+  var endDInput = $('.event-end .date');
+  var startTInput = $('.event-start .time');
+  var endTInput = $('.event-end .time');
+
+  var submit = $('#submit');
+  var errmsg = $("#err-msg");
+  
+  //set event type options
+  if (checkStorage())
+    fillEventTypes(eType);
   // jquery-editable-select is required for this line to work
-  $('.event-type').editableSelect();
-  $('.event-type.es-input').attr('placeholder','Choose or enter event type');
+  eType.editableSelect();
+  eTypeText.attr('placeholder','Choose or enter event type');
   
-  
-  var start = new Date();  
-  var end = new Date();
-  start.setHours(start.getHours() + 1); //next hour for default event start time
-  end.setHours(end.getHours() + 2);
-  
-  //set default event time
-  var frmStart = formatDate(start);
-  
-  var startDInput = $('.event-start .date').val(frmStart).attr('min',frmStart);
-  var endDInput = $('.event-end .date').val(formatDate(end)).attr('min',frmStart);
-  var startTInput = $('.event-start .time').val(formatTime(start.getHours(),0));  
-  var endTInput = $('.event-end .time').val(formatTime(end.getHours(),0));
-  
-  startDInput.blur(function() {
-    checkMinValue(startDInput, startTInput);
-    checkEndDatetime();
-  });
-
-  startTInput.blur(function() {
-    checkMinValue(startDInput, startTInput);
-    checkEndDatetime();
-  });
-
-  endDInput.blur(function() {
-    checkMinValue(endDInput, endTInput);
-    checkEndDatetime();
-  });
-
-  endTInput.blur(function() {
-    checkMinValue(endDInput, endTInput);
-    checkEndDatetime();
-  });
+  setDefaultDateTime();
+  setDateTimeCheckers();  
 
   //validate on blur
   $('.form input,textarea,select').filter('[required]:visible')
@@ -52,14 +35,64 @@ $(function() {
     });
 
   //validate and save event
-  $('#submit').click(function () {
-    $(".form").addClass("submitted");
-    //add validation report
+  submit.click(function () {
+    errmsg.val("");
+    $(".form").addClass("submitted");    
 
-    if ($(".form input:invalid").length == 0) 
-      alert("All of your information was valid\n\nThanks for your submission!");
+    if ($(".form input:invalid").length > 0) {
+      errmsg.val("Please, fill required fields");
+    }
+    else {      
+      if (!checkStorage()) 
+        return;
+      
+      saveEventDetails();      
+    }
   });  
   
+  function fillEventTypes(el) {
+    var types = getFromStorage('evt-types');
+    $.each(types, function(i,t) { 
+      el.append($("<option></option>")
+                      .attr("value",t)
+                      .text(t));               
+   }); 
+  }
+
+  function setDefaultDateTime() {
+    var start = new Date();  
+    var end = new Date();
+    start.setHours(start.getHours() + 1); //next hour for default event start time
+    end.setHours(end.getHours() + 2);    
+    
+    var frmStart = formatDate(start);    
+    startDInput.val(frmStart).attr('min',frmStart);
+    endDInput.val(formatDate(end)).attr('min',frmStart);
+    startTInput.val(formatTime(start.getHours(),0));  
+    endTInput.val(formatTime(end.getHours(),0));
+  }
+
+  function setDateTimeCheckers() {
+    startDInput.blur(function() {
+      checkMinValue(startDInput, startTInput);
+      checkEndDatetime();
+    });
+  
+    startTInput.blur(function() {
+      checkMinValue(startDInput, startTInput);
+      checkEndDatetime();
+    });
+  
+    endDInput.blur(function() {
+      checkMinValue(endDInput, endTInput);
+      checkEndDatetime();
+    });
+  
+    endTInput.blur(function() {
+      checkMinValue(endDInput, endTInput);
+      checkEndDatetime();
+    });
+  }
   function checkEndDatetime() {            
     var dtStart = getAndFixDateFrom(startDInput, startTInput);
     var dtEnd =  getAndFixDateFrom(endDInput, endTInput);
@@ -72,9 +105,9 @@ $(function() {
     }    
   }
 
-  function getAndFixDateFrom(dateInput, timeInput) {
-    
+  function getAndFixDateFrom(dateInput, timeInput) {    
     var dt = new Date(dateInput.val());      
+    
     if (!isValidDate(dt)) {
       if (dateInput.prop('required')) {
         dt = new Date();
@@ -112,6 +145,14 @@ $(function() {
     }
   }
 
+  function checkStorage() {
+    if (!supports_local_storage()) {
+      errmsg.val("Please, try another browser");
+      return false;
+    }
+    return true;
+  }
+  
 });
 
 /* function isDateSupported() {
@@ -135,4 +176,41 @@ function isValidDate(d) {
   return d instanceof Date && !isNaN(d);
 }
 
+function supports_local_storage() {
+  try {
+    return 'localStorage' in window && window['localStorage'] !== null;
+  } catch(e){
+    return false;
+  }
+}
+
+function getFromStorage(itemName) {
+  var json = localStorage.getItem(itemName);
+  var items = [];
+  if (json !== undefined && json !== null && json.length !== 0)
+    items = JSON.parse(json);
+  
+  return items;
+}
+
+function checkType(el) {
+  var types = getFromStorage('evt-types');
+  var tested = el.val();
+  if ($.inArray(tested, types) === -1)
+    types.push(tested);
+  localStorage.setItem('evt-types', JSON.stringify(types));
+}
+
+function saveEventDetails() {    
+  checkType(eType);
+  
+  var events = getFromStorage('events');
+  var evt = {};
+  $(".form input,textarea:visible").each(function() {
+    evt[$(this).attr('id')] = $(this).val();      
+  });
+
+  events.push(evt);
+  localStorage.setItem('events', JSON.stringify(events));
+}
 

@@ -32,7 +32,7 @@ section.form .time {
 }
 
 /*concrete elements rules*/
-.event-name, .event-type, .event-host, .event-guests, .event-location, .event-msg {
+#event-name, #event-type, #event-host, #event-guests, #event-location, #event-msg {
     width: 100%;
 }
 
