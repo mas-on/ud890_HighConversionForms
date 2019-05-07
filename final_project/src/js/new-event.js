@@ -1,5 +1,7 @@
 //The import and export statements have been standardized in ES2015. Although they are not supported in most browsers yet, webpack does support them out of the box.
 import jquery_editable_select from 'jquery-editable-select';
+import _db from './estorage.js';
+
 require("jquery-editable-select/dist/jquery-editable-select.css");
 require("../css/new-event.css");
 
@@ -54,7 +56,7 @@ $(function() {
   
   /*********functions*****************/
   function fillEventTypes(el) {
-    var types = getFromStorage('evt-types');
+    var types = _db.get_from_storage('evt-types');
     $.each(types, function(i,t) { 
       el.append($("<option></option>")
                       .attr("value",t)
@@ -149,7 +151,7 @@ $(function() {
   }
 
   function checkStorage() {
-    if (!supports_local_storage()) {
+    if (!_db.supports_local_storage()) {
       errmsg.val("Please, try another browser");
       return false;
     }
@@ -157,12 +159,6 @@ $(function() {
   }
 
 });
-
-/* function isDateSupported() {
-  var test = document.createElement("div");
-  test.innerHTML = "<input type='date'>";  
-  return (test.firstChild.type === 'date');
-} */
 
 function formatDate(dt) {
   var year = dt.getFullYear();
@@ -179,39 +175,28 @@ function isValidDate(d) {
   return d instanceof Date && !isNaN(d);
 }
 
-function supports_local_storage() {
-  try {
-    return 'localStorage' in window && window['localStorage'] !== null;
-  } catch(e){
-    return false;
-  }
-}
-
-function getFromStorage(itemName) {
-  var json = localStorage.getItem(itemName);
-  var items = [];
-  if (json !== undefined && json !== null && json.length !== 0)
-    items = JSON.parse(json);
-  
-  return items;
-}
-
 function checkType(el) {
-  var types = getFromStorage('evt-types');
+  var types = _db.get_from_storage('evt-types');
   var tested = el.val();
   if ($.inArray(tested, types) === -1)
     types.push(tested);
-  localStorage.setItem('evt-types', JSON.stringify(types));
+  
+  _db.save_to_storage('evt-types', types);
 }
 
 function saveEventDetails() {        
-  var events = getFromStorage('events');
+  var events = _db.get_from_storage('events');
   var evt = {};
   $(".form input,textarea:visible").each(function() {
-    evt[$(this).attr('id')] = $(this).val();      
+    evt[$(this).attr('id')] = $(this).val(); 
+    evt["uid"] = uniqId();
   });
 
   events.push(evt);
-  localStorage.setItem('events', JSON.stringify(events));
+  _db.save_to_storage('events', events);
+}
+
+function uniqId() {
+  return Math.round(new Date().getTime() + (Math.random() * 100));
 }
 

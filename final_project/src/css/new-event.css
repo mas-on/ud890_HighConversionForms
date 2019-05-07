@@ -31,6 +31,10 @@ section.form .time {
     font-size: small;
 }
 
+.right {
+    float: right;
+}
+
 /*concrete elements rules*/
 #event-name, #event-type, #event-host, #event-guests, #event-location, #event-msg {
     width: 100%;
@@ -47,13 +51,6 @@ section.form .opt-lbl-row {
 .event-end .lbl {
     margin-top: 0.15em;
 }
-
-
-
-.right {
-    float: right;
-}
-
 
 
 /*validation*/

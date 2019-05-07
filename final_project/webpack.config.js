@@ -5,6 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = { 
   entry: {
     newevent: "./src/js/new-event.js",    
+    events: "./src/js/events.js",
     vendor: ["jquery"]
     //settings: "./src/scripts/settings.js"
   }, 
