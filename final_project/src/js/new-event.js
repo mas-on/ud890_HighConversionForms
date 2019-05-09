@@ -5,10 +5,10 @@ import _db from './estorage.js';
 require("jquery-editable-select/dist/jquery-editable-select.css");
 require("../css/new-event.css");
 
-$(function() {  
+$(function () {
   var eType = $('#event-type');
   var eTypeText = $('#event-type.es-input');
-  
+
   var startDInput = $('.event-start .date');
   var endDInput = $('.event-end .date');
   var startTInput = $('.event-start .time');
@@ -16,20 +16,20 @@ $(function() {
 
   var submit = $('#submit');
   var errmsg = $("#err-msg");
-  
+
   //set event type options
   if (checkStorage())
     fillEventTypes(eType);
   // jquery-editable-select is required for this line to work
   eType.editableSelect();
-  eTypeText.attr('placeholder','Choose or enter event type');
-  
+  eTypeText.attr('placeholder', 'Choose or enter event type');
+
   setDefaultDateTime();
-  setDateTimeCheckers();  
+  setDateTimeCheckers();
 
   //validate on blur
   $('.form input,textarea,select').filter('[required]:visible')
-    .blur(function() {      
+    .blur(function () {
       if (this.checkValidity())
         $(this).removeClass("invalid");
       else
@@ -39,80 +39,82 @@ $(function() {
   //validate and save event
   submit.click(function () {
     errmsg.val("");
-    $(".form").addClass("submitted");    
+    $(".form").addClass("submitted");
 
     if ($(".form input:invalid").length > 0) {
       errmsg.val("Please, fill required fields");
     }
-    else {      
-      if (!checkStorage()) 
+    else {
+      if (!checkStorage())
         return;
-      
-      checkType(eType);
-      saveEventDetails(); 
-      location.href='events.html';     
+
+      checkType();
+      saveEventDetails();
+      location.href = 'events.html';
     }
-  });  
-  
+
+    return false;
+  });
+
   /*********functions*****************/
   function fillEventTypes(el) {
     var types = _db.get_from_storage('evt-types');
-    $.each(types, function(i,t) { 
+    $.each(types, function (i, t) {
       el.append($("<option></option>")
-                      .attr("value",t)
-                      .text(t));               
-   }); 
+        .attr("value", t)
+        .text(t));
+    });
   }
 
   function setDefaultDateTime() {
-    var start = new Date();  
+    var start = new Date();
     var end = new Date();
     start.setHours(start.getHours() + 1); //next hour for default event start time
-    end.setHours(end.getHours() + 2);    
-    
-    var frmStart = formatDate(start);    
-    startDInput.val(frmStart).attr('min',frmStart);
-    endDInput.val(formatDate(end)).attr('min',frmStart);
-    startTInput.val(formatTime(start.getHours(),0));  
-    endTInput.val(formatTime(end.getHours(),0));
+    end.setHours(end.getHours() + 2);
+
+    var frmStart = formatDate(start);
+    startDInput.val(frmStart).attr('min', frmStart);
+    endDInput.val(formatDate(end)).attr('min', frmStart);
+    startTInput.val(formatTime(start.getHours(), 0));
+    endTInput.val(formatTime(end.getHours(), 0));
   }
 
   function setDateTimeCheckers() {
-    startDInput.blur(function() {
+    startDInput.blur(function () {
       checkMinValue(startDInput, startTInput);
       checkEndDatetime();
     });
-  
-    startTInput.blur(function() {
+
+    startTInput.blur(function () {
       checkMinValue(startDInput, startTInput);
       checkEndDatetime();
     });
-  
-    endDInput.blur(function() {
+
+    endDInput.blur(function () {
       checkMinValue(endDInput, endTInput);
       checkEndDatetime();
     });
-  
-    endTInput.blur(function() {
+
+    endTInput.blur(function () {
       checkMinValue(endDInput, endTInput);
       checkEndDatetime();
     });
   }
-  function checkEndDatetime() {            
+  function checkEndDatetime() {
     var dtStart = getAndFixDateFrom(startDInput, startTInput);
-    var dtEnd =  getAndFixDateFrom(endDInput, endTInput);
+    var dtEnd = getAndFixDateFrom(endDInput, endTInput);
 
     if (dtEnd !== undefined && dtEnd < dtStart) {
       dtEnd = dtStart;
-      var frmEnd = formatDate(dtEnd); 
-      endDInput.val(frmEnd).attr('min',formatDate(dtStart));
-      endTInput.val(formatTime(dtEnd.getHours(), dtEnd.getMinutes()));   
-    }    
+      var frmEnd = formatDate(dtEnd);
+      endDInput.val(frmEnd).attr('min', formatDate(dtStart));
+      endTInput.val(formatTime(dtEnd.getHours(), dtEnd.getMinutes()));
+    }
   }
 
-  function getAndFixDateFrom(dateInput, timeInput) {    
-    var dt = new Date(dateInput.val());      
-    
+  function getAndFixDateFrom(dateInput, timeInput) {
+    var dt = new Date(dateInput.val());
+
     if (!isValidDate(dt)) {
       if (dateInput.prop('required')) {
         dt = new Date();
@@ -125,26 +127,26 @@ $(function() {
       }
     }
 
-    var t = (timeInput.val() === '' || timeInput.val() === undefined) ? [0,0] : timeInput.val().split(':');
+    var t = (timeInput.val() === '' || timeInput.val() === undefined) ? [0, 0] : timeInput.val().split(':');
     if (t.length != 2 || t[0].length != 2 || t[1].length != 2) {
       if (timeInput.prop('required')) {
-        timeInput.val(formatTime(0,0));
+        timeInput.val(formatTime(0, 0));
       }
       else {
         timeInput.val('');
       }
-      t = [0,0];
+      t = [0, 0];
     }
     if (dt !== undefined)
-      dt.setHours(t[0],t[1]);
-        
+      dt.setHours(t[0], t[1]);
+
     return dt;
   }
 
   function checkMinValue(dateInput, timeInput) {
     var now = new Date();
     var dt = getAndFixDateFrom(dateInput, timeInput);
-    if (dt !== undefined && dt<now) {
+    if (dt !== undefined && dt < now) {
       dateInput.val(formatDate(now));
       timeInput.val(formatTime(now.getHours(), now.getMinutes()));
     }
@@ -162,35 +164,45 @@ $(function() {
 
 function formatDate(dt) {
   var year = dt.getFullYear();
-  var month = dt.getMonth()+1;
+  var month = dt.getMonth() + 1;
   var day = dt.getDate();
-  return year + '-' + (month>9 ? month : '0' + month) + '-' + (day>9 ? day : '0' + day);
+  return year + '-' + (month > 9 ? month : '0' + month) + '-' + (day > 9 ? day : '0' + day);
 }
 
-function formatTime(h,m) {
-  return (h>9 ? h : '0' + h) + ':' + (m>9 ? m : '0' + m);
+function formatTime(h, m) {
+  return (h > 9 ? h : '0' + h) + ':' + (m > 9 ? m : '0' + m);
 }
 
 function isValidDate(d) {
   return d instanceof Date && !isNaN(d);
 }
 
-function checkType(el) {
+function checkType() {  
   var types = _db.get_from_storage('evt-types');
-  var tested = el.val();
+  var tested = $("#event-type").val();
   if ($.inArray(tested, types) === -1)
     types.push(tested);
-  
+
   _db.save_to_storage('evt-types', types);
 }
 
-function saveEventDetails() {        
+function composeDatetime(parent) {
+  var d = parent.find(".date").first().val();
+  var t = parent.find(".time").first().val();
+  return d + "T" + t + ":00";
+}
+
+function saveEventDetails() {
   var events = _db.get_from_storage('events');
   var evt = {};
-  $(".form input,textarea:visible").each(function() {
-    evt[$(this).attr('id')] = $(this).val(); 
+  $(".form input,textarea:visible").not(".date,.time").each(function () {
+    evt[$(this).attr('id')] = $(this).val();
     evt["uid"] = uniqId();
   });
+  
+  //dates
+  evt["start-date"] = composeDatetime($(".form .event-start"));
+  evt["event-end"] = composeDatetime($(".form .event-end"));
 
   events.push(evt);
   _db.save_to_storage('events', events);
