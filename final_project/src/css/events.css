@@ -54,3 +54,11 @@ ul.g-items li:nth-child(even) {
 .group-name {
     font-weight: bold;
 }
+
+.past {
+    font-style: italic;
+}
+
+.past a {
+    display: none;
+}
