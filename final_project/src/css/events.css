@@ -1,6 +1,7 @@
 /*base rules*/
 header {
     font-weight: bold;
+    font-size: 120%;
     padding: 0 0 1em 0;
 }
 
@@ -17,10 +18,39 @@ section.list, header {
     display: inline-block;
 }
 
-.list-header {
-    height: 1em;
-}
-
 .hidden {
     display: none;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+/*concrete elements rules*/
+ul.g-items {
+    padding-inline-start: 1em;
+    padding-top: 0.2em;
+}
+
+ul.g-items li:nth-child(even) {
+    background-color: lightgrey;
+}
+
+.item-details {
+    font-size: 90%;
+    color: grey;
+    padding: 0 0 0 1em;
+}
+
+.event-group {
+    padding-bottom: 0.8em;
+}
+
+.group-name {
+    font-weight: bold;
 }

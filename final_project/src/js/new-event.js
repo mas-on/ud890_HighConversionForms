@@ -1,6 +1,7 @@
 //The import and export statements have been standardized in ES2015. Although they are not supported in most browsers yet, webpack does support them out of the box.
 import jquery_editable_select from 'jquery-editable-select';
-import _db from './estorage.js';
+import _db from './lib/estorage.js';
+import _cmn from './lib/common.js';
 
 require("jquery-editable-select/dist/jquery-editable-select.css");
 require("../css/new-event.css");
@@ -20,7 +21,7 @@ $(function () {
   //set event type options
   if (checkStorage())
     fillEventTypes(eType);
-  // jquery-editable-select is required for this line to work
+
   eType.editableSelect();
   eTypeText.attr('placeholder', 'Choose or enter event type');
 
@@ -72,11 +73,11 @@ $(function () {
     start.setHours(start.getHours() + 1); //next hour for default event start time
     end.setHours(end.getHours() + 2);
 
-    var frmStart = formatDate(start);
+    var frmStart = _cmn.formatDate(start);
     startDInput.val(frmStart).attr('min', frmStart);
-    endDInput.val(formatDate(end)).attr('min', frmStart);
-    startTInput.val(formatTime(start.getHours(), 0));
-    endTInput.val(formatTime(end.getHours(), 0));
+    endDInput.val(_cmn.formatDate(end)).attr('min', frmStart);
+    startTInput.val(_cmn.formatTime(start.getHours(), 0));
+    endTInput.val(_cmn.formatTime(end.getHours(), 0));
   }
 
   function setDateTimeCheckers() {
@@ -106,9 +107,9 @@ $(function () {
 
     if (dtEnd !== undefined && dtEnd < dtStart) {
       dtEnd = dtStart;
-      var frmEnd = formatDate(dtEnd);
-      endDInput.val(frmEnd).attr('min', formatDate(dtStart));
-      endTInput.val(formatTime(dtEnd.getHours(), dtEnd.getMinutes()));
+      var frmEnd = _cmn.formatDate(dtEnd);
+      endDInput.val(frmEnd).attr('min', _cmn.formatDate(dtStart));
+      endTInput.val(_cmn.formatTime(dtEnd.getHours(), dtEnd.getMinutes()));
     }
   }
 
@@ -119,7 +120,7 @@ $(function () {
       if (dateInput.prop('required')) {
         dt = new Date();
         dt.setMinutes(dt.getMinutes() + 1);
-        dateInput.val(formatDate(dt));
+        dateInput.val(_cmn.formatDate(dt));
       }
       else {
         dt = undefined;
@@ -130,7 +131,7 @@ $(function () {
     var t = (timeInput.val() === '' || timeInput.val() === undefined) ? [0, 0] : timeInput.val().split(':');
     if (t.length != 2 || t[0].length != 2 || t[1].length != 2) {
       if (timeInput.prop('required')) {
-        timeInput.val(formatTime(0, 0));
+        timeInput.val(_cmn.formatTime(0, 0));
       }
       else {
         timeInput.val('');
@@ -147,8 +148,8 @@ $(function () {
     var now = new Date();
     var dt = getAndFixDateFrom(dateInput, timeInput);
     if (dt !== undefined && dt < now) {
-      dateInput.val(formatDate(now));
-      timeInput.val(formatTime(now.getHours(), now.getMinutes()));
+      dateInput.val(_cmn.formatDate(now));
+      timeInput.val(_cmn.formatTime(now.getHours(), now.getMinutes()));
     }
   }
 
@@ -162,16 +163,9 @@ $(function () {
 
 });
 
-function formatDate(dt) {
-  var year = dt.getFullYear();
-  var month = dt.getMonth() + 1;
-  var day = dt.getDate();
-  return year + '-' + (month > 9 ? month : '0' + month) + '-' + (day > 9 ? day : '0' + day);
-}
 
-function formatTime(h, m) {
-  return (h > 9 ? h : '0' + h) + ':' + (m > 9 ? m : '0' + m);
-}
+
+
 
 function isValidDate(d) {
   return d instanceof Date && !isNaN(d);
@@ -201,7 +195,7 @@ function saveEventDetails() {
   });
   
   //dates
-  evt["start-date"] = composeDatetime($(".form .event-start"));
+  evt["event-start"] = composeDatetime($(".form .event-start"));
   evt["event-end"] = composeDatetime($(".form .event-end"));
 
   events.push(evt);

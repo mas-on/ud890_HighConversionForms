@@ -1,39 +1,99 @@
-import _db from './estorage.js';
+import _db from './lib/estorage.js';
+import _cmn from './lib/common.js';
 require("../css/events.css");
+
+
 
 function fillEvents(events) {
     var errmsg = $("#err");
-    
-    if (events.length === 0)
-        errmsg.text("No events yet");
 
+    if (events.length === 0) {
+        errmsg.text("No events yet");
+        return;
+    }
+
+    //sort events by time
     events.sort(function (a, b) {
-        var aStart = new Date(a["start-date"]);
-        var bStart = new Date(b["start-date"]);
-        return ((aStart < bStart) ? -1 : ((aStart > bStart) ? 1 : 0));
+        return new Date(a["event-start"]) - new Date(b["event-start"]);
     });
+
+    //group events to dictionary (key=date)
+    var dateEvents = events.reduce(function (acc, e) {
+        var key = new Date(e["event-start"]).toLocaleDateString();
+        if (!acc[key]) {
+          acc[key] = [];
+        }
+        acc[key].push(e);
+        return acc;
+      }, {});
     
-    $.each(events, function (i, e) {
-        var id = e["uid"];
-        var name = e["event-name"];
-        
-        var hid = $("<span class='hidden'></span>").text(id);
-        var info = $("<span></span>").text(name);
-        var del = $("<a href='#' class='right'>Delete</a>")
-            .click(function () {
-                if (window.confirm("Are you sure you want to delete " + name + "?")) {
-                    var e = getEvents().filter(function (item) {
-                        return item["uid"] !== id;
-                    });
-                    saveEvents(e);
-                    $("#event-list").empty();
-                    fillEvents(e);
+    $.each(dateEvents, function (d, evts) {                
+        var dayItems = $("<ul></ul>").addClass("g-items");       
+
+        $.each(evts, function (i, e) {
+            //data
+            var id = e["uid"];
+            var name = e["event-name"];
+            var estart = new Date(e["event-start"]);
+
+            //caption elements
+            var hid = $("<span></span>").addClass("hidden").text(id);
+            var time = _cmn.formatTime(estart.getHours(),estart.getMinutes());
+            var info = $("<span title='Click to see details'></span>")
+                .text(time + " " + name)
+                .addClass("clickable")
+                .click(function() {
+                    $(this).parent().siblings('.item-details').toggleClass("hidden");
+                    return false;
+                });
+            var del = $("<a href='#'>Delete</a>")
+                .addClass("right")
+                .click(function () {
+                    if (window.confirm("Are you sure you want to delete " + name + "?")) {
+                        var e = getEvents().filter(function (item) {
+                            return item["uid"] !== id;
+                        });
+                        saveEvents(e);
+                        $("#event-list").empty();
+                        fillEvents(e);
+                    }
+                    return false;
+                });
+            var caption = $("<div></div>").addClass("item-caption").append(del, hid, info);
+
+            //details elements
+            var details = $("<div></div>").addClass("item-details hidden");
+            
+            if (e["event-end"] !== undefined && e["event-end"].length > 0) {
+                var dtEnd = new Date(e["event-end"]);
+                var ld = dtEnd.toLocaleDateString();
+                var dt = _cmn.formatTime(dtEnd.getHours(), dtEnd.getMinutes());
+                //if same day show only time
+                if (ld !== d) {
+                    dt = ld + " " + dt;
                 }
-                return false;
-            });
-        
-        var item = $("<li></li>").addClass("event-item").append(hid, info, del);
-        $("#event-list").append(item);
+                var end = $("<span></span>").text("until " + dt);
+                details.append(end);
+            }
+            var type = $("<div></div>").text("type: " + e["event-type"]);
+            var place = $("<div></div>").text("place: " + e["event-location"]);
+            var host = $("<div></div>").text("host: " + e["event-host"]);
+            details.append(type, place, host);
+
+            if (e["event-msg"] !== undefined && e["event-msg"].length > 0) 
+                details.append($("<div></div>").text("info: " + e["event-msg"]));
+            
+            if (e["event-guests"] !== undefined && e["event-guests"].length > 0) 
+                details.append($("<div></div>").text("guests: " + e["event-guests"]));
+
+            //parent elements            
+            var item = $("<li></li>").addClass("event-item").append(caption, details);
+            dayItems.append(item);
+        });
+
+        var day = $("<span></span>").addClass("group-name").text(d);
+        var ditem = $("<li></li>").addClass("event-group").append(day,dayItems);
+        $("#event-list").append(ditem);
     });
 }
 
@@ -54,7 +114,7 @@ function getEvents() {
 }
 
 function saveEvents(events) {
-    _db.save_to_storage('events', events);;
+    _db.save_to_storage('events', events);
 }
 
 
