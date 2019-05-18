@@ -1,17 +1,4 @@
 /*base rules*/
-header {
-    font-weight: bold;
-    padding: 0 0 1em 0;
-}
-
-section.form, header {
-    width: 320px; 
-}
-
-section.form label {
-    display: block;
-    padding: 0 0 1em 0;    
-}
 
 section.form .lbl {
     width: 15%;
@@ -26,14 +13,6 @@ section.form .time {
     width: 23%;
 }
 
-.lbl-tip {
-    color:grey;
-    font-size: small;
-}
-
-.right {
-    float: right;
-}
 
 /*concrete elements rules*/
 #event-name, #event-type, #event-host, #event-guests, #event-location, #event-msg {
@@ -54,7 +33,7 @@ section.form .opt-lbl-row {
 
 
 /*validation*/
-section.form.submitted input:invalid, .invalid {
+/*section.form.submitted input:invalid, .invalid {
     border: 1px dashed red;
     background:  rgb(252, 174, 174, 0.2) 
-  }
+  }*/

@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     newevent: "./src/js/new-event.js",    
     events: "./src/js/events.js",
+    signup: "./src/js/signup.js",
     vendor: ["jquery"]
     //settings: "./src/scripts/settings.js"
   }, 
@@ -48,13 +49,20 @@ module.exports = {
       //chunks: ['vendor', 'index'],
       //chunksSortMode: 'manual',
       filename: 'index.html'
-  }),
-  new HtmlWebpackPlugin({    
-    hash: true,  
-    template: './src/events.html',
-    chunks: ['vendor', 'events'],
-    chunksSortMode: 'manual',
-    filename: 'events.html'
-})
+    }),
+    new HtmlWebpackPlugin({    
+      hash: true,  
+      template: './src/events.html',
+      chunks: ['vendor', 'events'],
+      chunksSortMode: 'manual',
+      filename: 'events.html'
+    }),
+    new HtmlWebpackPlugin({    
+      hash: true,  
+      template: './src/signup.html',
+      chunks: ['vendor', 'signup'],
+      chunksSortMode: 'manual',
+      filename: 'signup.html'
+    })
   ]
 };

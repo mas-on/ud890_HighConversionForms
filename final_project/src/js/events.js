@@ -1,5 +1,7 @@
 import _db from './lib/estorage.js';
 import _cmn from './lib/common.js';
+
+require("../css/base.css");
 require("../css/events.css");
 
 //help functions

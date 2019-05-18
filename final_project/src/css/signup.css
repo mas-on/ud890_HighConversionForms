@@ -1,0 +1,16 @@
+input {
+    width: 100%;
+}
+
+.info {
+    color: grey;
+    font-weight: bold;
+    padding: 0 0 0.5em 0;
+    display: block;
+}
+
+label:after {
+    content: attr(data-invalid);
+    color: red;
+    font-size: small;
+}

@@ -20,16 +20,20 @@
             </label>
             <label for="start-date" class="event-start">
                 <div class="lbl">Start:</div>                
-                <input id="start-date" class="date" type="date" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>                      
-                <input id="start-time" class="time" type="time" placeholder="hh:mm" pattern="[0-9]{2}:[0-9]{2}" required>
+                <input id="start-date" class="date" type="date" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" 
+                    title="Please enter date in yyyy-mm-dd format (e.g. 2019-12-31)" required>                      
+                <input id="start-time" class="time" type="time" placeholder="hh:mm" pattern="[0-9]{2}:[0-9]{2}" 
+                    title="Please enter time in hh:mm format (e.g. 00:59)"required>
             </label>
             <label for="end-date" class="event-end opt-lbl-row">
                 <div class="lbl">
                     End:
                     <span class="lbl-tip">optional</span>
                 </div>
-                <input id="end-date" class="date" type="date" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" >                          
-                <input id="end-time" class="time" type="time" placeholder="hh:mm" pattern="[0-9]{2}:[0-9]{2}" >
+                <input id="end-date" class="date" type="date" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+                    title="Please enter date in yyyy-mm-dd format (e.g. 2019-12-31)" >                          
+                <input id="end-time" class="time" type="time" placeholder="hh:mm" pattern="[0-9]{2}:[0-9]{2}"
+                    title="Please enter time in hh:mm format (e.g. 01:59) >
             </label>
             <label>
                 <input id="event-location" type="text" placeholder="Location" required>

@@ -4,11 +4,51 @@ import _db from './lib/estorage.js';
 import _cmn from './lib/common.js';
 
 require("jquery-editable-select/dist/jquery-editable-select.css");
+require("../css/base.css");
 require("../css/new-event.css");
 
+//help functions
+function isValidDate(d) {
+  return d instanceof Date && !isNaN(d);
+}
+
+function checkType() {  
+  var types = _db.get_from_storage('evt-types');
+  var tested = $("#event-type").val();
+  if ($.inArray(tested, types) === -1)
+    types.push(tested);
+
+  _db.save_to_storage('evt-types', types);
+}
+
+function composeDatetime(parent) {
+  var d = parent.find(".date").first().val();
+  var t = parent.find(".time").first().val();
+  return d + "T" + t + ":00";
+}
+
+function saveEventDetails() {
+  var events = _db.get_from_storage('events');
+  var evt = {};
+  $(".form input,textarea:visible").not(".date,.time").each(function () {
+    evt[$(this).attr('id')] = $(this).val();
+    evt["uid"] = _cmn.uniqId();
+  });
+  
+  //dates
+  evt["event-start"] = composeDatetime($(".form .event-start"));
+  evt["event-end"] = composeDatetime($(".form .event-end"));
+
+  events.push(evt);
+  _db.save_to_storage('events', events);
+}
+
+
+
+
+//on load
 $(function () {
-  var eType = $('#event-type');
-  var eTypeText = $('#event-type.es-input');
+  var eType = $('#event-type');  
 
   var startDInput = $('.event-start .date');
   var endDInput = $('.event-end .date');
@@ -23,26 +63,20 @@ $(function () {
     fillEventTypes(eType);
 
   eType.editableSelect();
-  eTypeText.attr('placeholder', 'Choose or enter event type');
+  $('#event-type.es-input').attr('placeholder', 'Choose or enter event type');
 
   setDefaultDateTime();
   setDateTimeCheckers();
 
   //validate on blur
-  $('.form input,textarea,select').filter('[required]:visible')
-    .blur(function () {
-      if (this.checkValidity())
-        $(this).removeClass("invalid");
-      else
-        $(this).addClass("invalid");
-    });
+  _cmn.validateOnBlur('.form input,textarea,select');  
 
   //validate and save event
   submit.click(function () {
     errmsg.val("");
     $(".form").addClass("submitted");
 
-    if ($(".form input:invalid").length > 0) {
+    if ($(".form :invalid").length > 0) {
       errmsg.val("Please, fill required fields");
     }
     else {
@@ -162,47 +196,3 @@ $(function () {
   }
 
 });
-
-
-
-
-
-function isValidDate(d) {
-  return d instanceof Date && !isNaN(d);
-}
-
-function checkType() {  
-  var types = _db.get_from_storage('evt-types');
-  var tested = $("#event-type").val();
-  if ($.inArray(tested, types) === -1)
-    types.push(tested);
-
-  _db.save_to_storage('evt-types', types);
-}
-
-function composeDatetime(parent) {
-  var d = parent.find(".date").first().val();
-  var t = parent.find(".time").first().val();
-  return d + "T" + t + ":00";
-}
-
-function saveEventDetails() {
-  var events = _db.get_from_storage('events');
-  var evt = {};
-  $(".form input,textarea:visible").not(".date,.time").each(function () {
-    evt[$(this).attr('id')] = $(this).val();
-    evt["uid"] = uniqId();
-  });
-  
-  //dates
-  evt["event-start"] = composeDatetime($(".form .event-start"));
-  evt["event-end"] = composeDatetime($(".form .event-end"));
-
-  events.push(evt);
-  _db.save_to_storage('events', events);
-}
-
-function uniqId() {
-  return Math.round(new Date().getTime() + (Math.random() * 100));
-}
-
