@@ -93,7 +93,11 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"/**\\n * jQuery Editable Select\\n * Indri Muska <indrimuska@gmail.com>\\n *\\n * Source on GitHub @ https://github.com/indrimuska/jquery-editable-select\\n */\\n\\ninput.es-input { padding-right: 20px !important; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAICAYAAADJEc7MAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG2YAABzjgAA4DIAAIM2AAB5CAAAxgwAADT6AAAgbL5TJ5gAAABGSURBVHjaYvz//z8DOYCJgUzA0tnZidPK8vJyRpw24pLEpwnuVHRFhDQxMDAwMPz//x+OOzo6/iPz8WFGuocqAAAA//8DAD/sORHYg7kaAAAAAElFTkSuQmCC) right center no-repeat; }\\ninput.es-input.open {\\n\\t-webkit-border-bottom-left-radius: 0; -moz-border-radius-bottomleft: 0; border-bottom-left-radius: 0;\\n\\t-webkit-border-bottom-right-radius: 0; -moz-border-radius-bottomright: 0; border-bottom-right-radius: 0; }\\n.es-list { position: absolute; padding: 0; margin: 0; border: 1px solid #d1d1d1; display: none; z-index: 1000; background: #fff; max-height: 160px; overflow-y: auto;\\n\\t-moz-box-shadow: 0 2px 3px #ccc; -webkit-box-shadow: 0 2px 3px #ccc; box-shadow: 0 2px 3px #ccc; }\\n.es-list li { display: block; padding: 5px 10px; margin: 0; }\\n.es-list li.selected { background: #f3f3f3; }\\n.es-list li[disabled] { opacity: .5; }\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./node_modules/jquery-editable-select/dist/jquery-editable-select.css?./node_modules/css-loader/dist/cjs.js");
+exports = module.exports = __webpack_require__(/*! ../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "/**\n * jQuery Editable Select\n * Indri Muska <indrimuska@gmail.com>\n *\n * Source on GitHub @ https://github.com/indrimuska/jquery-editable-select\n */\n\ninput.es-input { padding-right: 20px !important; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAICAYAAADJEc7MAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG2YAABzjgAA4DIAAIM2AAB5CAAAxgwAADT6AAAgbL5TJ5gAAABGSURBVHjaYvz//z8DOYCJgUzA0tnZidPK8vJyRpw24pLEpwnuVHRFhDQxMDAwMPz//x+OOzo6/iPz8WFGuocqAAAA//8DAD/sORHYg7kaAAAAAElFTkSuQmCC) right center no-repeat; }\ninput.es-input.open {\n\t-webkit-border-bottom-left-radius: 0; -moz-border-radius-bottomleft: 0; border-bottom-left-radius: 0;\n\t-webkit-border-bottom-right-radius: 0; -moz-border-radius-bottomright: 0; border-bottom-right-radius: 0; }\n.es-list { position: absolute; padding: 0; margin: 0; border: 1px solid #d1d1d1; display: none; z-index: 1000; background: #fff; max-height: 160px; overflow-y: auto;\n\t-moz-box-shadow: 0 2px 3px #ccc; -webkit-box-shadow: 0 2px 3px #ccc; box-shadow: 0 2px 3px #ccc; }\n.es-list li { display: block; padding: 5px 10px; margin: 0; }\n.es-list li.selected { background: #f3f3f3; }\n.es-list li[disabled] { opacity: .5; }", ""]);
+
+
 
 /***/ }),
 
@@ -104,7 +108,11 @@ eval("exports = module.exports = __webpack_require__(/*! ../../css-loader/dist/r
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"header {\\r\\n    font-weight: bold;\\r\\n    font-size: 120%;\\r\\n    padding: 0 0 1em 0;\\r\\n}\\r\\n\\r\\nsection, header {\\r\\n    width: 320px; \\r\\n}\\r\\n\\r\\n.right {\\r\\n    float: right;\\r\\n}\\r\\n\\r\\n.hidden {\\r\\n    display: none;\\r\\n}\\r\\n\\r\\n.lbl-tip {\\r\\n    color:grey;\\r\\n    font-size: small;\\r\\n}\\r\\n\\r\\nsection.form label {\\r\\n    display: block;\\r\\n    padding: 0 0 1em 0;    \\r\\n}\\r\\n\\r\\n/*validation*/\\r\\n/*.step.submitted input:invalid {*/\\r\\n    .submitted :invalid, .invalid {\\r\\n    border: 1px dashed red;\\r\\n    background:  rgb(252, 174, 174, 0.2) \\r\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/css/base.css?./node_modules/css-loader/dist/cjs.js");
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "header {\r\n    font-weight: bold;\r\n    font-size: 120%;\r\n    padding: 0 0 1em 0;\r\n}\r\n\r\nsection, header {\r\n    width: 320px; \r\n}\r\n\r\n.right {\r\n    float: right;\r\n}\r\n\r\n.hidden {\r\n    display: none;\r\n}\r\n\r\n.lbl-tip {\r\n    color:grey;\r\n    font-size: small;\r\n}\r\n\r\nsection.form .opt-lbl-row {\r\n    padding-bottom: 0.5em;\r\n}\r\n\r\nsection.form label {\r\n    display: block;\r\n    padding: 0 0 1em 0;    \r\n}\r\n\r\n/*validation*/\r\n/*.step.submitted input:invalid {*/\r\n    .submitted :invalid, .invalid {\r\n    border: 1px dashed red;\r\n    background:  rgb(252, 174, 174, 0.2) \r\n}", ""]);
+
+
 
 /***/ }),
 
@@ -115,7 +123,11 @@ eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"/*base rules*/\\r\\n\\r\\nsection.form .lbl {\\r\\n    width: 15%;\\r\\n    display: inline-block;\\r\\n}\\r\\n\\r\\nsection.form .date {\\r\\n    width: 40%;\\r\\n}\\r\\n\\r\\nsection.form .time {\\r\\n    width: 23%;\\r\\n}\\r\\n\\r\\n\\r\\n/*concrete elements rules*/\\r\\n#event-name, #event-type, #event-host, #event-guests, #event-location, #event-msg {\\r\\n    width: 100%;\\r\\n}\\r\\n\\r\\nsection.form .opt-lbl-row {\\r\\n    padding-bottom: 0.5em;\\r\\n}\\r\\n\\r\\n.event-end input{\\r\\n    vertical-align: top;\\r\\n}\\r\\n\\r\\n.event-end .lbl {\\r\\n    margin-top: 0.15em;\\r\\n}\\r\\n\\r\\n\\r\\n/*validation*/\\r\\n/*section.form.submitted input:invalid, .invalid {\\r\\n    border: 1px dashed red;\\r\\n    background:  rgb(252, 174, 174, 0.2) \\r\\n  }*/\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/css/new-event.css?./node_modules/css-loader/dist/cjs.js");
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "/*base rules*/\r\n\r\nsection.form .lbl {\r\n    width: 15%;\r\n    display: inline-block;\r\n}\r\n\r\nsection.form .date {\r\n    width: 40%;\r\n}\r\n\r\nsection.form .time {\r\n    width: 23%;\r\n}\r\n\r\n\r\n/*concrete elements rules*/\r\n#event-name, #event-type, #event-host, #event-guests, #event-location, #event-msg {\r\n    width: 100%;\r\n}\r\n\r\n.event-end input{\r\n    vertical-align: top;\r\n}\r\n\r\n.event-end .lbl {\r\n    margin-top: 0.15em;\r\n}\r\n", ""]);
+
+
 
 /***/ }),
 
@@ -127,7 +139,91 @@ eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\nmodule.exports = function (useSourceMap) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item, useSourceMap);\n\n      if (item[2]) {\n        return '@media ' + item[2] + '{' + content + '}';\n      } else {\n        return content;\n      }\n    }).join('');\n  }; // import a list of modules into the list\n\n\n  list.i = function (modules, mediaQuery) {\n    if (typeof modules === 'string') {\n      modules = [[null, modules, '']];\n    }\n\n    var alreadyImportedModules = {};\n\n    for (var i = 0; i < this.length; i++) {\n      var id = this[i][0];\n\n      if (id != null) {\n        alreadyImportedModules[id] = true;\n      }\n    }\n\n    for (i = 0; i < modules.length; i++) {\n      var item = modules[i]; // skip already imported module\n      // this implementation is not 100% perfect for weird media query combinations\n      // when a module is imported multiple times with different media queries.\n      // I hope this will never occur (Hey this way we have smaller bundles)\n\n      if (item[0] == null || !alreadyImportedModules[item[0]]) {\n        if (mediaQuery && !item[2]) {\n          item[2] = mediaQuery;\n        } else if (mediaQuery) {\n          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';\n        }\n\n        list.push(item);\n      }\n    }\n  };\n\n  return list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n  var content = item[1] || '';\n  var cssMapping = item[3];\n\n  if (!cssMapping) {\n    return content;\n  }\n\n  if (useSourceMap && typeof btoa === 'function') {\n    var sourceMapping = toComment(cssMapping);\n    var sourceURLs = cssMapping.sources.map(function (source) {\n      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';\n    });\n    return [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n  }\n\n  return [content].join('\\n');\n} // Adapted from convert-source-map (MIT)\n\n\nfunction toComment(sourceMap) {\n  // eslint-disable-next-line no-undef\n  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;\n  return '/*# ' + data + ' */';\n}\n\n//# sourceURL=webpack:///./node_modules/css-loader/dist/runtime/api.js?");
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function (useSourceMap) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item, useSourceMap);
+
+      if (item[2]) {
+        return '@media ' + item[2] + '{' + content + '}';
+      } else {
+        return content;
+      }
+    }).join('');
+  }; // import a list of modules into the list
+
+
+  list.i = function (modules, mediaQuery) {
+    if (typeof modules === 'string') {
+      modules = [[null, modules, '']];
+    }
+
+    var alreadyImportedModules = {};
+
+    for (var i = 0; i < this.length; i++) {
+      var id = this[i][0];
+
+      if (id != null) {
+        alreadyImportedModules[id] = true;
+      }
+    }
+
+    for (i = 0; i < modules.length; i++) {
+      var item = modules[i]; // skip already imported module
+      // this implementation is not 100% perfect for weird media query combinations
+      // when a module is imported multiple times with different media queries.
+      // I hope this will never occur (Hey this way we have smaller bundles)
+
+      if (item[0] == null || !alreadyImportedModules[item[0]]) {
+        if (mediaQuery && !item[2]) {
+          item[2] = mediaQuery;
+        } else if (mediaQuery) {
+          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';
+        }
+
+        list.push(item);
+      }
+    }
+  };
+
+  return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+  var content = item[1] || '';
+  var cssMapping = item[3];
+
+  if (!cssMapping) {
+    return content;
+  }
+
+  if (useSourceMap && typeof btoa === 'function') {
+    var sourceMapping = toComment(cssMapping);
+    var sourceURLs = cssMapping.sources.map(function (source) {
+      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';
+    });
+    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+  }
+
+  return [content].join('\n');
+} // Adapted from convert-source-map (MIT)
+
+
+function toComment(sourceMap) {
+  // eslint-disable-next-line no-undef
+  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+  return '/*# ' + data + ' */';
+}
 
 /***/ }),
 
@@ -138,7 +234,26 @@ eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../../css-loader/dist/cjs.js!./jquery-editable-select.css */ \"./node_modules/css-loader/dist/cjs.js!./node_modules/jquery-editable-select/dist/jquery-editable-select.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./node_modules/jquery-editable-select/dist/jquery-editable-select.css?");
+
+var content = __webpack_require__(/*! !../../css-loader/dist/cjs.js!./jquery-editable-select.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/jquery-editable-select/dist/jquery-editable-select.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -149,7 +264,8 @@ eval("\nvar content = __webpack_require__(/*! !../../css-loader/dist/cjs.js!./jq
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("/*! jQuery Editable Select - v2.2.5 - https://github.com/indrimuska/jquery-editable-select - (c) 2016 Indri Muska - MIT */\n+function(a){EditableSelect=function(b,c){this.options=c,this.$select=a(b),this.$input=a('<input type=\"text\" autocomplete=\"off\">'),this.$list=a('<ul class=\"es-list\">'),this.utility=new EditableSelectUtility(this),[\"focus\",\"manual\"].indexOf(this.options.trigger)<0&&(this.options.trigger=\"focus\"),[\"default\",\"fade\",\"slide\"].indexOf(this.options.effects)<0&&(this.options.effects=\"default\"),isNaN(this.options.duration)&&[\"fast\",\"slow\"].indexOf(this.options.duration)<0&&(this.options.duration=\"fast\"),this.$select.replaceWith(this.$input),this.$list.appendTo(this.options.appendTo||this.$input.parent()),this.utility.initialize(),this.utility.initializeList(),this.utility.initializeInput(),this.utility.trigger(\"created\")},EditableSelect.DEFAULTS={filter:!0,effects:\"default\",duration:\"fast\",trigger:\"focus\"},EditableSelect.prototype.filter=function(){var b=0,c=this.$input.val().toLowerCase().trim();this.$list.find(\"li\").addClass(\"es-visible\").show(),this.options.filter&&(b=this.$list.find(\"li\").filter(function(b,d){return a(d).text().toLowerCase().indexOf(c)<0}).hide().removeClass(\"es-visible\").length,this.$list.find(\"li\").length==b&&this.hide())},EditableSelect.prototype.show=function(){if(this.$list.css({top:this.$input.position().top+this.$input.outerHeight()-1,left:this.$input.position().left,width:this.$input.outerWidth()}),!this.$list.is(\":visible\")&&this.$list.find(\"li.es-visible\").length>0){var b={\"default\":\"show\",fade:\"fadeIn\",slide:\"slideDown\"},c=b[this.options.effects];this.utility.trigger(\"show\"),this.$input.addClass(\"open\"),this.$list[c](this.options.duration,a.proxy(this.utility.trigger,this.utility,\"shown\"))}},EditableSelect.prototype.hide=function(){var b={\"default\":\"hide\",fade:\"fadeOut\",slide:\"slideUp\"},c=b[this.options.effects];this.utility.trigger(\"hide\"),this.$input.removeClass(\"open\"),this.$list[c](this.options.duration,a.proxy(this.utility.trigger,this.utility,\"hidden\"))},EditableSelect.prototype.select=function(a){this.$list.has(a)&&a.is(\"li.es-visible:not([disabled])\")&&(this.$input.val(a.text()),this.options.filter&&this.hide(),this.filter(),this.utility.trigger(\"select\",a))},EditableSelect.prototype.add=function(b,c,d,e){var f=a(\"<li>\").html(b),g=a(\"<option>\").text(b),h=this.$list.find(\"li\").length;c=isNaN(c)?h:Math.min(Math.max(0,c),h),0==c?(this.$list.prepend(f),this.$select.prepend(g)):(this.$list.find(\"li\").eq(c-1).after(f),this.$select.find(\"option\").eq(c-1).after(g)),this.utility.setAttributes(f,d,e),this.utility.setAttributes(g,d,e),this.filter()},EditableSelect.prototype.remove=function(a){var b=this.$list.find(\"li\").length;a=isNaN(a)?b:Math.min(Math.max(0,a),b-1),this.$list.find(\"li\").eq(a).remove(),this.$select.find(\"option\").eq(a).remove(),this.filter()},EditableSelect.prototype.clear=function(){this.$list.find(\"li\").remove(),this.$select.find(\"option\").remove(),this.filter()},EditableSelect.prototype.destroy=function(){this.$list.off(\"mousemove mousedown mouseup\"),this.$input.off(\"focus blur input keydown\"),this.$input.replaceWith(this.$select),this.$list.remove(),this.$select.removeData(\"editable-select\")},EditableSelectUtility=function(a){this.es=a},EditableSelectUtility.prototype.initialize=function(){var b=this;b.setAttributes(b.es.$input,b.es.$select[0].attributes,b.es.$select.data()),b.es.$input.addClass(\"es-input\").data(\"editable-select\",b.es),b.es.$select.find(\"option\").each(function(c,d){var e=a(d).remove();b.es.add(e.text(),c,d.attributes,e.data()),e.attr(\"selected\")&&b.es.$input.val(e.text())}),b.es.filter()},EditableSelectUtility.prototype.initializeList=function(){var b=this;b.es.$list.on(\"mousemove\",\"li:not([disabled])\",function(){b.es.$list.find(\".selected\").removeClass(\"selected\"),a(this).addClass(\"selected\")}).on(\"mousedown\",\"li\",function(c){a(this).is(\"[disabled]\")?c.preventDefault():b.es.select(a(this))}).on(\"mouseup\",function(){b.es.$list.find(\"li.selected\").removeClass(\"selected\")})},EditableSelectUtility.prototype.initializeInput=function(){var b=this;switch(this.es.options.trigger){default:case\"focus\":b.es.$input.on(\"focus\",a.proxy(b.es.show,b.es)).on(\"blur\",a.proxy(b.es.hide,b.es));break;case\"manual\":}b.es.$input.on(\"input keydown\",function(a){switch(a.keyCode){case 38:var c=b.es.$list.find(\"li.es-visible:not([disabled])\"),d=c.index(c.filter(\"li.selected\"));b.highlight(d-1),a.preventDefault();break;case 40:var c=b.es.$list.find(\"li.es-visible:not([disabled])\"),d=c.index(c.filter(\"li.selected\"));b.highlight(d+1),a.preventDefault();break;case 13:b.es.$list.is(\":visible\")&&(b.es.select(b.es.$list.find(\"li.selected\")),a.preventDefault());break;case 9:case 27:b.es.hide();break;default:b.es.filter(),b.highlight(0)}})},EditableSelectUtility.prototype.highlight=function(a){var b=this;b.es.show(),setTimeout(function(){var c=b.es.$list.find(\"li.es-visible\"),d=b.es.$list.find(\"li.selected\").removeClass(\"selected\"),e=c.index(d);if(c.length>0){var f=(c.length+a)%c.length,g=c.eq(f),h=g.position().top;g.addClass(\"selected\"),f<e&&h<0&&b.es.$list.scrollTop(b.es.$list.scrollTop()+h),f>e&&h+g.outerHeight()>b.es.$list.outerHeight()&&b.es.$list.scrollTop(b.es.$list.scrollTop()+g.outerHeight()+2*(h-b.es.$list.outerHeight()))}})},EditableSelectUtility.prototype.setAttributes=function(b,c,d){a.each(c||{},function(a,c){b.attr(c.name,c.value)}),b.data(d)},EditableSelectUtility.prototype.trigger=function(a){var b=Array.prototype.slice.call(arguments,1),c=[a+\".editable-select\"];c.push(b),this.es.$select.trigger.apply(this.es.$select,c),this.es.$input.trigger.apply(this.es.$input,c)},Plugin=function(b){var c=Array.prototype.slice.call(arguments,1);return this.each(function(){var d=a(this),e=d.data(\"editable-select\"),f=a.extend({},EditableSelect.DEFAULTS,d.data(),\"object\"==typeof b&&b);e||(e=new EditableSelect(this,f)),\"string\"==typeof b&&e[b].apply(e,c)})},a.fn.editableSelect=Plugin,a.fn.editableSelect.Constructor=EditableSelect}(jQuery);\n\n//# sourceURL=webpack:///./node_modules/jquery-editable-select/dist/jquery-editable-select.min.js?");
+/*! jQuery Editable Select - v2.2.5 - https://github.com/indrimuska/jquery-editable-select - (c) 2016 Indri Muska - MIT */
++function(a){EditableSelect=function(b,c){this.options=c,this.$select=a(b),this.$input=a('<input type="text" autocomplete="off">'),this.$list=a('<ul class="es-list">'),this.utility=new EditableSelectUtility(this),["focus","manual"].indexOf(this.options.trigger)<0&&(this.options.trigger="focus"),["default","fade","slide"].indexOf(this.options.effects)<0&&(this.options.effects="default"),isNaN(this.options.duration)&&["fast","slow"].indexOf(this.options.duration)<0&&(this.options.duration="fast"),this.$select.replaceWith(this.$input),this.$list.appendTo(this.options.appendTo||this.$input.parent()),this.utility.initialize(),this.utility.initializeList(),this.utility.initializeInput(),this.utility.trigger("created")},EditableSelect.DEFAULTS={filter:!0,effects:"default",duration:"fast",trigger:"focus"},EditableSelect.prototype.filter=function(){var b=0,c=this.$input.val().toLowerCase().trim();this.$list.find("li").addClass("es-visible").show(),this.options.filter&&(b=this.$list.find("li").filter(function(b,d){return a(d).text().toLowerCase().indexOf(c)<0}).hide().removeClass("es-visible").length,this.$list.find("li").length==b&&this.hide())},EditableSelect.prototype.show=function(){if(this.$list.css({top:this.$input.position().top+this.$input.outerHeight()-1,left:this.$input.position().left,width:this.$input.outerWidth()}),!this.$list.is(":visible")&&this.$list.find("li.es-visible").length>0){var b={"default":"show",fade:"fadeIn",slide:"slideDown"},c=b[this.options.effects];this.utility.trigger("show"),this.$input.addClass("open"),this.$list[c](this.options.duration,a.proxy(this.utility.trigger,this.utility,"shown"))}},EditableSelect.prototype.hide=function(){var b={"default":"hide",fade:"fadeOut",slide:"slideUp"},c=b[this.options.effects];this.utility.trigger("hide"),this.$input.removeClass("open"),this.$list[c](this.options.duration,a.proxy(this.utility.trigger,this.utility,"hidden"))},EditableSelect.prototype.select=function(a){this.$list.has(a)&&a.is("li.es-visible:not([disabled])")&&(this.$input.val(a.text()),this.options.filter&&this.hide(),this.filter(),this.utility.trigger("select",a))},EditableSelect.prototype.add=function(b,c,d,e){var f=a("<li>").html(b),g=a("<option>").text(b),h=this.$list.find("li").length;c=isNaN(c)?h:Math.min(Math.max(0,c),h),0==c?(this.$list.prepend(f),this.$select.prepend(g)):(this.$list.find("li").eq(c-1).after(f),this.$select.find("option").eq(c-1).after(g)),this.utility.setAttributes(f,d,e),this.utility.setAttributes(g,d,e),this.filter()},EditableSelect.prototype.remove=function(a){var b=this.$list.find("li").length;a=isNaN(a)?b:Math.min(Math.max(0,a),b-1),this.$list.find("li").eq(a).remove(),this.$select.find("option").eq(a).remove(),this.filter()},EditableSelect.prototype.clear=function(){this.$list.find("li").remove(),this.$select.find("option").remove(),this.filter()},EditableSelect.prototype.destroy=function(){this.$list.off("mousemove mousedown mouseup"),this.$input.off("focus blur input keydown"),this.$input.replaceWith(this.$select),this.$list.remove(),this.$select.removeData("editable-select")},EditableSelectUtility=function(a){this.es=a},EditableSelectUtility.prototype.initialize=function(){var b=this;b.setAttributes(b.es.$input,b.es.$select[0].attributes,b.es.$select.data()),b.es.$input.addClass("es-input").data("editable-select",b.es),b.es.$select.find("option").each(function(c,d){var e=a(d).remove();b.es.add(e.text(),c,d.attributes,e.data()),e.attr("selected")&&b.es.$input.val(e.text())}),b.es.filter()},EditableSelectUtility.prototype.initializeList=function(){var b=this;b.es.$list.on("mousemove","li:not([disabled])",function(){b.es.$list.find(".selected").removeClass("selected"),a(this).addClass("selected")}).on("mousedown","li",function(c){a(this).is("[disabled]")?c.preventDefault():b.es.select(a(this))}).on("mouseup",function(){b.es.$list.find("li.selected").removeClass("selected")})},EditableSelectUtility.prototype.initializeInput=function(){var b=this;switch(this.es.options.trigger){default:case"focus":b.es.$input.on("focus",a.proxy(b.es.show,b.es)).on("blur",a.proxy(b.es.hide,b.es));break;case"manual":}b.es.$input.on("input keydown",function(a){switch(a.keyCode){case 38:var c=b.es.$list.find("li.es-visible:not([disabled])"),d=c.index(c.filter("li.selected"));b.highlight(d-1),a.preventDefault();break;case 40:var c=b.es.$list.find("li.es-visible:not([disabled])"),d=c.index(c.filter("li.selected"));b.highlight(d+1),a.preventDefault();break;case 13:b.es.$list.is(":visible")&&(b.es.select(b.es.$list.find("li.selected")),a.preventDefault());break;case 9:case 27:b.es.hide();break;default:b.es.filter(),b.highlight(0)}})},EditableSelectUtility.prototype.highlight=function(a){var b=this;b.es.show(),setTimeout(function(){var c=b.es.$list.find("li.es-visible"),d=b.es.$list.find("li.selected").removeClass("selected"),e=c.index(d);if(c.length>0){var f=(c.length+a)%c.length,g=c.eq(f),h=g.position().top;g.addClass("selected"),f<e&&h<0&&b.es.$list.scrollTop(b.es.$list.scrollTop()+h),f>e&&h+g.outerHeight()>b.es.$list.outerHeight()&&b.es.$list.scrollTop(b.es.$list.scrollTop()+g.outerHeight()+2*(h-b.es.$list.outerHeight()))}})},EditableSelectUtility.prototype.setAttributes=function(b,c,d){a.each(c||{},function(a,c){b.attr(c.name,c.value)}),b.data(d)},EditableSelectUtility.prototype.trigger=function(a){var b=Array.prototype.slice.call(arguments,1),c=[a+".editable-select"];c.push(b),this.es.$select.trigger.apply(this.es.$select,c),this.es.$input.trigger.apply(this.es.$input,c)},Plugin=function(b){var c=Array.prototype.slice.call(arguments,1);return this.each(function(){var d=a(this),e=d.data("editable-select"),f=a.extend({},EditableSelect.DEFAULTS,d.data(),"object"==typeof b&&b);e||(e=new EditableSelect(this,f)),"string"==typeof b&&e[b].apply(e,c)})},a.fn.editableSelect=Plugin,a.fn.editableSelect.Constructor=EditableSelect}(jQuery);
 
 /***/ }),
 
@@ -160,7 +276,405 @@ eval("/*! jQuery Editable Select - v2.2.5 - https://github.com/indrimuska/jquery
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\n\nvar stylesInDom = {};\n\nvar\tmemoize = function (fn) {\n\tvar memo;\n\n\treturn function () {\n\t\tif (typeof memo === \"undefined\") memo = fn.apply(this, arguments);\n\t\treturn memo;\n\t};\n};\n\nvar isOldIE = memoize(function () {\n\t// Test for IE <= 9 as proposed by Browserhacks\n\t// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805\n\t// Tests for existence of standard globals is to allow style-loader\n\t// to operate correctly into non-standard environments\n\t// @see https://github.com/webpack-contrib/style-loader/issues/177\n\treturn window && document && document.all && !window.atob;\n});\n\nvar getTarget = function (target, parent) {\n  if (parent){\n    return parent.querySelector(target);\n  }\n  return document.querySelector(target);\n};\n\nvar getElement = (function (fn) {\n\tvar memo = {};\n\n\treturn function(target, parent) {\n                // If passing function in options, then use it for resolve \"head\" element.\n                // Useful for Shadow Root style i.e\n                // {\n                //   insertInto: function () { return document.querySelector(\"#foo\").shadowRoot }\n                // }\n                if (typeof target === 'function') {\n                        return target();\n                }\n                if (typeof memo[target] === \"undefined\") {\n\t\t\tvar styleTarget = getTarget.call(this, target, parent);\n\t\t\t// Special case to return head of iframe instead of iframe itself\n\t\t\tif (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {\n\t\t\t\ttry {\n\t\t\t\t\t// This will throw an exception if access to iframe is blocked\n\t\t\t\t\t// due to cross-origin restrictions\n\t\t\t\t\tstyleTarget = styleTarget.contentDocument.head;\n\t\t\t\t} catch(e) {\n\t\t\t\t\tstyleTarget = null;\n\t\t\t\t}\n\t\t\t}\n\t\t\tmemo[target] = styleTarget;\n\t\t}\n\t\treturn memo[target]\n\t};\n})();\n\nvar singleton = null;\nvar\tsingletonCounter = 0;\nvar\tstylesInsertedAtTop = [];\n\nvar\tfixUrls = __webpack_require__(/*! ./urls */ \"./node_modules/style-loader/lib/urls.js\");\n\nmodule.exports = function(list, options) {\n\tif (typeof DEBUG !== \"undefined\" && DEBUG) {\n\t\tif (typeof document !== \"object\") throw new Error(\"The style-loader cannot be used in a non-browser environment\");\n\t}\n\n\toptions = options || {};\n\n\toptions.attrs = typeof options.attrs === \"object\" ? options.attrs : {};\n\n\t// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>\n\t// tags it will allow on a page\n\tif (!options.singleton && typeof options.singleton !== \"boolean\") options.singleton = isOldIE();\n\n\t// By default, add <style> tags to the <head> element\n        if (!options.insertInto) options.insertInto = \"head\";\n\n\t// By default, add <style> tags to the bottom of the target\n\tif (!options.insertAt) options.insertAt = \"bottom\";\n\n\tvar styles = listToStyles(list, options);\n\n\taddStylesToDom(styles, options);\n\n\treturn function update (newList) {\n\t\tvar mayRemove = [];\n\n\t\tfor (var i = 0; i < styles.length; i++) {\n\t\t\tvar item = styles[i];\n\t\t\tvar domStyle = stylesInDom[item.id];\n\n\t\t\tdomStyle.refs--;\n\t\t\tmayRemove.push(domStyle);\n\t\t}\n\n\t\tif(newList) {\n\t\t\tvar newStyles = listToStyles(newList, options);\n\t\t\taddStylesToDom(newStyles, options);\n\t\t}\n\n\t\tfor (var i = 0; i < mayRemove.length; i++) {\n\t\t\tvar domStyle = mayRemove[i];\n\n\t\t\tif(domStyle.refs === 0) {\n\t\t\t\tfor (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();\n\n\t\t\t\tdelete stylesInDom[domStyle.id];\n\t\t\t}\n\t\t}\n\t};\n};\n\nfunction addStylesToDom (styles, options) {\n\tfor (var i = 0; i < styles.length; i++) {\n\t\tvar item = styles[i];\n\t\tvar domStyle = stylesInDom[item.id];\n\n\t\tif(domStyle) {\n\t\t\tdomStyle.refs++;\n\n\t\t\tfor(var j = 0; j < domStyle.parts.length; j++) {\n\t\t\t\tdomStyle.parts[j](item.parts[j]);\n\t\t\t}\n\n\t\t\tfor(; j < item.parts.length; j++) {\n\t\t\t\tdomStyle.parts.push(addStyle(item.parts[j], options));\n\t\t\t}\n\t\t} else {\n\t\t\tvar parts = [];\n\n\t\t\tfor(var j = 0; j < item.parts.length; j++) {\n\t\t\t\tparts.push(addStyle(item.parts[j], options));\n\t\t\t}\n\n\t\t\tstylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};\n\t\t}\n\t}\n}\n\nfunction listToStyles (list, options) {\n\tvar styles = [];\n\tvar newStyles = {};\n\n\tfor (var i = 0; i < list.length; i++) {\n\t\tvar item = list[i];\n\t\tvar id = options.base ? item[0] + options.base : item[0];\n\t\tvar css = item[1];\n\t\tvar media = item[2];\n\t\tvar sourceMap = item[3];\n\t\tvar part = {css: css, media: media, sourceMap: sourceMap};\n\n\t\tif(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});\n\t\telse newStyles[id].parts.push(part);\n\t}\n\n\treturn styles;\n}\n\nfunction insertStyleElement (options, style) {\n\tvar target = getElement(options.insertInto)\n\n\tif (!target) {\n\t\tthrow new Error(\"Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.\");\n\t}\n\n\tvar lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];\n\n\tif (options.insertAt === \"top\") {\n\t\tif (!lastStyleElementInsertedAtTop) {\n\t\t\ttarget.insertBefore(style, target.firstChild);\n\t\t} else if (lastStyleElementInsertedAtTop.nextSibling) {\n\t\t\ttarget.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);\n\t\t} else {\n\t\t\ttarget.appendChild(style);\n\t\t}\n\t\tstylesInsertedAtTop.push(style);\n\t} else if (options.insertAt === \"bottom\") {\n\t\ttarget.appendChild(style);\n\t} else if (typeof options.insertAt === \"object\" && options.insertAt.before) {\n\t\tvar nextSibling = getElement(options.insertAt.before, target);\n\t\ttarget.insertBefore(style, nextSibling);\n\t} else {\n\t\tthrow new Error(\"[Style Loader]\\n\\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\\n Must be 'top', 'bottom', or Object.\\n (https://github.com/webpack-contrib/style-loader#insertat)\\n\");\n\t}\n}\n\nfunction removeStyleElement (style) {\n\tif (style.parentNode === null) return false;\n\tstyle.parentNode.removeChild(style);\n\n\tvar idx = stylesInsertedAtTop.indexOf(style);\n\tif(idx >= 0) {\n\t\tstylesInsertedAtTop.splice(idx, 1);\n\t}\n}\n\nfunction createStyleElement (options) {\n\tvar style = document.createElement(\"style\");\n\n\tif(options.attrs.type === undefined) {\n\t\toptions.attrs.type = \"text/css\";\n\t}\n\n\tif(options.attrs.nonce === undefined) {\n\t\tvar nonce = getNonce();\n\t\tif (nonce) {\n\t\t\toptions.attrs.nonce = nonce;\n\t\t}\n\t}\n\n\taddAttrs(style, options.attrs);\n\tinsertStyleElement(options, style);\n\n\treturn style;\n}\n\nfunction createLinkElement (options) {\n\tvar link = document.createElement(\"link\");\n\n\tif(options.attrs.type === undefined) {\n\t\toptions.attrs.type = \"text/css\";\n\t}\n\toptions.attrs.rel = \"stylesheet\";\n\n\taddAttrs(link, options.attrs);\n\tinsertStyleElement(options, link);\n\n\treturn link;\n}\n\nfunction addAttrs (el, attrs) {\n\tObject.keys(attrs).forEach(function (key) {\n\t\tel.setAttribute(key, attrs[key]);\n\t});\n}\n\nfunction getNonce() {\n\tif (false) {}\n\n\treturn __webpack_require__.nc;\n}\n\nfunction addStyle (obj, options) {\n\tvar style, update, remove, result;\n\n\t// If a transform function was defined, run it on the css\n\tif (options.transform && obj.css) {\n\t    result = typeof options.transform === 'function'\n\t\t ? options.transform(obj.css) \n\t\t : options.transform.default(obj.css);\n\n\t    if (result) {\n\t    \t// If transform returns a value, use that instead of the original css.\n\t    \t// This allows running runtime transformations on the css.\n\t    \tobj.css = result;\n\t    } else {\n\t    \t// If the transform function returns a falsy value, don't add this css.\n\t    \t// This allows conditional loading of css\n\t    \treturn function() {\n\t    \t\t// noop\n\t    \t};\n\t    }\n\t}\n\n\tif (options.singleton) {\n\t\tvar styleIndex = singletonCounter++;\n\n\t\tstyle = singleton || (singleton = createStyleElement(options));\n\n\t\tupdate = applyToSingletonTag.bind(null, style, styleIndex, false);\n\t\tremove = applyToSingletonTag.bind(null, style, styleIndex, true);\n\n\t} else if (\n\t\tobj.sourceMap &&\n\t\ttypeof URL === \"function\" &&\n\t\ttypeof URL.createObjectURL === \"function\" &&\n\t\ttypeof URL.revokeObjectURL === \"function\" &&\n\t\ttypeof Blob === \"function\" &&\n\t\ttypeof btoa === \"function\"\n\t) {\n\t\tstyle = createLinkElement(options);\n\t\tupdate = updateLink.bind(null, style, options);\n\t\tremove = function () {\n\t\t\tremoveStyleElement(style);\n\n\t\t\tif(style.href) URL.revokeObjectURL(style.href);\n\t\t};\n\t} else {\n\t\tstyle = createStyleElement(options);\n\t\tupdate = applyToTag.bind(null, style);\n\t\tremove = function () {\n\t\t\tremoveStyleElement(style);\n\t\t};\n\t}\n\n\tupdate(obj);\n\n\treturn function updateStyle (newObj) {\n\t\tif (newObj) {\n\t\t\tif (\n\t\t\t\tnewObj.css === obj.css &&\n\t\t\t\tnewObj.media === obj.media &&\n\t\t\t\tnewObj.sourceMap === obj.sourceMap\n\t\t\t) {\n\t\t\t\treturn;\n\t\t\t}\n\n\t\t\tupdate(obj = newObj);\n\t\t} else {\n\t\t\tremove();\n\t\t}\n\t};\n}\n\nvar replaceText = (function () {\n\tvar textStore = [];\n\n\treturn function (index, replacement) {\n\t\ttextStore[index] = replacement;\n\n\t\treturn textStore.filter(Boolean).join('\\n');\n\t};\n})();\n\nfunction applyToSingletonTag (style, index, remove, obj) {\n\tvar css = remove ? \"\" : obj.css;\n\n\tif (style.styleSheet) {\n\t\tstyle.styleSheet.cssText = replaceText(index, css);\n\t} else {\n\t\tvar cssNode = document.createTextNode(css);\n\t\tvar childNodes = style.childNodes;\n\n\t\tif (childNodes[index]) style.removeChild(childNodes[index]);\n\n\t\tif (childNodes.length) {\n\t\t\tstyle.insertBefore(cssNode, childNodes[index]);\n\t\t} else {\n\t\t\tstyle.appendChild(cssNode);\n\t\t}\n\t}\n}\n\nfunction applyToTag (style, obj) {\n\tvar css = obj.css;\n\tvar media = obj.media;\n\n\tif(media) {\n\t\tstyle.setAttribute(\"media\", media)\n\t}\n\n\tif(style.styleSheet) {\n\t\tstyle.styleSheet.cssText = css;\n\t} else {\n\t\twhile(style.firstChild) {\n\t\t\tstyle.removeChild(style.firstChild);\n\t\t}\n\n\t\tstyle.appendChild(document.createTextNode(css));\n\t}\n}\n\nfunction updateLink (link, options, obj) {\n\tvar css = obj.css;\n\tvar sourceMap = obj.sourceMap;\n\n\t/*\n\t\tIf convertToAbsoluteUrls isn't defined, but sourcemaps are enabled\n\t\tand there is no publicPath defined then lets turn convertToAbsoluteUrls\n\t\ton by default.  Otherwise default to the convertToAbsoluteUrls option\n\t\tdirectly\n\t*/\n\tvar autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;\n\n\tif (options.convertToAbsoluteUrls || autoFixUrls) {\n\t\tcss = fixUrls(css);\n\t}\n\n\tif (sourceMap) {\n\t\t// http://stackoverflow.com/a/26603875\n\t\tcss += \"\\n/*# sourceMappingURL=data:application/json;base64,\" + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + \" */\";\n\t}\n\n\tvar blob = new Blob([css], { type: \"text/css\" });\n\n\tvar oldSrc = link.href;\n\n\tlink.href = URL.createObjectURL(blob);\n\n\tif(oldSrc) URL.revokeObjectURL(oldSrc);\n}\n\n\n//# sourceURL=webpack:///./node_modules/style-loader/lib/addStyles.js?");
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+
+var stylesInDom = {};
+
+var	memoize = function (fn) {
+	var memo;
+
+	return function () {
+		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+		return memo;
+	};
+};
+
+var isOldIE = memoize(function () {
+	// Test for IE <= 9 as proposed by Browserhacks
+	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+	// Tests for existence of standard globals is to allow style-loader
+	// to operate correctly into non-standard environments
+	// @see https://github.com/webpack-contrib/style-loader/issues/177
+	return window && document && document.all && !window.atob;
+});
+
+var getTarget = function (target, parent) {
+  if (parent){
+    return parent.querySelector(target);
+  }
+  return document.querySelector(target);
+};
+
+var getElement = (function (fn) {
+	var memo = {};
+
+	return function(target, parent) {
+                // If passing function in options, then use it for resolve "head" element.
+                // Useful for Shadow Root style i.e
+                // {
+                //   insertInto: function () { return document.querySelector("#foo").shadowRoot }
+                // }
+                if (typeof target === 'function') {
+                        return target();
+                }
+                if (typeof memo[target] === "undefined") {
+			var styleTarget = getTarget.call(this, target, parent);
+			// Special case to return head of iframe instead of iframe itself
+			if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+				try {
+					// This will throw an exception if access to iframe is blocked
+					// due to cross-origin restrictions
+					styleTarget = styleTarget.contentDocument.head;
+				} catch(e) {
+					styleTarget = null;
+				}
+			}
+			memo[target] = styleTarget;
+		}
+		return memo[target]
+	};
+})();
+
+var singleton = null;
+var	singletonCounter = 0;
+var	stylesInsertedAtTop = [];
+
+var	fixUrls = __webpack_require__(/*! ./urls */ "./node_modules/style-loader/lib/urls.js");
+
+module.exports = function(list, options) {
+	if (typeof DEBUG !== "undefined" && DEBUG) {
+		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+	}
+
+	options = options || {};
+
+	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
+
+	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+	// tags it will allow on a page
+	if (!options.singleton && typeof options.singleton !== "boolean") options.singleton = isOldIE();
+
+	// By default, add <style> tags to the <head> element
+        if (!options.insertInto) options.insertInto = "head";
+
+	// By default, add <style> tags to the bottom of the target
+	if (!options.insertAt) options.insertAt = "bottom";
+
+	var styles = listToStyles(list, options);
+
+	addStylesToDom(styles, options);
+
+	return function update (newList) {
+		var mayRemove = [];
+
+		for (var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+
+			domStyle.refs--;
+			mayRemove.push(domStyle);
+		}
+
+		if(newList) {
+			var newStyles = listToStyles(newList, options);
+			addStylesToDom(newStyles, options);
+		}
+
+		for (var i = 0; i < mayRemove.length; i++) {
+			var domStyle = mayRemove[i];
+
+			if(domStyle.refs === 0) {
+				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
+
+				delete stylesInDom[domStyle.id];
+			}
+		}
+	};
+};
+
+function addStylesToDom (styles, options) {
+	for (var i = 0; i < styles.length; i++) {
+		var item = styles[i];
+		var domStyle = stylesInDom[item.id];
+
+		if(domStyle) {
+			domStyle.refs++;
+
+			for(var j = 0; j < domStyle.parts.length; j++) {
+				domStyle.parts[j](item.parts[j]);
+			}
+
+			for(; j < item.parts.length; j++) {
+				domStyle.parts.push(addStyle(item.parts[j], options));
+			}
+		} else {
+			var parts = [];
+
+			for(var j = 0; j < item.parts.length; j++) {
+				parts.push(addStyle(item.parts[j], options));
+			}
+
+			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+		}
+	}
+}
+
+function listToStyles (list, options) {
+	var styles = [];
+	var newStyles = {};
+
+	for (var i = 0; i < list.length; i++) {
+		var item = list[i];
+		var id = options.base ? item[0] + options.base : item[0];
+		var css = item[1];
+		var media = item[2];
+		var sourceMap = item[3];
+		var part = {css: css, media: media, sourceMap: sourceMap};
+
+		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
+		else newStyles[id].parts.push(part);
+	}
+
+	return styles;
+}
+
+function insertStyleElement (options, style) {
+	var target = getElement(options.insertInto)
+
+	if (!target) {
+		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
+	}
+
+	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
+
+	if (options.insertAt === "top") {
+		if (!lastStyleElementInsertedAtTop) {
+			target.insertBefore(style, target.firstChild);
+		} else if (lastStyleElementInsertedAtTop.nextSibling) {
+			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
+		} else {
+			target.appendChild(style);
+		}
+		stylesInsertedAtTop.push(style);
+	} else if (options.insertAt === "bottom") {
+		target.appendChild(style);
+	} else if (typeof options.insertAt === "object" && options.insertAt.before) {
+		var nextSibling = getElement(options.insertAt.before, target);
+		target.insertBefore(style, nextSibling);
+	} else {
+		throw new Error("[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n");
+	}
+}
+
+function removeStyleElement (style) {
+	if (style.parentNode === null) return false;
+	style.parentNode.removeChild(style);
+
+	var idx = stylesInsertedAtTop.indexOf(style);
+	if(idx >= 0) {
+		stylesInsertedAtTop.splice(idx, 1);
+	}
+}
+
+function createStyleElement (options) {
+	var style = document.createElement("style");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+
+	if(options.attrs.nonce === undefined) {
+		var nonce = getNonce();
+		if (nonce) {
+			options.attrs.nonce = nonce;
+		}
+	}
+
+	addAttrs(style, options.attrs);
+	insertStyleElement(options, style);
+
+	return style;
+}
+
+function createLinkElement (options) {
+	var link = document.createElement("link");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+	options.attrs.rel = "stylesheet";
+
+	addAttrs(link, options.attrs);
+	insertStyleElement(options, link);
+
+	return link;
+}
+
+function addAttrs (el, attrs) {
+	Object.keys(attrs).forEach(function (key) {
+		el.setAttribute(key, attrs[key]);
+	});
+}
+
+function getNonce() {
+	if (false) {}
+
+	return __webpack_require__.nc;
+}
+
+function addStyle (obj, options) {
+	var style, update, remove, result;
+
+	// If a transform function was defined, run it on the css
+	if (options.transform && obj.css) {
+	    result = typeof options.transform === 'function'
+		 ? options.transform(obj.css) 
+		 : options.transform.default(obj.css);
+
+	    if (result) {
+	    	// If transform returns a value, use that instead of the original css.
+	    	// This allows running runtime transformations on the css.
+	    	obj.css = result;
+	    } else {
+	    	// If the transform function returns a falsy value, don't add this css.
+	    	// This allows conditional loading of css
+	    	return function() {
+	    		// noop
+	    	};
+	    }
+	}
+
+	if (options.singleton) {
+		var styleIndex = singletonCounter++;
+
+		style = singleton || (singleton = createStyleElement(options));
+
+		update = applyToSingletonTag.bind(null, style, styleIndex, false);
+		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+
+	} else if (
+		obj.sourceMap &&
+		typeof URL === "function" &&
+		typeof URL.createObjectURL === "function" &&
+		typeof URL.revokeObjectURL === "function" &&
+		typeof Blob === "function" &&
+		typeof btoa === "function"
+	) {
+		style = createLinkElement(options);
+		update = updateLink.bind(null, style, options);
+		remove = function () {
+			removeStyleElement(style);
+
+			if(style.href) URL.revokeObjectURL(style.href);
+		};
+	} else {
+		style = createStyleElement(options);
+		update = applyToTag.bind(null, style);
+		remove = function () {
+			removeStyleElement(style);
+		};
+	}
+
+	update(obj);
+
+	return function updateStyle (newObj) {
+		if (newObj) {
+			if (
+				newObj.css === obj.css &&
+				newObj.media === obj.media &&
+				newObj.sourceMap === obj.sourceMap
+			) {
+				return;
+			}
+
+			update(obj = newObj);
+		} else {
+			remove();
+		}
+	};
+}
+
+var replaceText = (function () {
+	var textStore = [];
+
+	return function (index, replacement) {
+		textStore[index] = replacement;
+
+		return textStore.filter(Boolean).join('\n');
+	};
+})();
+
+function applyToSingletonTag (style, index, remove, obj) {
+	var css = remove ? "" : obj.css;
+
+	if (style.styleSheet) {
+		style.styleSheet.cssText = replaceText(index, css);
+	} else {
+		var cssNode = document.createTextNode(css);
+		var childNodes = style.childNodes;
+
+		if (childNodes[index]) style.removeChild(childNodes[index]);
+
+		if (childNodes.length) {
+			style.insertBefore(cssNode, childNodes[index]);
+		} else {
+			style.appendChild(cssNode);
+		}
+	}
+}
+
+function applyToTag (style, obj) {
+	var css = obj.css;
+	var media = obj.media;
+
+	if(media) {
+		style.setAttribute("media", media)
+	}
+
+	if(style.styleSheet) {
+		style.styleSheet.cssText = css;
+	} else {
+		while(style.firstChild) {
+			style.removeChild(style.firstChild);
+		}
+
+		style.appendChild(document.createTextNode(css));
+	}
+}
+
+function updateLink (link, options, obj) {
+	var css = obj.css;
+	var sourceMap = obj.sourceMap;
+
+	/*
+		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
+		and there is no publicPath defined then lets turn convertToAbsoluteUrls
+		on by default.  Otherwise default to the convertToAbsoluteUrls option
+		directly
+	*/
+	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
+
+	if (options.convertToAbsoluteUrls || autoFixUrls) {
+		css = fixUrls(css);
+	}
+
+	if (sourceMap) {
+		// http://stackoverflow.com/a/26603875
+		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+	}
+
+	var blob = new Blob([css], { type: "text/css" });
+
+	var oldSrc = link.href;
+
+	link.href = URL.createObjectURL(blob);
+
+	if(oldSrc) URL.revokeObjectURL(oldSrc);
+}
+
 
 /***/ }),
 
@@ -171,7 +685,96 @@ eval("/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element with a data-uri to\n * embed the css on the page. This breaks all relative urls because now they are relative to a\n * bundle instead of the current page.\n *\n * One solution is to only use full urls, but that may be impossible.\n *\n * Instead, this function \"fixes\" the relative urls to be absolute according to the current page location.\n *\n * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.\n *\n */\n\nmodule.exports = function (css) {\n  // get current location\n  var location = typeof window !== \"undefined\" && window.location;\n\n  if (!location) {\n    throw new Error(\"fixUrls requires window.location\");\n  }\n\n\t// blank or null?\n\tif (!css || typeof css !== \"string\") {\n\t  return css;\n  }\n\n  var baseUrl = location.protocol + \"//\" + location.host;\n  var currentDir = baseUrl + location.pathname.replace(/\\/[^\\/]*$/, \"/\");\n\n\t// convert each url(...)\n\t/*\n\tThis regular expression is just a way to recursively match brackets within\n\ta string.\n\n\t /url\\s*\\(  = Match on the word \"url\" with any whitespace after it and then a parens\n\t   (  = Start a capturing group\n\t     (?:  = Start a non-capturing group\n\t         [^)(]  = Match anything that isn't a parentheses\n\t         |  = OR\n\t         \\(  = Match a start parentheses\n\t             (?:  = Start another non-capturing groups\n\t                 [^)(]+  = Match anything that isn't a parentheses\n\t                 |  = OR\n\t                 \\(  = Match a start parentheses\n\t                     [^)(]*  = Match anything that isn't a parentheses\n\t                 \\)  = Match a end parentheses\n\t             )  = End Group\n              *\\) = Match anything and then a close parens\n          )  = Close non-capturing group\n          *  = Match anything\n       )  = Close capturing group\n\t \\)  = Match a close parens\n\n\t /gi  = Get all matches, not the first.  Be case insensitive.\n\t */\n\tvar fixedCss = css.replace(/url\\s*\\(((?:[^)(]|\\((?:[^)(]+|\\([^)(]*\\))*\\))*)\\)/gi, function(fullMatch, origUrl) {\n\t\t// strip quotes (if they exist)\n\t\tvar unquotedOrigUrl = origUrl\n\t\t\t.trim()\n\t\t\t.replace(/^\"(.*)\"$/, function(o, $1){ return $1; })\n\t\t\t.replace(/^'(.*)'$/, function(o, $1){ return $1; });\n\n\t\t// already a full url? no change\n\t\tif (/^(#|data:|http:\\/\\/|https:\\/\\/|file:\\/\\/\\/|\\s*$)/i.test(unquotedOrigUrl)) {\n\t\t  return fullMatch;\n\t\t}\n\n\t\t// convert the url to a full url\n\t\tvar newUrl;\n\n\t\tif (unquotedOrigUrl.indexOf(\"//\") === 0) {\n\t\t  \t//TODO: should we add protocol?\n\t\t\tnewUrl = unquotedOrigUrl;\n\t\t} else if (unquotedOrigUrl.indexOf(\"/\") === 0) {\n\t\t\t// path should be relative to the base url\n\t\t\tnewUrl = baseUrl + unquotedOrigUrl; // already starts with '/'\n\t\t} else {\n\t\t\t// path should be relative to current directory\n\t\t\tnewUrl = currentDir + unquotedOrigUrl.replace(/^\\.\\//, \"\"); // Strip leading './'\n\t\t}\n\n\t\t// send back the fixed url(...)\n\t\treturn \"url(\" + JSON.stringify(newUrl) + \")\";\n\t});\n\n\t// send back the fixed css\n\treturn fixedCss;\n};\n\n\n//# sourceURL=webpack:///./node_modules/style-loader/lib/urls.js?");
+
+/**
+ * When source maps are enabled, `style-loader` uses a link element with a data-uri to
+ * embed the css on the page. This breaks all relative urls because now they are relative to a
+ * bundle instead of the current page.
+ *
+ * One solution is to only use full urls, but that may be impossible.
+ *
+ * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
+ *
+ * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
+ *
+ */
+
+module.exports = function (css) {
+  // get current location
+  var location = typeof window !== "undefined" && window.location;
+
+  if (!location) {
+    throw new Error("fixUrls requires window.location");
+  }
+
+	// blank or null?
+	if (!css || typeof css !== "string") {
+	  return css;
+  }
+
+  var baseUrl = location.protocol + "//" + location.host;
+  var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
+
+	// convert each url(...)
+	/*
+	This regular expression is just a way to recursively match brackets within
+	a string.
+
+	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
+	   (  = Start a capturing group
+	     (?:  = Start a non-capturing group
+	         [^)(]  = Match anything that isn't a parentheses
+	         |  = OR
+	         \(  = Match a start parentheses
+	             (?:  = Start another non-capturing groups
+	                 [^)(]+  = Match anything that isn't a parentheses
+	                 |  = OR
+	                 \(  = Match a start parentheses
+	                     [^)(]*  = Match anything that isn't a parentheses
+	                 \)  = Match a end parentheses
+	             )  = End Group
+              *\) = Match anything and then a close parens
+          )  = Close non-capturing group
+          *  = Match anything
+       )  = Close capturing group
+	 \)  = Match a close parens
+
+	 /gi  = Get all matches, not the first.  Be case insensitive.
+	 */
+	var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function(fullMatch, origUrl) {
+		// strip quotes (if they exist)
+		var unquotedOrigUrl = origUrl
+			.trim()
+			.replace(/^"(.*)"$/, function(o, $1){ return $1; })
+			.replace(/^'(.*)'$/, function(o, $1){ return $1; });
+
+		// already a full url? no change
+		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/|\s*$)/i.test(unquotedOrigUrl)) {
+		  return fullMatch;
+		}
+
+		// convert the url to a full url
+		var newUrl;
+
+		if (unquotedOrigUrl.indexOf("//") === 0) {
+		  	//TODO: should we add protocol?
+			newUrl = unquotedOrigUrl;
+		} else if (unquotedOrigUrl.indexOf("/") === 0) {
+			// path should be relative to the base url
+			newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
+		} else {
+			// path should be relative to current directory
+			newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
+		}
+
+		// send back the fixed url(...)
+		return "url(" + JSON.stringify(newUrl) + ")";
+	});
+
+	// send back the fixed css
+	return fixedCss;
+};
+
 
 /***/ }),
 
@@ -182,7 +785,26 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./base.css */ \"./node_modules/css-loader/dist/cjs.js!./src/css/base.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/css/base.css?");
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./base.css */ "./node_modules/css-loader/dist/cjs.js!./src/css/base.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -193,7 +815,26 @@ eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dis
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./new-event.css */ \"./node_modules/css-loader/dist/cjs.js!./src/css/new-event.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/css/new-event.css?");
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./new-event.css */ "./node_modules/css-loader/dist/cjs.js!./src/css/new-event.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -201,11 +842,98 @@ eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dis
 /*!******************************!*\
   !*** ./src/js/lib/common.js ***!
   \******************************/
-/*! exports provided: default */
+/*! exports provided: formatDate, formatTime, uniqId, uniqArr, hash, validateOnBlur */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction formatDate(dt) {\r\n    var year = dt.getFullYear();\r\n    var month = dt.getMonth() + 1;\r\n    var day = dt.getDate();\r\n    return year + '-' + (month > 9 ? month : '0' + month) + '-' + (day > 9 ? day : '0' + day);\r\n  }\r\n\r\nfunction formatTime(h, m) {\r\n    return (h > 9 ? h : '0' + h) + ':' + (m > 9 ? m : '0' + m);\r\n}\r\n\r\nfunction uniqId() {\r\n  return Math.round(new Date().getTime() + (Math.random() * 100));\r\n}\r\n\r\nfunction uniqArr(a) {\r\n  var seen = {};\r\n  return a.filter(function(item) {\r\n      return seen.hasOwnProperty(item) ? false : (seen[item] = true);\r\n  });\r\n}\r\n\r\nfunction validateOnBlur(selector) {    \r\n  $(selector).filter(':visible')\r\n    .blur(function () {\r\n      if (this.checkValidity())\r\n        $(this).removeClass(\"invalid\");\r\n      else\r\n        $(this).addClass(\"invalid\");\r\n    });\r\n  }\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ({ formatDate, formatTime, uniqId, uniqArr, validateOnBlur });\n\n//# sourceURL=webpack:///./src/js/lib/common.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatDate", function() { return formatDate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatTime", function() { return formatTime; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uniqId", function() { return uniqId; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uniqArr", function() { return uniqArr; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hash", function() { return hash; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validateOnBlur", function() { return validateOnBlur; });
+function formatDate(dt) {
+    var year = dt.getFullYear();
+    var month = dt.getMonth() + 1;
+    var day = dt.getDate();
+    return year + '-' + (month > 9 ? month : '0' + month) + '-' + (day > 9 ? day : '0' + day);
+  }
+
+function formatTime(h, m) {
+    return (h > 9 ? h : '0' + h) + ':' + (m > 9 ? m : '0' + m);
+}
+
+function uniqId() {
+  return Math.round(new Date().getTime() + (Math.random() * 100));
+}
+
+function uniqArr(a) {
+  var seen = {};
+  return a.filter(function(item) {
+      return seen.hasOwnProperty(item) ? false : (seen[item] = true);
+  });
+}
+
+function hexString(buffer) {
+  // convert hash to byte array
+  var byteArray = new Uint8Array(buffer); 
+  var hashArray = [].slice.call(byteArray);
+  // convert bytes to hex string
+  var hashHex = hashArray.map(function(value) {
+    return ('00' + value.toString(16)).slice(-2);
+  });
+  return hashHex.join('');
+}
+
+//not for long strings
+function utf8encode_ie(str) {
+  var strUtf8 = unescape(encodeURIComponent(str));
+  var arr = new Uint8Array(strUtf8.length);
+  for (var i = 0; i < strUtf8.length; i++) {
+      arr[i] = strUtf8.charCodeAt(i);
+  }
+  return arr;
+}
+
+function textEncode(msg) {
+  if (window.TextEncoder) {
+    return new TextEncoder('utf-8').encode(msg);
+  }
+  //for IE:
+  return utf8encode_ie(msg);
+}
+
+function hash(message) {
+  const data = textEncode(message);
+  
+  var cryptoObj = window.crypto || window.msCrypto; // IE11
+  var digest = cryptoObj.subtle.digest('SHA-256', data);
+  
+  if (digest.oncomplete !== undefined) { //IE
+    digest.oncomplete = function(evt) { 
+      return hexString(evt.target.result); // message digest as ArrayBuffer
+    };
+    return digest;
+  } 
+  else { //all except IE
+    return digest.then(function(value){
+      return hexString(value);
+    });    
+  }  
+}
+
+function validateOnBlur(selector) {    
+  $(selector).filter(':visible')
+    .blur(function () {
+      if (this.checkValidity())
+        $(this).removeClass("invalid");
+      else
+        $(this).addClass("invalid");
+    });
+  }
+
+
 
 /***/ }),
 
@@ -213,11 +941,36 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction formatDate(dt) {\r\n
 /*!********************************!*\
   !*** ./src/js/lib/estorage.js ***!
   \********************************/
-/*! exports provided: default */
+/*! exports provided: supports_local_storage, get_from_storage, save_to_storage */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction supports_local_storage() {\r\n    try {\r\n      return 'localStorage' in window && window['localStorage'] !== null;\r\n    } catch(e){\r\n      return false;\r\n    }\r\n}\r\n  \r\nfunction get_from_storage(itemName) {\r\n    var json = localStorage.getItem(itemName);\r\n    var items = [];\r\n    if (json !== undefined && json !== null && json.length !== 0)\r\n        items = JSON.parse(json);\r\n\r\n    return items;\r\n}\r\n\r\nfunction save_to_storage(itemName, obj) {\r\n    localStorage.setItem(itemName, JSON.stringify(obj));\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ({ supports_local_storage, get_from_storage, save_to_storage });\n\n//# sourceURL=webpack:///./src/js/lib/estorage.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "supports_local_storage", function() { return supports_local_storage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "get_from_storage", function() { return get_from_storage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "save_to_storage", function() { return save_to_storage; });
+function supports_local_storage() {
+    try {
+      return 'localStorage' in window && window['localStorage'] !== null;
+    } catch(e){
+      return false;
+    }
+}
+  
+function get_from_storage(itemName) {
+    var json = localStorage.getItem(itemName);
+    var items = [];
+    if (json !== undefined && json !== null && json.length !== 0)
+        items = JSON.parse(json);
+
+    return items;
+}
+
+function save_to_storage(itemName, obj) {
+    localStorage.setItem(itemName, JSON.stringify(obj));
+}
+
+
 
 /***/ }),
 
@@ -229,7 +982,210 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction supports_local_stora
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery_editable_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery-editable-select */ \"./node_modules/jquery-editable-select/dist/jquery-editable-select.min.js\");\n/* harmony import */ var jquery_editable_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_editable_select__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/estorage.js */ \"./src/js/lib/estorage.js\");\n/* harmony import */ var _lib_common_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/common.js */ \"./src/js/lib/common.js\");\n//The import and export statements have been standardized in ES2015. Although they are not supported in most browsers yet, webpack does support them out of the box.\r\n\r\n\r\n\r\n\r\n__webpack_require__(/*! jquery-editable-select/dist/jquery-editable-select.css */ \"./node_modules/jquery-editable-select/dist/jquery-editable-select.css\");\r\n__webpack_require__(/*! ../css/base.css */ \"./src/css/base.css\");\r\n__webpack_require__(/*! ../css/new-event.css */ \"./src/css/new-event.css\");\r\n\r\n//help functions\r\nfunction isValidDate(d) {\r\n  return d instanceof Date && !isNaN(d);\r\n}\r\n\r\nfunction checkType() {  \r\n  var types = _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].get_from_storage('evt-types');\r\n  var tested = $(\"#event-type\").val();\r\n  if ($.inArray(tested, types) === -1)\r\n    types.push(tested);\r\n\r\n  _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].save_to_storage('evt-types', types);\r\n}\r\n\r\nfunction composeDatetime(parent) {\r\n  var d = parent.find(\".date\").first().val();\r\n  var t = parent.find(\".time\").first().val();\r\n  return d + \"T\" + t + \":00\";\r\n}\r\n\r\nfunction saveEventDetails() {\r\n  var events = _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].get_from_storage('events');\r\n  var evt = {};\r\n  $(\".form input,textarea:visible\").not(\".date,.time\").each(function () {\r\n    evt[$(this).attr('id')] = $(this).val();\r\n    evt[\"uid\"] = _lib_common_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].uniqId();\r\n  });\r\n  \r\n  //dates\r\n  evt[\"event-start\"] = composeDatetime($(\".form .event-start\"));\r\n  evt[\"event-end\"] = composeDatetime($(\".form .event-end\"));\r\n\r\n  events.push(evt);\r\n  _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].save_to_storage('events', events);\r\n}\r\n\r\n\r\n\r\n\r\n//on load\r\n$(function () {\r\n  var eType = $('#event-type');  \r\n\r\n  var startDInput = $('.event-start .date');\r\n  var endDInput = $('.event-end .date');\r\n  var startTInput = $('.event-start .time');\r\n  var endTInput = $('.event-end .time');\r\n\r\n  var submit = $('#submit');\r\n  var errmsg = $(\"#err-msg\");\r\n\r\n  //set event type options\r\n  if (checkStorage())\r\n    fillEventTypes(eType);\r\n\r\n  eType.editableSelect();\r\n  $('#event-type.es-input').attr('placeholder', 'Choose or enter event type');\r\n\r\n  setDefaultDateTime();\r\n  setDateTimeCheckers();\r\n\r\n  //validate on blur\r\n  _lib_common_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].validateOnBlur('.form input,textarea,select');  \r\n\r\n  //validate and save event\r\n  submit.click(function () {\r\n    errmsg.val(\"\");\r\n    $(\".form\").addClass(\"submitted\");\r\n\r\n    if ($(\".form :invalid\").length > 0) {\r\n      errmsg.val(\"Please, fill required fields\");\r\n    }\r\n    else {\r\n      if (!checkStorage())\r\n        return;\r\n\r\n      checkType();\r\n      saveEventDetails();\r\n      location.href = 'events.html';\r\n    }\r\n\r\n    return false;\r\n  });\r\n\r\n  /*********functions*****************/\r\n  function fillEventTypes(el) {\r\n    var types = _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].get_from_storage('evt-types');\r\n    $.each(types, function (i, t) {\r\n      el.append($(\"<option></option>\")\r\n        .attr(\"value\", t)\r\n        .text(t));\r\n    });\r\n  }\r\n\r\n  function setDefaultDateTime() {\r\n    var start = new Date();\r\n    var end = new Date();\r\n    start.setHours(start.getHours() + 1); //next hour for default event start time\r\n    end.setHours(end.getHours() + 2);\r\n\r\n    var frmStart = _lib_common_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].formatDate(start);\r\n    startDInput.val(frmStart).attr('min', frmStart);\r\n    endDInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].formatDate(end)).attr('min', frmStart);\r\n    startTInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].formatTime(start.getHours(), 0));\r\n    endTInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].formatTime(end.getHours(), 0));\r\n  }\r\n\r\n  function setDateTimeCheckers() {\r\n    startDInput.blur(function () {\r\n      checkMinValue(startDInput, startTInput);\r\n      checkEndDatetime();\r\n    });\r\n\r\n    startTInput.blur(function () {\r\n      checkMinValue(startDInput, startTInput);\r\n      checkEndDatetime();\r\n    });\r\n\r\n    endDInput.blur(function () {\r\n      checkMinValue(endDInput, endTInput);\r\n      checkEndDatetime();\r\n    });\r\n\r\n    endTInput.blur(function () {\r\n      checkMinValue(endDInput, endTInput);\r\n      checkEndDatetime();\r\n    });\r\n  }\r\n  function checkEndDatetime() {\r\n    var dtStart = getAndFixDateFrom(startDInput, startTInput);\r\n    var dtEnd = getAndFixDateFrom(endDInput, endTInput);\r\n\r\n    if (dtEnd !== undefined && dtEnd < dtStart) {\r\n      dtEnd = dtStart;\r\n      var frmEnd = _lib_common_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].formatDate(dtEnd);\r\n      endDInput.val(frmEnd).attr('min', _lib_common_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].formatDate(dtStart));\r\n      endTInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].formatTime(dtEnd.getHours(), dtEnd.getMinutes()));\r\n    }\r\n  }\r\n\r\n  function getAndFixDateFrom(dateInput, timeInput) {\r\n    var dt = new Date(dateInput.val());\r\n\r\n    if (!isValidDate(dt)) {\r\n      if (dateInput.prop('required')) {\r\n        dt = new Date();\r\n        dt.setMinutes(dt.getMinutes() + 1);\r\n        dateInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].formatDate(dt));\r\n      }\r\n      else {\r\n        dt = undefined;\r\n        dateInput.val('');\r\n      }\r\n    }\r\n\r\n    var t = (timeInput.val() === '' || timeInput.val() === undefined) ? [0, 0] : timeInput.val().split(':');\r\n    if (t.length != 2 || t[0].length != 2 || t[1].length != 2) {\r\n      if (timeInput.prop('required')) {\r\n        timeInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].formatTime(0, 0));\r\n      }\r\n      else {\r\n        timeInput.val('');\r\n      }\r\n      t = [0, 0];\r\n    }\r\n    if (dt !== undefined)\r\n      dt.setHours(t[0], t[1]);\r\n\r\n    return dt;\r\n  }\r\n\r\n  function checkMinValue(dateInput, timeInput) {\r\n    var now = new Date();\r\n    var dt = getAndFixDateFrom(dateInput, timeInput);\r\n    if (dt !== undefined && dt < now) {\r\n      dateInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].formatDate(now));\r\n      timeInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].formatTime(now.getHours(), now.getMinutes()));\r\n    }\r\n  }\r\n\r\n  function checkStorage() {\r\n    if (!_lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].supports_local_storage()) {\r\n      errmsg.val(\"Please, try another browser\");\r\n      return false;\r\n    }\r\n    return true;\r\n  }\r\n\r\n});\r\n\n\n//# sourceURL=webpack:///./src/js/new-event.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery_editable_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery-editable-select */ "./node_modules/jquery-editable-select/dist/jquery-editable-select.min.js");
+/* harmony import */ var jquery_editable_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_editable_select__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/estorage.js */ "./src/js/lib/estorage.js");
+/* harmony import */ var _lib_common_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/common.js */ "./src/js/lib/common.js");
+//The import and export statements have been standardized in ES2015. Although they are not supported in most browsers yet, webpack does support them out of the box.
+
+
+
+
+__webpack_require__(/*! jquery-editable-select/dist/jquery-editable-select.css */ "./node_modules/jquery-editable-select/dist/jquery-editable-select.css");
+__webpack_require__(/*! ../css/base.css */ "./src/css/base.css");
+__webpack_require__(/*! ../css/new-event.css */ "./src/css/new-event.css");
+
+//help functions
+function isValidDate(d) {
+  return d instanceof Date && !isNaN(d);
+}
+
+function checkType() {  
+  var types = _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__["get_from_storage"]('evt-types');
+  var tested = $("#event-type").val();
+  if ($.inArray(tested, types) === -1)
+    types.push(tested);
+
+  _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__["save_to_storage"]('evt-types', types);
+}
+
+function composeDatetime(parent) {
+  var d = parent.find(".date").first().val();
+  var t = parent.find(".time").first().val();
+  return d + "T" + t + ":00";
+}
+
+function saveEventDetails() {
+  var events = _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__["get_from_storage"]('events');
+  var evt = {};
+  $(".form input,textarea:visible").not(".date,.time").each(function () {
+    evt[$(this).attr('id')] = $(this).val();
+    evt["uid"] = _lib_common_js__WEBPACK_IMPORTED_MODULE_2__["uniqId"]();
+  });
+  
+  //dates
+  evt["event-start"] = composeDatetime($(".form .event-start"));
+  evt["event-end"] = composeDatetime($(".form .event-end"));
+
+  events.push(evt);
+  _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__["save_to_storage"]('events', events);
+}
+
+
+
+
+//on load
+$(function () {
+  var eType = $('#event-type');  
+
+  var startDInput = $('.event-start .date');
+  var endDInput = $('.event-end .date');
+  var startTInput = $('.event-start .time');
+  var endTInput = $('.event-end .time');
+
+  var submit = $('#submit');
+  var errmsg = $("#err-msg");
+
+  //set event type options
+  if (checkStorage())
+    fillEventTypes(eType);
+
+  eType.editableSelect();
+  $('#event-type.es-input').attr('placeholder', 'Choose or enter event type');
+
+  setDefaultDateTime();
+  setDateTimeCheckers();
+
+  //validate on blur
+  _lib_common_js__WEBPACK_IMPORTED_MODULE_2__["validateOnBlur"]('.form input,textarea,select');  
+
+  //validate and save event
+  submit.click(function () {
+    errmsg.val("");
+    $(".form").addClass("submitted");
+
+    if ($(".form :invalid").length > 0) {
+      errmsg.val("Please, fill required fields");
+    }
+    else {
+      if (!checkStorage())
+        return;
+
+      checkType();
+      saveEventDetails();
+      location.href = 'events.html';
+    }
+
+    return false;
+  });
+
+  /*********functions*****************/
+  function fillEventTypes(el) {
+    var types = _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__["get_from_storage"]('evt-types');
+    $.each(types, function (i, t) {
+      el.append($("<option></option>")
+        .attr("value", t)
+        .text(t));
+    });
+  }
+
+  function setDefaultDateTime() {
+    var start = new Date();
+    var end = new Date();
+    start.setHours(start.getHours() + 1); //next hour for default event start time
+    end.setHours(end.getHours() + 2);
+
+    var frmStart = _lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatDate"](start);
+    startDInput.val(frmStart).attr('min', frmStart);
+    endDInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatDate"](end)).attr('min', frmStart);
+    startTInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatTime"](start.getHours(), 0));
+    endTInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatTime"](end.getHours(), 0));
+  }
+
+  function setDateTimeCheckers() {
+    startDInput.blur(function () {
+      checkMinValue(startDInput, startTInput);
+      checkEndDatetime();
+    });
+
+    startTInput.blur(function () {
+      checkMinValue(startDInput, startTInput);
+      checkEndDatetime();
+    });
+
+    endDInput.blur(function () {
+      checkMinValue(endDInput, endTInput);
+      checkEndDatetime();
+    });
+
+    endTInput.blur(function () {
+      checkMinValue(endDInput, endTInput);
+      checkEndDatetime();
+    });
+  }
+  function checkEndDatetime() {
+    var dtStart = getAndFixDateFrom(startDInput, startTInput);
+    var dtEnd = getAndFixDateFrom(endDInput, endTInput);
+
+    if (dtEnd !== undefined && dtEnd < dtStart) {
+      dtEnd = dtStart;
+      var frmEnd = _lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatDate"](dtEnd);
+      endDInput.val(frmEnd).attr('min', _lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatDate"](dtStart));
+      endTInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatTime"](dtEnd.getHours(), dtEnd.getMinutes()));
+    }
+  }
+
+  function getAndFixDateFrom(dateInput, timeInput) {
+    var dt = new Date(dateInput.val());
+
+    if (!isValidDate(dt)) {
+      if (dateInput.prop('required')) {
+        dt = new Date();
+        dt.setMinutes(dt.getMinutes() + 1);
+        dateInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatDate"](dt));
+      }
+      else {
+        dt = undefined;
+        dateInput.val('');
+      }
+    }
+
+    var t = (timeInput.val() === '' || timeInput.val() === undefined) ? [0, 0] : timeInput.val().split(':');
+    if (t.length != 2 || t[0].length != 2 || t[1].length != 2) {
+      if (timeInput.prop('required')) {
+        timeInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatTime"](0, 0));
+      }
+      else {
+        timeInput.val('');
+      }
+      t = [0, 0];
+    }
+    if (dt !== undefined)
+      dt.setHours(t[0], t[1]);
+
+    return dt;
+  }
+
+  function checkMinValue(dateInput, timeInput) {
+    var now = new Date();
+    var dt = getAndFixDateFrom(dateInput, timeInput);
+    if (dt !== undefined && dt < now) {
+      dateInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatDate"](now));
+      timeInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatTime"](now.getHours(), now.getMinutes()));
+    }
+  }
+
+  function checkStorage() {
+    if (!_lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__["supports_local_storage"]()) {
+      errmsg.val("Please, try another browser");
+      return false;
+    }
+    return true;
+  }
+
+});
+
 
 /***/ })
 

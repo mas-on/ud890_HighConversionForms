@@ -19,10 +19,6 @@ section.form .time {
     width: 100%;
 }
 
-section.form .opt-lbl-row {
-    padding-bottom: 0.5em;
-}
-
 .event-end input{
     vertical-align: top;
 }
@@ -30,10 +26,3 @@ section.form .opt-lbl-row {
 .event-end .lbl {
     margin-top: 0.15em;
 }
-
-
-/*validation*/
-/*section.form.submitted input:invalid, .invalid {
-    border: 1px dashed red;
-    background:  rgb(252, 174, 174, 0.2) 
-  }*/

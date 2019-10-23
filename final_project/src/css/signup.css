@@ -14,3 +14,13 @@ label:after {
     color: red;
     font-size: small;
 }
+
+section.form .lbl {
+    width: 20%;
+    display: inline-block;
+}
+
+section.form .date {
+    width: 40%;
+    vertical-align: top;
+}

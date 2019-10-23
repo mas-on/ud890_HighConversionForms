@@ -1,7 +1,7 @@
 //The import and export statements have been standardized in ES2015. Although they are not supported in most browsers yet, webpack does support them out of the box.
 import jquery_editable_select from 'jquery-editable-select';
-import _db from './lib/estorage.js';
-import _cmn from './lib/common.js';
+import * as _db from './lib/estorage.js';
+import * as _cmn from './lib/common.js';
 
 require("jquery-editable-select/dist/jquery-editable-select.css");
 require("../css/base.css");

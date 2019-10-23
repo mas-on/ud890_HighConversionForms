@@ -1,5 +1,5 @@
-import _db from './lib/estorage.js';
-import _cmn from './lib/common.js';
+import * as _db from './lib/estorage.js';
+import * as _cmn from './lib/common.js';
 
 require("../css/base.css");
 require("../css/events.css");

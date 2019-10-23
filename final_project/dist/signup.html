@@ -10,22 +10,22 @@
             <div class="step">
                 <span class="info">Step 1/2</span>
                 <label>
-                    <input class="name" type="text" placeholder="Your name" autocomplete="name" required>
+                    <input class="name" type="text" placeholder="Your name" autocomplete="name" required autofocus> 
                 </label>
                 <label>
                     <input class="email" type="email" placeholder="E-mail" autocomplete="email" required>
                 </label>
                 <label>
                     <span class="lbl-tip">Please enter at least 8 symbols including digits and lowercase and uppercase letters</span>
-                    <input id="password" class="pwd" type="password" placeholder="Password" minlength="8" required>
+                    <input id="password" class="pwd" type="password" placeholder="Password" minlength="8" maxlength="100" required>
                 </label>
                 <label>
-                    <input id="rep-password" class="pwd" type="password" placeholder="Repeat password" minlength="8" required>
+                    <input id="rep-password" class="pwd" type="password" placeholder="Repeat password" minlength="8" maxlength="100" required>
                 </label>
             </div>
             <div class="step hidden"> 
                 <span class="info">Step 2/2</span>               
-                <label for="birthday">
+                <label for="birthday" class="opt-lbl-row">
                     <div class="lbl">
                         Birthday:
                         <span class="lbl-tip">optional</span>
@@ -44,5 +44,5 @@
             <button id='next' class="right">Next</button>
             <button id='submit' class="hidden right">Create</button>
         </section>
-    <script type="text/javascript" src="./js/vendor.bundle.js?2175ee750031be5c335f"></script><script type="text/javascript" src="./js/signup.bundle.js?2175ee750031be5c335f"></script></body>
+    <script type="text/javascript" src="./js/vendor.bundle.js?1a2f4b7d79a3675bae6d"></script><script type="text/javascript" src="./js/signup.bundle.js?1a2f4b7d79a3675bae6d"></script></body>
 </html>

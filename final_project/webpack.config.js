@@ -64,5 +64,6 @@ module.exports = {
       chunksSortMode: 'manual',
       filename: 'signup.html'
     })
-  ]
+  ],
+  devtool: 'none'
 };

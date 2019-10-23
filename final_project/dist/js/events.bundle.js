@@ -93,7 +93,11 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"header {\\r\\n    font-weight: bold;\\r\\n    font-size: 120%;\\r\\n    padding: 0 0 1em 0;\\r\\n}\\r\\n\\r\\nsection, header {\\r\\n    width: 320px; \\r\\n}\\r\\n\\r\\n.right {\\r\\n    float: right;\\r\\n}\\r\\n\\r\\n.hidden {\\r\\n    display: none;\\r\\n}\\r\\n\\r\\n.lbl-tip {\\r\\n    color:grey;\\r\\n    font-size: small;\\r\\n}\\r\\n\\r\\nsection.form label {\\r\\n    display: block;\\r\\n    padding: 0 0 1em 0;    \\r\\n}\\r\\n\\r\\n/*validation*/\\r\\n/*.step.submitted input:invalid {*/\\r\\n    .submitted :invalid, .invalid {\\r\\n    border: 1px dashed red;\\r\\n    background:  rgb(252, 174, 174, 0.2) \\r\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/css/base.css?./node_modules/css-loader/dist/cjs.js");
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "header {\r\n    font-weight: bold;\r\n    font-size: 120%;\r\n    padding: 0 0 1em 0;\r\n}\r\n\r\nsection, header {\r\n    width: 320px; \r\n}\r\n\r\n.right {\r\n    float: right;\r\n}\r\n\r\n.hidden {\r\n    display: none;\r\n}\r\n\r\n.lbl-tip {\r\n    color:grey;\r\n    font-size: small;\r\n}\r\n\r\nsection.form .opt-lbl-row {\r\n    padding-bottom: 0.5em;\r\n}\r\n\r\nsection.form label {\r\n    display: block;\r\n    padding: 0 0 1em 0;    \r\n}\r\n\r\n/*validation*/\r\n/*.step.submitted input:invalid {*/\r\n    .submitted :invalid, .invalid {\r\n    border: 1px dashed red;\r\n    background:  rgb(252, 174, 174, 0.2) \r\n}", ""]);
+
+
 
 /***/ }),
 
@@ -104,7 +108,11 @@ eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"/*base rules*/\\r\\n.col-70 {\\r\\n    width: 70%;\\r\\n    display: inline-block;\\r\\n}\\r\\n\\r\\n.clickable {\\r\\n    cursor: pointer;\\r\\n}\\r\\n\\r\\nul {\\r\\n    list-style: none;\\r\\n    padding-inline-start: 0;\\r\\n}\\r\\n\\r\\n/*concrete elements rules*/\\r\\nul.g-items {\\r\\n    padding-inline-start: 1em;\\r\\n    padding-top: 0.2em;\\r\\n}\\r\\n\\r\\nul.g-items li:nth-child(even) {\\r\\n    background-color: lightgrey;\\r\\n}\\r\\n\\r\\n.item-details {\\r\\n    font-size: 90%;\\r\\n    color: grey;\\r\\n    padding: 0 0 0 1em;\\r\\n}\\r\\n\\r\\n.event-group {\\r\\n    padding-bottom: 0.8em;\\r\\n}\\r\\n\\r\\n.group-name {\\r\\n    font-weight: bold;\\r\\n}\\r\\n\\r\\n.past {\\r\\n    font-style: italic;\\r\\n}\\r\\n\\r\\n.past a {\\r\\n    display: none;\\r\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/css/events.css?./node_modules/css-loader/dist/cjs.js");
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "/*base rules*/\r\n.col-70 {\r\n    width: 70%;\r\n    display: inline-block;\r\n}\r\n\r\n.clickable {\r\n    cursor: pointer;\r\n}\r\n\r\nul {\r\n    list-style: none;\r\n    padding-inline-start: 0;\r\n}\r\n\r\n/*concrete elements rules*/\r\nul.g-items {\r\n    padding-inline-start: 1em;\r\n    padding-top: 0.2em;\r\n}\r\n\r\nul.g-items li:nth-child(even) {\r\n    background-color: lightgrey;\r\n}\r\n\r\n.item-details {\r\n    font-size: 90%;\r\n    color: grey;\r\n    padding: 0 0 0 1em;\r\n}\r\n\r\n.event-group {\r\n    padding-bottom: 0.8em;\r\n}\r\n\r\n.group-name {\r\n    font-weight: bold;\r\n}\r\n\r\n.past {\r\n    font-style: italic;\r\n}\r\n\r\n.past a {\r\n    display: none;\r\n}", ""]);
+
+
 
 /***/ }),
 
@@ -116,7 +124,91 @@ eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\nmodule.exports = function (useSourceMap) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item, useSourceMap);\n\n      if (item[2]) {\n        return '@media ' + item[2] + '{' + content + '}';\n      } else {\n        return content;\n      }\n    }).join('');\n  }; // import a list of modules into the list\n\n\n  list.i = function (modules, mediaQuery) {\n    if (typeof modules === 'string') {\n      modules = [[null, modules, '']];\n    }\n\n    var alreadyImportedModules = {};\n\n    for (var i = 0; i < this.length; i++) {\n      var id = this[i][0];\n\n      if (id != null) {\n        alreadyImportedModules[id] = true;\n      }\n    }\n\n    for (i = 0; i < modules.length; i++) {\n      var item = modules[i]; // skip already imported module\n      // this implementation is not 100% perfect for weird media query combinations\n      // when a module is imported multiple times with different media queries.\n      // I hope this will never occur (Hey this way we have smaller bundles)\n\n      if (item[0] == null || !alreadyImportedModules[item[0]]) {\n        if (mediaQuery && !item[2]) {\n          item[2] = mediaQuery;\n        } else if (mediaQuery) {\n          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';\n        }\n\n        list.push(item);\n      }\n    }\n  };\n\n  return list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n  var content = item[1] || '';\n  var cssMapping = item[3];\n\n  if (!cssMapping) {\n    return content;\n  }\n\n  if (useSourceMap && typeof btoa === 'function') {\n    var sourceMapping = toComment(cssMapping);\n    var sourceURLs = cssMapping.sources.map(function (source) {\n      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';\n    });\n    return [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n  }\n\n  return [content].join('\\n');\n} // Adapted from convert-source-map (MIT)\n\n\nfunction toComment(sourceMap) {\n  // eslint-disable-next-line no-undef\n  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;\n  return '/*# ' + data + ' */';\n}\n\n//# sourceURL=webpack:///./node_modules/css-loader/dist/runtime/api.js?");
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function (useSourceMap) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item, useSourceMap);
+
+      if (item[2]) {
+        return '@media ' + item[2] + '{' + content + '}';
+      } else {
+        return content;
+      }
+    }).join('');
+  }; // import a list of modules into the list
+
+
+  list.i = function (modules, mediaQuery) {
+    if (typeof modules === 'string') {
+      modules = [[null, modules, '']];
+    }
+
+    var alreadyImportedModules = {};
+
+    for (var i = 0; i < this.length; i++) {
+      var id = this[i][0];
+
+      if (id != null) {
+        alreadyImportedModules[id] = true;
+      }
+    }
+
+    for (i = 0; i < modules.length; i++) {
+      var item = modules[i]; // skip already imported module
+      // this implementation is not 100% perfect for weird media query combinations
+      // when a module is imported multiple times with different media queries.
+      // I hope this will never occur (Hey this way we have smaller bundles)
+
+      if (item[0] == null || !alreadyImportedModules[item[0]]) {
+        if (mediaQuery && !item[2]) {
+          item[2] = mediaQuery;
+        } else if (mediaQuery) {
+          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';
+        }
+
+        list.push(item);
+      }
+    }
+  };
+
+  return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+  var content = item[1] || '';
+  var cssMapping = item[3];
+
+  if (!cssMapping) {
+    return content;
+  }
+
+  if (useSourceMap && typeof btoa === 'function') {
+    var sourceMapping = toComment(cssMapping);
+    var sourceURLs = cssMapping.sources.map(function (source) {
+      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';
+    });
+    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+  }
+
+  return [content].join('\n');
+} // Adapted from convert-source-map (MIT)
+
+
+function toComment(sourceMap) {
+  // eslint-disable-next-line no-undef
+  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+  return '/*# ' + data + ' */';
+}
 
 /***/ }),
 
@@ -127,7 +219,405 @@ eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\n\nvar stylesInDom = {};\n\nvar\tmemoize = function (fn) {\n\tvar memo;\n\n\treturn function () {\n\t\tif (typeof memo === \"undefined\") memo = fn.apply(this, arguments);\n\t\treturn memo;\n\t};\n};\n\nvar isOldIE = memoize(function () {\n\t// Test for IE <= 9 as proposed by Browserhacks\n\t// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805\n\t// Tests for existence of standard globals is to allow style-loader\n\t// to operate correctly into non-standard environments\n\t// @see https://github.com/webpack-contrib/style-loader/issues/177\n\treturn window && document && document.all && !window.atob;\n});\n\nvar getTarget = function (target, parent) {\n  if (parent){\n    return parent.querySelector(target);\n  }\n  return document.querySelector(target);\n};\n\nvar getElement = (function (fn) {\n\tvar memo = {};\n\n\treturn function(target, parent) {\n                // If passing function in options, then use it for resolve \"head\" element.\n                // Useful for Shadow Root style i.e\n                // {\n                //   insertInto: function () { return document.querySelector(\"#foo\").shadowRoot }\n                // }\n                if (typeof target === 'function') {\n                        return target();\n                }\n                if (typeof memo[target] === \"undefined\") {\n\t\t\tvar styleTarget = getTarget.call(this, target, parent);\n\t\t\t// Special case to return head of iframe instead of iframe itself\n\t\t\tif (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {\n\t\t\t\ttry {\n\t\t\t\t\t// This will throw an exception if access to iframe is blocked\n\t\t\t\t\t// due to cross-origin restrictions\n\t\t\t\t\tstyleTarget = styleTarget.contentDocument.head;\n\t\t\t\t} catch(e) {\n\t\t\t\t\tstyleTarget = null;\n\t\t\t\t}\n\t\t\t}\n\t\t\tmemo[target] = styleTarget;\n\t\t}\n\t\treturn memo[target]\n\t};\n})();\n\nvar singleton = null;\nvar\tsingletonCounter = 0;\nvar\tstylesInsertedAtTop = [];\n\nvar\tfixUrls = __webpack_require__(/*! ./urls */ \"./node_modules/style-loader/lib/urls.js\");\n\nmodule.exports = function(list, options) {\n\tif (typeof DEBUG !== \"undefined\" && DEBUG) {\n\t\tif (typeof document !== \"object\") throw new Error(\"The style-loader cannot be used in a non-browser environment\");\n\t}\n\n\toptions = options || {};\n\n\toptions.attrs = typeof options.attrs === \"object\" ? options.attrs : {};\n\n\t// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>\n\t// tags it will allow on a page\n\tif (!options.singleton && typeof options.singleton !== \"boolean\") options.singleton = isOldIE();\n\n\t// By default, add <style> tags to the <head> element\n        if (!options.insertInto) options.insertInto = \"head\";\n\n\t// By default, add <style> tags to the bottom of the target\n\tif (!options.insertAt) options.insertAt = \"bottom\";\n\n\tvar styles = listToStyles(list, options);\n\n\taddStylesToDom(styles, options);\n\n\treturn function update (newList) {\n\t\tvar mayRemove = [];\n\n\t\tfor (var i = 0; i < styles.length; i++) {\n\t\t\tvar item = styles[i];\n\t\t\tvar domStyle = stylesInDom[item.id];\n\n\t\t\tdomStyle.refs--;\n\t\t\tmayRemove.push(domStyle);\n\t\t}\n\n\t\tif(newList) {\n\t\t\tvar newStyles = listToStyles(newList, options);\n\t\t\taddStylesToDom(newStyles, options);\n\t\t}\n\n\t\tfor (var i = 0; i < mayRemove.length; i++) {\n\t\t\tvar domStyle = mayRemove[i];\n\n\t\t\tif(domStyle.refs === 0) {\n\t\t\t\tfor (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();\n\n\t\t\t\tdelete stylesInDom[domStyle.id];\n\t\t\t}\n\t\t}\n\t};\n};\n\nfunction addStylesToDom (styles, options) {\n\tfor (var i = 0; i < styles.length; i++) {\n\t\tvar item = styles[i];\n\t\tvar domStyle = stylesInDom[item.id];\n\n\t\tif(domStyle) {\n\t\t\tdomStyle.refs++;\n\n\t\t\tfor(var j = 0; j < domStyle.parts.length; j++) {\n\t\t\t\tdomStyle.parts[j](item.parts[j]);\n\t\t\t}\n\n\t\t\tfor(; j < item.parts.length; j++) {\n\t\t\t\tdomStyle.parts.push(addStyle(item.parts[j], options));\n\t\t\t}\n\t\t} else {\n\t\t\tvar parts = [];\n\n\t\t\tfor(var j = 0; j < item.parts.length; j++) {\n\t\t\t\tparts.push(addStyle(item.parts[j], options));\n\t\t\t}\n\n\t\t\tstylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};\n\t\t}\n\t}\n}\n\nfunction listToStyles (list, options) {\n\tvar styles = [];\n\tvar newStyles = {};\n\n\tfor (var i = 0; i < list.length; i++) {\n\t\tvar item = list[i];\n\t\tvar id = options.base ? item[0] + options.base : item[0];\n\t\tvar css = item[1];\n\t\tvar media = item[2];\n\t\tvar sourceMap = item[3];\n\t\tvar part = {css: css, media: media, sourceMap: sourceMap};\n\n\t\tif(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});\n\t\telse newStyles[id].parts.push(part);\n\t}\n\n\treturn styles;\n}\n\nfunction insertStyleElement (options, style) {\n\tvar target = getElement(options.insertInto)\n\n\tif (!target) {\n\t\tthrow new Error(\"Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.\");\n\t}\n\n\tvar lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];\n\n\tif (options.insertAt === \"top\") {\n\t\tif (!lastStyleElementInsertedAtTop) {\n\t\t\ttarget.insertBefore(style, target.firstChild);\n\t\t} else if (lastStyleElementInsertedAtTop.nextSibling) {\n\t\t\ttarget.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);\n\t\t} else {\n\t\t\ttarget.appendChild(style);\n\t\t}\n\t\tstylesInsertedAtTop.push(style);\n\t} else if (options.insertAt === \"bottom\") {\n\t\ttarget.appendChild(style);\n\t} else if (typeof options.insertAt === \"object\" && options.insertAt.before) {\n\t\tvar nextSibling = getElement(options.insertAt.before, target);\n\t\ttarget.insertBefore(style, nextSibling);\n\t} else {\n\t\tthrow new Error(\"[Style Loader]\\n\\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\\n Must be 'top', 'bottom', or Object.\\n (https://github.com/webpack-contrib/style-loader#insertat)\\n\");\n\t}\n}\n\nfunction removeStyleElement (style) {\n\tif (style.parentNode === null) return false;\n\tstyle.parentNode.removeChild(style);\n\n\tvar idx = stylesInsertedAtTop.indexOf(style);\n\tif(idx >= 0) {\n\t\tstylesInsertedAtTop.splice(idx, 1);\n\t}\n}\n\nfunction createStyleElement (options) {\n\tvar style = document.createElement(\"style\");\n\n\tif(options.attrs.type === undefined) {\n\t\toptions.attrs.type = \"text/css\";\n\t}\n\n\tif(options.attrs.nonce === undefined) {\n\t\tvar nonce = getNonce();\n\t\tif (nonce) {\n\t\t\toptions.attrs.nonce = nonce;\n\t\t}\n\t}\n\n\taddAttrs(style, options.attrs);\n\tinsertStyleElement(options, style);\n\n\treturn style;\n}\n\nfunction createLinkElement (options) {\n\tvar link = document.createElement(\"link\");\n\n\tif(options.attrs.type === undefined) {\n\t\toptions.attrs.type = \"text/css\";\n\t}\n\toptions.attrs.rel = \"stylesheet\";\n\n\taddAttrs(link, options.attrs);\n\tinsertStyleElement(options, link);\n\n\treturn link;\n}\n\nfunction addAttrs (el, attrs) {\n\tObject.keys(attrs).forEach(function (key) {\n\t\tel.setAttribute(key, attrs[key]);\n\t});\n}\n\nfunction getNonce() {\n\tif (false) {}\n\n\treturn __webpack_require__.nc;\n}\n\nfunction addStyle (obj, options) {\n\tvar style, update, remove, result;\n\n\t// If a transform function was defined, run it on the css\n\tif (options.transform && obj.css) {\n\t    result = typeof options.transform === 'function'\n\t\t ? options.transform(obj.css) \n\t\t : options.transform.default(obj.css);\n\n\t    if (result) {\n\t    \t// If transform returns a value, use that instead of the original css.\n\t    \t// This allows running runtime transformations on the css.\n\t    \tobj.css = result;\n\t    } else {\n\t    \t// If the transform function returns a falsy value, don't add this css.\n\t    \t// This allows conditional loading of css\n\t    \treturn function() {\n\t    \t\t// noop\n\t    \t};\n\t    }\n\t}\n\n\tif (options.singleton) {\n\t\tvar styleIndex = singletonCounter++;\n\n\t\tstyle = singleton || (singleton = createStyleElement(options));\n\n\t\tupdate = applyToSingletonTag.bind(null, style, styleIndex, false);\n\t\tremove = applyToSingletonTag.bind(null, style, styleIndex, true);\n\n\t} else if (\n\t\tobj.sourceMap &&\n\t\ttypeof URL === \"function\" &&\n\t\ttypeof URL.createObjectURL === \"function\" &&\n\t\ttypeof URL.revokeObjectURL === \"function\" &&\n\t\ttypeof Blob === \"function\" &&\n\t\ttypeof btoa === \"function\"\n\t) {\n\t\tstyle = createLinkElement(options);\n\t\tupdate = updateLink.bind(null, style, options);\n\t\tremove = function () {\n\t\t\tremoveStyleElement(style);\n\n\t\t\tif(style.href) URL.revokeObjectURL(style.href);\n\t\t};\n\t} else {\n\t\tstyle = createStyleElement(options);\n\t\tupdate = applyToTag.bind(null, style);\n\t\tremove = function () {\n\t\t\tremoveStyleElement(style);\n\t\t};\n\t}\n\n\tupdate(obj);\n\n\treturn function updateStyle (newObj) {\n\t\tif (newObj) {\n\t\t\tif (\n\t\t\t\tnewObj.css === obj.css &&\n\t\t\t\tnewObj.media === obj.media &&\n\t\t\t\tnewObj.sourceMap === obj.sourceMap\n\t\t\t) {\n\t\t\t\treturn;\n\t\t\t}\n\n\t\t\tupdate(obj = newObj);\n\t\t} else {\n\t\t\tremove();\n\t\t}\n\t};\n}\n\nvar replaceText = (function () {\n\tvar textStore = [];\n\n\treturn function (index, replacement) {\n\t\ttextStore[index] = replacement;\n\n\t\treturn textStore.filter(Boolean).join('\\n');\n\t};\n})();\n\nfunction applyToSingletonTag (style, index, remove, obj) {\n\tvar css = remove ? \"\" : obj.css;\n\n\tif (style.styleSheet) {\n\t\tstyle.styleSheet.cssText = replaceText(index, css);\n\t} else {\n\t\tvar cssNode = document.createTextNode(css);\n\t\tvar childNodes = style.childNodes;\n\n\t\tif (childNodes[index]) style.removeChild(childNodes[index]);\n\n\t\tif (childNodes.length) {\n\t\t\tstyle.insertBefore(cssNode, childNodes[index]);\n\t\t} else {\n\t\t\tstyle.appendChild(cssNode);\n\t\t}\n\t}\n}\n\nfunction applyToTag (style, obj) {\n\tvar css = obj.css;\n\tvar media = obj.media;\n\n\tif(media) {\n\t\tstyle.setAttribute(\"media\", media)\n\t}\n\n\tif(style.styleSheet) {\n\t\tstyle.styleSheet.cssText = css;\n\t} else {\n\t\twhile(style.firstChild) {\n\t\t\tstyle.removeChild(style.firstChild);\n\t\t}\n\n\t\tstyle.appendChild(document.createTextNode(css));\n\t}\n}\n\nfunction updateLink (link, options, obj) {\n\tvar css = obj.css;\n\tvar sourceMap = obj.sourceMap;\n\n\t/*\n\t\tIf convertToAbsoluteUrls isn't defined, but sourcemaps are enabled\n\t\tand there is no publicPath defined then lets turn convertToAbsoluteUrls\n\t\ton by default.  Otherwise default to the convertToAbsoluteUrls option\n\t\tdirectly\n\t*/\n\tvar autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;\n\n\tif (options.convertToAbsoluteUrls || autoFixUrls) {\n\t\tcss = fixUrls(css);\n\t}\n\n\tif (sourceMap) {\n\t\t// http://stackoverflow.com/a/26603875\n\t\tcss += \"\\n/*# sourceMappingURL=data:application/json;base64,\" + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + \" */\";\n\t}\n\n\tvar blob = new Blob([css], { type: \"text/css\" });\n\n\tvar oldSrc = link.href;\n\n\tlink.href = URL.createObjectURL(blob);\n\n\tif(oldSrc) URL.revokeObjectURL(oldSrc);\n}\n\n\n//# sourceURL=webpack:///./node_modules/style-loader/lib/addStyles.js?");
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+
+var stylesInDom = {};
+
+var	memoize = function (fn) {
+	var memo;
+
+	return function () {
+		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+		return memo;
+	};
+};
+
+var isOldIE = memoize(function () {
+	// Test for IE <= 9 as proposed by Browserhacks
+	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+	// Tests for existence of standard globals is to allow style-loader
+	// to operate correctly into non-standard environments
+	// @see https://github.com/webpack-contrib/style-loader/issues/177
+	return window && document && document.all && !window.atob;
+});
+
+var getTarget = function (target, parent) {
+  if (parent){
+    return parent.querySelector(target);
+  }
+  return document.querySelector(target);
+};
+
+var getElement = (function (fn) {
+	var memo = {};
+
+	return function(target, parent) {
+                // If passing function in options, then use it for resolve "head" element.
+                // Useful for Shadow Root style i.e
+                // {
+                //   insertInto: function () { return document.querySelector("#foo").shadowRoot }
+                // }
+                if (typeof target === 'function') {
+                        return target();
+                }
+                if (typeof memo[target] === "undefined") {
+			var styleTarget = getTarget.call(this, target, parent);
+			// Special case to return head of iframe instead of iframe itself
+			if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+				try {
+					// This will throw an exception if access to iframe is blocked
+					// due to cross-origin restrictions
+					styleTarget = styleTarget.contentDocument.head;
+				} catch(e) {
+					styleTarget = null;
+				}
+			}
+			memo[target] = styleTarget;
+		}
+		return memo[target]
+	};
+})();
+
+var singleton = null;
+var	singletonCounter = 0;
+var	stylesInsertedAtTop = [];
+
+var	fixUrls = __webpack_require__(/*! ./urls */ "./node_modules/style-loader/lib/urls.js");
+
+module.exports = function(list, options) {
+	if (typeof DEBUG !== "undefined" && DEBUG) {
+		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+	}
+
+	options = options || {};
+
+	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
+
+	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+	// tags it will allow on a page
+	if (!options.singleton && typeof options.singleton !== "boolean") options.singleton = isOldIE();
+
+	// By default, add <style> tags to the <head> element
+        if (!options.insertInto) options.insertInto = "head";
+
+	// By default, add <style> tags to the bottom of the target
+	if (!options.insertAt) options.insertAt = "bottom";
+
+	var styles = listToStyles(list, options);
+
+	addStylesToDom(styles, options);
+
+	return function update (newList) {
+		var mayRemove = [];
+
+		for (var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+
+			domStyle.refs--;
+			mayRemove.push(domStyle);
+		}
+
+		if(newList) {
+			var newStyles = listToStyles(newList, options);
+			addStylesToDom(newStyles, options);
+		}
+
+		for (var i = 0; i < mayRemove.length; i++) {
+			var domStyle = mayRemove[i];
+
+			if(domStyle.refs === 0) {
+				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
+
+				delete stylesInDom[domStyle.id];
+			}
+		}
+	};
+};
+
+function addStylesToDom (styles, options) {
+	for (var i = 0; i < styles.length; i++) {
+		var item = styles[i];
+		var domStyle = stylesInDom[item.id];
+
+		if(domStyle) {
+			domStyle.refs++;
+
+			for(var j = 0; j < domStyle.parts.length; j++) {
+				domStyle.parts[j](item.parts[j]);
+			}
+
+			for(; j < item.parts.length; j++) {
+				domStyle.parts.push(addStyle(item.parts[j], options));
+			}
+		} else {
+			var parts = [];
+
+			for(var j = 0; j < item.parts.length; j++) {
+				parts.push(addStyle(item.parts[j], options));
+			}
+
+			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+		}
+	}
+}
+
+function listToStyles (list, options) {
+	var styles = [];
+	var newStyles = {};
+
+	for (var i = 0; i < list.length; i++) {
+		var item = list[i];
+		var id = options.base ? item[0] + options.base : item[0];
+		var css = item[1];
+		var media = item[2];
+		var sourceMap = item[3];
+		var part = {css: css, media: media, sourceMap: sourceMap};
+
+		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
+		else newStyles[id].parts.push(part);
+	}
+
+	return styles;
+}
+
+function insertStyleElement (options, style) {
+	var target = getElement(options.insertInto)
+
+	if (!target) {
+		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
+	}
+
+	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
+
+	if (options.insertAt === "top") {
+		if (!lastStyleElementInsertedAtTop) {
+			target.insertBefore(style, target.firstChild);
+		} else if (lastStyleElementInsertedAtTop.nextSibling) {
+			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
+		} else {
+			target.appendChild(style);
+		}
+		stylesInsertedAtTop.push(style);
+	} else if (options.insertAt === "bottom") {
+		target.appendChild(style);
+	} else if (typeof options.insertAt === "object" && options.insertAt.before) {
+		var nextSibling = getElement(options.insertAt.before, target);
+		target.insertBefore(style, nextSibling);
+	} else {
+		throw new Error("[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n");
+	}
+}
+
+function removeStyleElement (style) {
+	if (style.parentNode === null) return false;
+	style.parentNode.removeChild(style);
+
+	var idx = stylesInsertedAtTop.indexOf(style);
+	if(idx >= 0) {
+		stylesInsertedAtTop.splice(idx, 1);
+	}
+}
+
+function createStyleElement (options) {
+	var style = document.createElement("style");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+
+	if(options.attrs.nonce === undefined) {
+		var nonce = getNonce();
+		if (nonce) {
+			options.attrs.nonce = nonce;
+		}
+	}
+
+	addAttrs(style, options.attrs);
+	insertStyleElement(options, style);
+
+	return style;
+}
+
+function createLinkElement (options) {
+	var link = document.createElement("link");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+	options.attrs.rel = "stylesheet";
+
+	addAttrs(link, options.attrs);
+	insertStyleElement(options, link);
+
+	return link;
+}
+
+function addAttrs (el, attrs) {
+	Object.keys(attrs).forEach(function (key) {
+		el.setAttribute(key, attrs[key]);
+	});
+}
+
+function getNonce() {
+	if (false) {}
+
+	return __webpack_require__.nc;
+}
+
+function addStyle (obj, options) {
+	var style, update, remove, result;
+
+	// If a transform function was defined, run it on the css
+	if (options.transform && obj.css) {
+	    result = typeof options.transform === 'function'
+		 ? options.transform(obj.css) 
+		 : options.transform.default(obj.css);
+
+	    if (result) {
+	    	// If transform returns a value, use that instead of the original css.
+	    	// This allows running runtime transformations on the css.
+	    	obj.css = result;
+	    } else {
+	    	// If the transform function returns a falsy value, don't add this css.
+	    	// This allows conditional loading of css
+	    	return function() {
+	    		// noop
+	    	};
+	    }
+	}
+
+	if (options.singleton) {
+		var styleIndex = singletonCounter++;
+
+		style = singleton || (singleton = createStyleElement(options));
+
+		update = applyToSingletonTag.bind(null, style, styleIndex, false);
+		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+
+	} else if (
+		obj.sourceMap &&
+		typeof URL === "function" &&
+		typeof URL.createObjectURL === "function" &&
+		typeof URL.revokeObjectURL === "function" &&
+		typeof Blob === "function" &&
+		typeof btoa === "function"
+	) {
+		style = createLinkElement(options);
+		update = updateLink.bind(null, style, options);
+		remove = function () {
+			removeStyleElement(style);
+
+			if(style.href) URL.revokeObjectURL(style.href);
+		};
+	} else {
+		style = createStyleElement(options);
+		update = applyToTag.bind(null, style);
+		remove = function () {
+			removeStyleElement(style);
+		};
+	}
+
+	update(obj);
+
+	return function updateStyle (newObj) {
+		if (newObj) {
+			if (
+				newObj.css === obj.css &&
+				newObj.media === obj.media &&
+				newObj.sourceMap === obj.sourceMap
+			) {
+				return;
+			}
+
+			update(obj = newObj);
+		} else {
+			remove();
+		}
+	};
+}
+
+var replaceText = (function () {
+	var textStore = [];
+
+	return function (index, replacement) {
+		textStore[index] = replacement;
+
+		return textStore.filter(Boolean).join('\n');
+	};
+})();
+
+function applyToSingletonTag (style, index, remove, obj) {
+	var css = remove ? "" : obj.css;
+
+	if (style.styleSheet) {
+		style.styleSheet.cssText = replaceText(index, css);
+	} else {
+		var cssNode = document.createTextNode(css);
+		var childNodes = style.childNodes;
+
+		if (childNodes[index]) style.removeChild(childNodes[index]);
+
+		if (childNodes.length) {
+			style.insertBefore(cssNode, childNodes[index]);
+		} else {
+			style.appendChild(cssNode);
+		}
+	}
+}
+
+function applyToTag (style, obj) {
+	var css = obj.css;
+	var media = obj.media;
+
+	if(media) {
+		style.setAttribute("media", media)
+	}
+
+	if(style.styleSheet) {
+		style.styleSheet.cssText = css;
+	} else {
+		while(style.firstChild) {
+			style.removeChild(style.firstChild);
+		}
+
+		style.appendChild(document.createTextNode(css));
+	}
+}
+
+function updateLink (link, options, obj) {
+	var css = obj.css;
+	var sourceMap = obj.sourceMap;
+
+	/*
+		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
+		and there is no publicPath defined then lets turn convertToAbsoluteUrls
+		on by default.  Otherwise default to the convertToAbsoluteUrls option
+		directly
+	*/
+	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
+
+	if (options.convertToAbsoluteUrls || autoFixUrls) {
+		css = fixUrls(css);
+	}
+
+	if (sourceMap) {
+		// http://stackoverflow.com/a/26603875
+		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+	}
+
+	var blob = new Blob([css], { type: "text/css" });
+
+	var oldSrc = link.href;
+
+	link.href = URL.createObjectURL(blob);
+
+	if(oldSrc) URL.revokeObjectURL(oldSrc);
+}
+
 
 /***/ }),
 
@@ -138,7 +628,96 @@ eval("/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element with a data-uri to\n * embed the css on the page. This breaks all relative urls because now they are relative to a\n * bundle instead of the current page.\n *\n * One solution is to only use full urls, but that may be impossible.\n *\n * Instead, this function \"fixes\" the relative urls to be absolute according to the current page location.\n *\n * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.\n *\n */\n\nmodule.exports = function (css) {\n  // get current location\n  var location = typeof window !== \"undefined\" && window.location;\n\n  if (!location) {\n    throw new Error(\"fixUrls requires window.location\");\n  }\n\n\t// blank or null?\n\tif (!css || typeof css !== \"string\") {\n\t  return css;\n  }\n\n  var baseUrl = location.protocol + \"//\" + location.host;\n  var currentDir = baseUrl + location.pathname.replace(/\\/[^\\/]*$/, \"/\");\n\n\t// convert each url(...)\n\t/*\n\tThis regular expression is just a way to recursively match brackets within\n\ta string.\n\n\t /url\\s*\\(  = Match on the word \"url\" with any whitespace after it and then a parens\n\t   (  = Start a capturing group\n\t     (?:  = Start a non-capturing group\n\t         [^)(]  = Match anything that isn't a parentheses\n\t         |  = OR\n\t         \\(  = Match a start parentheses\n\t             (?:  = Start another non-capturing groups\n\t                 [^)(]+  = Match anything that isn't a parentheses\n\t                 |  = OR\n\t                 \\(  = Match a start parentheses\n\t                     [^)(]*  = Match anything that isn't a parentheses\n\t                 \\)  = Match a end parentheses\n\t             )  = End Group\n              *\\) = Match anything and then a close parens\n          )  = Close non-capturing group\n          *  = Match anything\n       )  = Close capturing group\n\t \\)  = Match a close parens\n\n\t /gi  = Get all matches, not the first.  Be case insensitive.\n\t */\n\tvar fixedCss = css.replace(/url\\s*\\(((?:[^)(]|\\((?:[^)(]+|\\([^)(]*\\))*\\))*)\\)/gi, function(fullMatch, origUrl) {\n\t\t// strip quotes (if they exist)\n\t\tvar unquotedOrigUrl = origUrl\n\t\t\t.trim()\n\t\t\t.replace(/^\"(.*)\"$/, function(o, $1){ return $1; })\n\t\t\t.replace(/^'(.*)'$/, function(o, $1){ return $1; });\n\n\t\t// already a full url? no change\n\t\tif (/^(#|data:|http:\\/\\/|https:\\/\\/|file:\\/\\/\\/|\\s*$)/i.test(unquotedOrigUrl)) {\n\t\t  return fullMatch;\n\t\t}\n\n\t\t// convert the url to a full url\n\t\tvar newUrl;\n\n\t\tif (unquotedOrigUrl.indexOf(\"//\") === 0) {\n\t\t  \t//TODO: should we add protocol?\n\t\t\tnewUrl = unquotedOrigUrl;\n\t\t} else if (unquotedOrigUrl.indexOf(\"/\") === 0) {\n\t\t\t// path should be relative to the base url\n\t\t\tnewUrl = baseUrl + unquotedOrigUrl; // already starts with '/'\n\t\t} else {\n\t\t\t// path should be relative to current directory\n\t\t\tnewUrl = currentDir + unquotedOrigUrl.replace(/^\\.\\//, \"\"); // Strip leading './'\n\t\t}\n\n\t\t// send back the fixed url(...)\n\t\treturn \"url(\" + JSON.stringify(newUrl) + \")\";\n\t});\n\n\t// send back the fixed css\n\treturn fixedCss;\n};\n\n\n//# sourceURL=webpack:///./node_modules/style-loader/lib/urls.js?");
+
+/**
+ * When source maps are enabled, `style-loader` uses a link element with a data-uri to
+ * embed the css on the page. This breaks all relative urls because now they are relative to a
+ * bundle instead of the current page.
+ *
+ * One solution is to only use full urls, but that may be impossible.
+ *
+ * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
+ *
+ * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
+ *
+ */
+
+module.exports = function (css) {
+  // get current location
+  var location = typeof window !== "undefined" && window.location;
+
+  if (!location) {
+    throw new Error("fixUrls requires window.location");
+  }
+
+	// blank or null?
+	if (!css || typeof css !== "string") {
+	  return css;
+  }
+
+  var baseUrl = location.protocol + "//" + location.host;
+  var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
+
+	// convert each url(...)
+	/*
+	This regular expression is just a way to recursively match brackets within
+	a string.
+
+	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
+	   (  = Start a capturing group
+	     (?:  = Start a non-capturing group
+	         [^)(]  = Match anything that isn't a parentheses
+	         |  = OR
+	         \(  = Match a start parentheses
+	             (?:  = Start another non-capturing groups
+	                 [^)(]+  = Match anything that isn't a parentheses
+	                 |  = OR
+	                 \(  = Match a start parentheses
+	                     [^)(]*  = Match anything that isn't a parentheses
+	                 \)  = Match a end parentheses
+	             )  = End Group
+              *\) = Match anything and then a close parens
+          )  = Close non-capturing group
+          *  = Match anything
+       )  = Close capturing group
+	 \)  = Match a close parens
+
+	 /gi  = Get all matches, not the first.  Be case insensitive.
+	 */
+	var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function(fullMatch, origUrl) {
+		// strip quotes (if they exist)
+		var unquotedOrigUrl = origUrl
+			.trim()
+			.replace(/^"(.*)"$/, function(o, $1){ return $1; })
+			.replace(/^'(.*)'$/, function(o, $1){ return $1; });
+
+		// already a full url? no change
+		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/|\s*$)/i.test(unquotedOrigUrl)) {
+		  return fullMatch;
+		}
+
+		// convert the url to a full url
+		var newUrl;
+
+		if (unquotedOrigUrl.indexOf("//") === 0) {
+		  	//TODO: should we add protocol?
+			newUrl = unquotedOrigUrl;
+		} else if (unquotedOrigUrl.indexOf("/") === 0) {
+			// path should be relative to the base url
+			newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
+		} else {
+			// path should be relative to current directory
+			newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
+		}
+
+		// send back the fixed url(...)
+		return "url(" + JSON.stringify(newUrl) + ")";
+	});
+
+	// send back the fixed css
+	return fixedCss;
+};
+
 
 /***/ }),
 
@@ -149,7 +728,26 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./base.css */ \"./node_modules/css-loader/dist/cjs.js!./src/css/base.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/css/base.css?");
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./base.css */ "./node_modules/css-loader/dist/cjs.js!./src/css/base.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -160,7 +758,26 @@ eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dis
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./events.css */ \"./node_modules/css-loader/dist/cjs.js!./src/css/events.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/css/events.css?");
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./events.css */ "./node_modules/css-loader/dist/cjs.js!./src/css/events.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -172,7 +789,157 @@ eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dis
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_estorage_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/estorage.js */ \"./src/js/lib/estorage.js\");\n/* harmony import */ var _lib_common_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/common.js */ \"./src/js/lib/common.js\");\n\r\n\r\n\r\n__webpack_require__(/*! ../css/base.css */ \"./src/css/base.css\");\r\n__webpack_require__(/*! ../css/events.css */ \"./src/css/events.css\");\r\n\r\n//help functions\r\nfunction appendHtml(dateEvents) {\r\n    $.each(dateEvents, function (d, evts) {\r\n        var dayItems = $(\"<ul></ul>\").addClass(\"g-items\");\r\n\r\n        $.each(evts, function (i, e) {\r\n            //data\r\n            var id = e[\"uid\"];\r\n            var name = e[\"event-name\"];\r\n            var estart = new Date(e[\"event-start\"]);\r\n\r\n            //caption elements\r\n            var hid = $(\"<span></span>\").addClass(\"hidden\").text(id);\r\n            var time = _lib_common_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].formatTime(estart.getHours(), estart.getMinutes());\r\n            var info = $(\"<span title='Click to see details'></span>\")\r\n                .text(time + \" \" + name)\r\n                .addClass(\"clickable\")\r\n                .click(function () {\r\n                    $(this).parent().siblings('.item-details').toggleClass(\"hidden\");\r\n                    return false;\r\n                });\r\n            var del = $(\"<a href='#'>Delete</a>\")\r\n                .addClass(\"right\")\r\n                .click(function () {\r\n                    if (window.confirm(\"Are you sure you want to delete \" + name + \"?\")) {\r\n                        var e = getEvents().filter(function (item) {\r\n                            return item[\"uid\"] !== id;\r\n                        });\r\n                        saveEvents(e);\r\n                        $(\"#event-list\").empty();\r\n                        fillEvents(e);\r\n                    }\r\n                    return false;\r\n                });\r\n            var caption = $(\"<div></div>\").addClass(\"item-caption\").append(del, hid, info);\r\n\r\n            //details elements\r\n            var details = $(\"<div></div>\").addClass(\"item-details hidden\");\r\n\r\n            if (e[\"event-end\"] !== undefined && e[\"event-end\"].length > 0) {\r\n                var dtEnd = new Date(e[\"event-end\"]);\r\n                var ld = dtEnd.toLocaleDateString();\r\n                var dt = _lib_common_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].formatTime(dtEnd.getHours(), dtEnd.getMinutes());\r\n                //if same day show only time\r\n                if (ld !== d) {\r\n                    dt = ld + \" \" + dt;\r\n                }\r\n                var end = $(\"<span></span>\").text(\"until \" + dt);\r\n                details.append(end);\r\n            }\r\n            var type = $(\"<div></div>\").text(\"type: \" + e[\"event-type\"]);\r\n            var place = $(\"<div></div>\").text(\"place: \" + e[\"event-location\"]);\r\n            var host = $(\"<div></div>\").text(\"host: \" + e[\"event-host\"]);\r\n            details.append(type, place, host);\r\n\r\n            if (e[\"event-msg\"] !== undefined && e[\"event-msg\"].length > 0)\r\n                details.append($(\"<div></div>\").text(\"info: \" + e[\"event-msg\"]));\r\n\r\n            if (e[\"event-guests\"] !== undefined && e[\"event-guests\"].length > 0)\r\n                details.append($(\"<div></div>\").text(\"guests: \" + e[\"event-guests\"]));\r\n\r\n            //parent elements            \r\n            var item = $(\"<li></li>\").addClass(\"event-item\").append(caption, details);\r\n            if (estart < new Date())\r\n                item.addClass(\"past\");\r\n            dayItems.append(item);\r\n        });\r\n\r\n        var day = $(\"<span></span>\").addClass(\"group-name\").text(d);\r\n        var ditem = $(\"<li></li>\").addClass(\"event-group\").append(day, dayItems);\r\n        if (dayItems.children().not(\".past\").length === 0)\r\n            ditem.addClass(\"hidden past\");\r\n\r\n        $(\"#event-list\").append(ditem);\r\n        if ($(\"#event-list\").children().not(\".hidden\").length === 0)\r\n            $(\"#show-past\").removeClass(\"hidden\");\r\n    });\r\n}\r\n\r\nfunction fillEvents(events) {\r\n    var errmsg = $(\"#err\");\r\n\r\n    if (events.length === 0) {\r\n        errmsg.text(\"No events yet\");\r\n        return;\r\n    }\r\n\r\n    //sort events by time\r\n    events.sort(function (a, b) {\r\n        return new Date(a[\"event-start\"]) - new Date(b[\"event-start\"]);\r\n    });\r\n\r\n    //group events to dictionary (key=date)\r\n    var dateEvents = events.reduce(function (acc, e) {\r\n        var key = new Date(e[\"event-start\"]).toLocaleDateString();\r\n        if (!acc[key]) {\r\n            acc[key] = [];\r\n        }\r\n        acc[key].push(e);\r\n        return acc;\r\n    }, {});\r\n\r\n    appendHtml(dateEvents);\r\n}\r\n\r\nfunction getEvents() {\r\n    return _lib_estorage_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].get_from_storage('events');\r\n}\r\n\r\nfunction saveEvents(events) {\r\n    _lib_estorage_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].save_to_storage('events', events);\r\n}\r\n\r\n//on load\r\n$(function () {\r\n    var errmsg = $(\"#err\");\r\n    if (!_lib_estorage_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].supports_local_storage()) {\r\n        errmsg.text(\"Please, try another browser\");\r\n        return;\r\n    }\r\n\r\n    $(\"#show-past\").click(function(){\r\n        $(this).toggleClass(\"hidden\");\r\n        $(\"#hide-past\").removeClass(\"hidden\");\r\n        $(\"#event-list\").children().removeClass(\"hidden\");\r\n    });\r\n\r\n    $(\"#hide-past\").click(function(){\r\n        $(this).toggleClass(\"hidden\");\r\n        $(\"#show-past\").removeClass(\"hidden\");\r\n        $.each($(\"#event-list .g-items\"), function(i,el) {\r\n            if ($(el).children().not(\".past\").length === 0)\r\n                $(el).parent().addClass(\"hidden\");\r\n        });\r\n        \r\n    });\r\n\r\n    var events = getEvents();\r\n    fillEvents(events);    \r\n});\r\n\r\n\n\n//# sourceURL=webpack:///./src/js/events.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _lib_estorage_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/estorage.js */ "./src/js/lib/estorage.js");
+/* harmony import */ var _lib_common_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/common.js */ "./src/js/lib/common.js");
+
+
+
+__webpack_require__(/*! ../css/base.css */ "./src/css/base.css");
+__webpack_require__(/*! ../css/events.css */ "./src/css/events.css");
+
+//help functions
+function appendHtml(dateEvents) {
+    $.each(dateEvents, function (d, evts) {
+        var dayItems = $("<ul></ul>").addClass("g-items");
+
+        $.each(evts, function (i, e) {
+            //data
+            var id = e["uid"];
+            var name = e["event-name"];
+            var estart = new Date(e["event-start"]);
+
+            //caption elements
+            var hid = $("<span></span>").addClass("hidden").text(id);
+            var time = _lib_common_js__WEBPACK_IMPORTED_MODULE_1__["formatTime"](estart.getHours(), estart.getMinutes());
+            var info = $("<span title='Click to see details'></span>")
+                .text(time + " " + name)
+                .addClass("clickable")
+                .click(function () {
+                    $(this).parent().siblings('.item-details').toggleClass("hidden");
+                    return false;
+                });
+            var del = $("<a href='#'>Delete</a>")
+                .addClass("right")
+                .click(function () {
+                    if (window.confirm("Are you sure you want to delete " + name + "?")) {
+                        var e = getEvents().filter(function (item) {
+                            return item["uid"] !== id;
+                        });
+                        saveEvents(e);
+                        $("#event-list").empty();
+                        fillEvents(e);
+                    }
+                    return false;
+                });
+            var caption = $("<div></div>").addClass("item-caption").append(del, hid, info);
+
+            //details elements
+            var details = $("<div></div>").addClass("item-details hidden");
+
+            if (e["event-end"] !== undefined && e["event-end"].length > 0) {
+                var dtEnd = new Date(e["event-end"]);
+                var ld = dtEnd.toLocaleDateString();
+                var dt = _lib_common_js__WEBPACK_IMPORTED_MODULE_1__["formatTime"](dtEnd.getHours(), dtEnd.getMinutes());
+                //if same day show only time
+                if (ld !== d) {
+                    dt = ld + " " + dt;
+                }
+                var end = $("<span></span>").text("until " + dt);
+                details.append(end);
+            }
+            var type = $("<div></div>").text("type: " + e["event-type"]);
+            var place = $("<div></div>").text("place: " + e["event-location"]);
+            var host = $("<div></div>").text("host: " + e["event-host"]);
+            details.append(type, place, host);
+
+            if (e["event-msg"] !== undefined && e["event-msg"].length > 0)
+                details.append($("<div></div>").text("info: " + e["event-msg"]));
+
+            if (e["event-guests"] !== undefined && e["event-guests"].length > 0)
+                details.append($("<div></div>").text("guests: " + e["event-guests"]));
+
+            //parent elements            
+            var item = $("<li></li>").addClass("event-item").append(caption, details);
+            if (estart < new Date())
+                item.addClass("past");
+            dayItems.append(item);
+        });
+
+        var day = $("<span></span>").addClass("group-name").text(d);
+        var ditem = $("<li></li>").addClass("event-group").append(day, dayItems);
+        if (dayItems.children().not(".past").length === 0)
+            ditem.addClass("hidden past");
+
+        $("#event-list").append(ditem);
+        if ($("#event-list").children().not(".hidden").length === 0)
+            $("#show-past").removeClass("hidden");
+    });
+}
+
+function fillEvents(events) {
+    var errmsg = $("#err");
+
+    if (events.length === 0) {
+        errmsg.text("No events yet");
+        return;
+    }
+
+    //sort events by time
+    events.sort(function (a, b) {
+        return new Date(a["event-start"]) - new Date(b["event-start"]);
+    });
+
+    //group events to dictionary (key=date)
+    var dateEvents = events.reduce(function (acc, e) {
+        var key = new Date(e["event-start"]).toLocaleDateString();
+        if (!acc[key]) {
+            acc[key] = [];
+        }
+        acc[key].push(e);
+        return acc;
+    }, {});
+
+    appendHtml(dateEvents);
+}
+
+function getEvents() {
+    return _lib_estorage_js__WEBPACK_IMPORTED_MODULE_0__["get_from_storage"]('events');
+}
+
+function saveEvents(events) {
+    _lib_estorage_js__WEBPACK_IMPORTED_MODULE_0__["save_to_storage"]('events', events);
+}
+
+//on load
+$(function () {
+    var errmsg = $("#err");
+    if (!_lib_estorage_js__WEBPACK_IMPORTED_MODULE_0__["supports_local_storage"]()) {
+        errmsg.text("Please, try another browser");
+        return;
+    }
+
+    $("#show-past").click(function(){
+        $(this).toggleClass("hidden");
+        $("#hide-past").removeClass("hidden");
+        $("#event-list").children().removeClass("hidden");
+    });
+
+    $("#hide-past").click(function(){
+        $(this).toggleClass("hidden");
+        $("#show-past").removeClass("hidden");
+        $.each($("#event-list .g-items"), function(i,el) {
+            if ($(el).children().not(".past").length === 0)
+                $(el).parent().addClass("hidden");
+        });
+        
+    });
+
+    var events = getEvents();
+    fillEvents(events);    
+});
+
+
 
 /***/ }),
 
@@ -180,11 +947,98 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib
 /*!******************************!*\
   !*** ./src/js/lib/common.js ***!
   \******************************/
-/*! exports provided: default */
+/*! exports provided: formatDate, formatTime, uniqId, uniqArr, hash, validateOnBlur */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction formatDate(dt) {\r\n    var year = dt.getFullYear();\r\n    var month = dt.getMonth() + 1;\r\n    var day = dt.getDate();\r\n    return year + '-' + (month > 9 ? month : '0' + month) + '-' + (day > 9 ? day : '0' + day);\r\n  }\r\n\r\nfunction formatTime(h, m) {\r\n    return (h > 9 ? h : '0' + h) + ':' + (m > 9 ? m : '0' + m);\r\n}\r\n\r\nfunction uniqId() {\r\n  return Math.round(new Date().getTime() + (Math.random() * 100));\r\n}\r\n\r\nfunction uniqArr(a) {\r\n  var seen = {};\r\n  return a.filter(function(item) {\r\n      return seen.hasOwnProperty(item) ? false : (seen[item] = true);\r\n  });\r\n}\r\n\r\nfunction validateOnBlur(selector) {    \r\n  $(selector).filter(':visible')\r\n    .blur(function () {\r\n      if (this.checkValidity())\r\n        $(this).removeClass(\"invalid\");\r\n      else\r\n        $(this).addClass(\"invalid\");\r\n    });\r\n  }\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ({ formatDate, formatTime, uniqId, uniqArr, validateOnBlur });\n\n//# sourceURL=webpack:///./src/js/lib/common.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatDate", function() { return formatDate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatTime", function() { return formatTime; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uniqId", function() { return uniqId; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uniqArr", function() { return uniqArr; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hash", function() { return hash; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validateOnBlur", function() { return validateOnBlur; });
+function formatDate(dt) {
+    var year = dt.getFullYear();
+    var month = dt.getMonth() + 1;
+    var day = dt.getDate();
+    return year + '-' + (month > 9 ? month : '0' + month) + '-' + (day > 9 ? day : '0' + day);
+  }
+
+function formatTime(h, m) {
+    return (h > 9 ? h : '0' + h) + ':' + (m > 9 ? m : '0' + m);
+}
+
+function uniqId() {
+  return Math.round(new Date().getTime() + (Math.random() * 100));
+}
+
+function uniqArr(a) {
+  var seen = {};
+  return a.filter(function(item) {
+      return seen.hasOwnProperty(item) ? false : (seen[item] = true);
+  });
+}
+
+function hexString(buffer) {
+  // convert hash to byte array
+  var byteArray = new Uint8Array(buffer); 
+  var hashArray = [].slice.call(byteArray);
+  // convert bytes to hex string
+  var hashHex = hashArray.map(function(value) {
+    return ('00' + value.toString(16)).slice(-2);
+  });
+  return hashHex.join('');
+}
+
+//not for long strings
+function utf8encode_ie(str) {
+  var strUtf8 = unescape(encodeURIComponent(str));
+  var arr = new Uint8Array(strUtf8.length);
+  for (var i = 0; i < strUtf8.length; i++) {
+      arr[i] = strUtf8.charCodeAt(i);
+  }
+  return arr;
+}
+
+function textEncode(msg) {
+  if (window.TextEncoder) {
+    return new TextEncoder('utf-8').encode(msg);
+  }
+  //for IE:
+  return utf8encode_ie(msg);
+}
+
+function hash(message) {
+  const data = textEncode(message);
+  
+  var cryptoObj = window.crypto || window.msCrypto; // IE11
+  var digest = cryptoObj.subtle.digest('SHA-256', data);
+  
+  if (digest.oncomplete !== undefined) { //IE
+    digest.oncomplete = function(evt) { 
+      return hexString(evt.target.result); // message digest as ArrayBuffer
+    };
+    return digest;
+  } 
+  else { //all except IE
+    return digest.then(function(value){
+      return hexString(value);
+    });    
+  }  
+}
+
+function validateOnBlur(selector) {    
+  $(selector).filter(':visible')
+    .blur(function () {
+      if (this.checkValidity())
+        $(this).removeClass("invalid");
+      else
+        $(this).addClass("invalid");
+    });
+  }
+
+
 
 /***/ }),
 
@@ -192,11 +1046,36 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction formatDate(dt) {\r\n
 /*!********************************!*\
   !*** ./src/js/lib/estorage.js ***!
   \********************************/
-/*! exports provided: default */
+/*! exports provided: supports_local_storage, get_from_storage, save_to_storage */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction supports_local_storage() {\r\n    try {\r\n      return 'localStorage' in window && window['localStorage'] !== null;\r\n    } catch(e){\r\n      return false;\r\n    }\r\n}\r\n  \r\nfunction get_from_storage(itemName) {\r\n    var json = localStorage.getItem(itemName);\r\n    var items = [];\r\n    if (json !== undefined && json !== null && json.length !== 0)\r\n        items = JSON.parse(json);\r\n\r\n    return items;\r\n}\r\n\r\nfunction save_to_storage(itemName, obj) {\r\n    localStorage.setItem(itemName, JSON.stringify(obj));\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ({ supports_local_storage, get_from_storage, save_to_storage });\n\n//# sourceURL=webpack:///./src/js/lib/estorage.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "supports_local_storage", function() { return supports_local_storage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "get_from_storage", function() { return get_from_storage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "save_to_storage", function() { return save_to_storage; });
+function supports_local_storage() {
+    try {
+      return 'localStorage' in window && window['localStorage'] !== null;
+    } catch(e){
+      return false;
+    }
+}
+  
+function get_from_storage(itemName) {
+    var json = localStorage.getItem(itemName);
+    var items = [];
+    if (json !== undefined && json !== null && json.length !== 0)
+        items = JSON.parse(json);
+
+    return items;
+}
+
+function save_to_storage(itemName, obj) {
+    localStorage.setItem(itemName, JSON.stringify(obj));
+}
+
+
 
 /***/ })
 
