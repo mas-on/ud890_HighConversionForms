@@ -95,7 +95,7 @@
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "header {\r\n    font-weight: bold;\r\n    font-size: 120%;\r\n    padding: 0 0 1em 0;\r\n}\r\n\r\nsection, header {\r\n    width: 320px; \r\n}\r\n\r\n.right {\r\n    float: right;\r\n}\r\n\r\n.hidden {\r\n    display: none;\r\n}\r\n\r\n.lbl-tip {\r\n    color:grey;\r\n    font-size: small;\r\n}\r\n\r\nsection.form .opt-lbl-row {\r\n    padding-bottom: 0.5em;\r\n}\r\n\r\nsection.form label {\r\n    display: block;\r\n    padding: 0 0 1em 0;    \r\n}\r\n\r\n/*validation*/\r\n/*.step.submitted input:invalid {*/\r\n    .submitted :invalid, .invalid {\r\n    border: 1px dashed red;\r\n    background:  rgb(252, 174, 174, 0.2) \r\n}", ""]);
+exports.push([module.i, "header {\r\n    font-weight: bold;\r\n    font-size: 120%;\r\n    padding: 0 0 1em 0;\r\n}\r\n\r\nsection, header {\r\n    width: 320px; \r\n}\r\n\r\ninput, textarea, button {\r\n    width: 100%;\r\n}\r\n\r\n.right {\r\n    float: right;\r\n}\r\n\r\n.col-70 {\r\n    width: 70%;\r\n    display: inline-block;\r\n}\r\n\r\n.hidden {\r\n    display: none;\r\n}\r\n\r\n.lbl-tip {\r\n    color:grey;\r\n    font-size: small;\r\n}\r\n\r\nsection.form .opt-lbl-row {\r\n    padding-bottom: 0.5em;\r\n}\r\n\r\nsection.form label {\r\n    display: block;\r\n    padding: 0 0 1em 0;    \r\n}\r\n\r\n/*validation*/\r\n.submitted :invalid, .invalid {\r\n    border: 1px dashed red;\r\n    background:  rgb(252, 174, 174, 0.2) \r\n}\r\n\r\n.err {\r\n    color: red;\r\n    font-size: small;\r\n}", ""]);
 
 
 
@@ -110,7 +110,7 @@ exports.push([module.i, "header {\r\n    font-weight: bold;\r\n    font-size: 12
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "input {\r\n    width: 100%;\r\n}\r\n\r\n.info {\r\n    color: grey;\r\n    font-weight: bold;\r\n    padding: 0 0 0.5em 0;\r\n    display: block;\r\n}\r\n\r\nlabel:after {\r\n    content: attr(data-invalid);\r\n    color: red;\r\n    font-size: small;\r\n}\r\n\r\nsection.form .lbl {\r\n    width: 20%;\r\n    display: inline-block;\r\n}\r\n\r\nsection.form .date {\r\n    width: 40%;\r\n    vertical-align: top;\r\n}", ""]);
+exports.push([module.i, "\r\n\r\n.info {\r\n    color: grey;\r\n    font-weight: bold;\r\n    padding: 0 0 0.5em 0;\r\n    display: block;\r\n}\r\n\r\nlabel:after {\r\n    content: attr(data-invalid);\r\n    color: red;\r\n    font-size: small;\r\n}\r\n\r\nsection.form .lbl {\r\n    width: 20%;\r\n    display: inline-block;\r\n}\r\n\r\nsection.form .date {\r\n    width: 40%;\r\n    vertical-align: top;\r\n}", ""]);
 
 
 
@@ -785,17 +785,43 @@ if(false) {}
 /*!******************************!*\
   !*** ./src/js/lib/common.js ***!
   \******************************/
-/*! exports provided: formatDate, formatTime, uniqId, uniqArr, hash, validateOnBlur */
+/*! exports provided: isIE, removePlaceholders, formatDate, formatTime, uniqId, uniqArr, hash, hexString, validateOnBlur */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isIE", function() { return isIE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removePlaceholders", function() { return removePlaceholders; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatDate", function() { return formatDate; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatTime", function() { return formatTime; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uniqId", function() { return uniqId; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uniqArr", function() { return uniqArr; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hash", function() { return hash; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hexString", function() { return hexString; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validateOnBlur", function() { return validateOnBlur; });
+function isIE() {
+  var ua = window.navigator.userAgent;
+  var msie = ua.indexOf("MSIE ");
+  return (msie > 0 || (/Trident\/7\./).test(ua) || document.documentMode == 11);
+}
+
+function removePlaceholders() {
+  $('[placeholder]:not(.date,.time)').each(function() {    
+    var ph = $(this).attr('placeholder');
+    this.removeAttribute('placeholder');
+    
+    var isOpt = ph.indexOf('[optional]') > 0;
+    if (isOpt) {
+      ph = ph.replace('[optional]','').trim();
+    }            
+    var lbl = '<div>' + ph + ':</div>';
+    if (isOpt) {
+      lbl = lbl + '<span class="lbl-tip">optional</span>';
+    }
+    $(this).before(lbl);
+  });
+}
+
 function formatDate(dt) {
     var year = dt.getFullYear();
     var month = dt.getMonth() + 1;
@@ -854,10 +880,10 @@ function hash(message) {
   var digest = cryptoObj.subtle.digest('SHA-256', data);
   
   if (digest.oncomplete !== undefined) { //IE
-    digest.oncomplete = function(evt) { 
-      return hexString(evt.target.result); // message digest as ArrayBuffer
-    };
-    return digest;
+    var res = '';
+    setTimeout(function() {
+      res = hexString(digest.result);}, 10);  // CryptoOperation
+    return res;
   } 
   else { //all except IE
     return digest.then(function(value){
@@ -892,6 +918,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "supports_local_storage", function() { return supports_local_storage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "get_from_storage", function() { return get_from_storage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "save_to_storage", function() { return save_to_storage; });
+//for testing page as local file in IE, add file://127.0.0.1/ to trusted sites and use url file://127.0.0.1/c$/pathtofile/file.html
+
 function supports_local_storage() {
     try {
       return 'localStorage' in window && window['localStorage'] !== null;
@@ -1058,10 +1086,12 @@ function showNextStep(step) {
 
 function saveUser(name, email, pwdhash) {
     var user = {};
-        user["name"] = name;
-        user["email"] = email;
-        user["pwdhash"] = pwdhash;
-        _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__["save_to_storage"]("user", user);
+    user["name"] = name;
+    user["email"] = email;
+    user["pwdhash"] = pwdhash;
+    _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__["save_to_storage"]("user", user);
+
+    redirect();
 }
 
 function redirect(){
@@ -1069,10 +1099,12 @@ function redirect(){
 }
 
 //on load
-$(function () {
-    //var errmsg = $("#err-msg");
+$(function () {    
     var today = new Date().getDate().toString();
     $("#birthday").attr('min', today);
+
+    if (_lib_common_js__WEBPACK_IMPORTED_MODULE_0__["isIE"]())
+        _lib_common_js__WEBPACK_IMPORTED_MODULE_0__["removePlaceholders"]();
 
     setValidateOnBlur();
 
@@ -1095,10 +1127,14 @@ $(function () {
         var hashRes = _lib_common_js__WEBPACK_IMPORTED_MODULE_0__["hash"]($("#password").val());
         if (hashRes.then)
             hashRes.then(function(p) { 
-                saveUser(name, email, p); redirect(); 
+                saveUser(name, email, p);
             });
-        else if (hashRes.result) { //IE11
-            saveUser(name, email, hashRes.result); redirect();
+        else { //IE11   
+            saveUser(name, email, hashRes);         
+            //hashRes.onsuccess = function(evt) {  alert('save');                                     
+                //saveUser(name, email, _cmn.hexString(evt.target.result)); // result = message digest as ArrayBuffer                
+              //};
+            
         }
          
         return false;

@@ -1,3 +1,26 @@
+function isIE() {
+  var ua = window.navigator.userAgent;
+  var msie = ua.indexOf("MSIE ");
+  return (msie > 0 || (/Trident\/7\./).test(ua) || document.documentMode == 11);
+}
+
+function removePlaceholders() {
+  $('[placeholder]:not(.date,.time)').each(function() {    
+    var ph = $(this).attr('placeholder');
+    this.removeAttribute('placeholder');
+    
+    var isOpt = ph.indexOf('[optional]') > 0;
+    if (isOpt) {
+      ph = ph.replace('[optional]','').trim();
+    }            
+    var lbl = '<div>' + ph + ':</div>';
+    if (isOpt) {
+      lbl = lbl + '<span class="lbl-tip">optional</span>';
+    }
+    $(this).before(lbl);
+  });
+}
+
 function formatDate(dt) {
     var year = dt.getFullYear();
     var month = dt.getMonth() + 1;
@@ -55,11 +78,11 @@ function hash(message) {
   var cryptoObj = window.crypto || window.msCrypto; // IE11
   var digest = cryptoObj.subtle.digest('SHA-256', data);
   
-  if (digest.oncomplete !== undefined) { //IE
-    digest.oncomplete = function(evt) { 
-      return hexString(evt.target.result); // message digest as ArrayBuffer
-    };
-    return digest;
+  if (digest.oncomplete !== undefined) { //IE11
+    var res = '';
+    setTimeout(function() { //gets result synchronously
+      res = hexString(digest.result);}, 10); 
+    return res;
   } 
   else { //all except IE
     return digest.then(function(value){
@@ -78,4 +101,4 @@ function validateOnBlur(selector) {
     });
   }
 
-export { formatDate, formatTime, uniqId, uniqArr, hash, validateOnBlur };
+export { isIE, removePlaceholders, formatDate, formatTime, uniqId, uniqArr, hash, validateOnBlur };

@@ -62,8 +62,16 @@ $(function () {
   if (checkStorage())
     fillEventTypes(eType);
 
-  eType.editableSelect();
-  $('#event-type.es-input').attr('placeholder', 'Choose or enter event type');
+  eType.editableSelect();  
+
+  //for IE (placeholder disappears on focus): change placeholders to labels
+  if (_cmn.isIE()) {   
+    $('#event-type.es-input').before('<span>Choose or enter event type:</span>');
+    _cmn.removePlaceholders();
+  }
+  else { //just add a placeholder for a created element
+    $('#event-type.es-input').attr('placeholder', 'Choose or enter event type');   
+  }
 
   setDefaultDateTime();
   setDateTimeCheckers();
@@ -73,11 +81,11 @@ $(function () {
 
   //validate and save event
   submit.click(function () {
-    errmsg.val("");
+    errmsg.text("");
     $(".form").addClass("submitted");
 
     if ($(".form :invalid").length > 0) {
-      errmsg.val("Please, fill required fields");
+      errmsg.text("Please, fill required fields");
     }
     else {
       if (!checkStorage())
@@ -189,10 +197,10 @@ $(function () {
 
   function checkStorage() {
     if (!_db.supports_local_storage()) {
-      errmsg.val("Please, try another browser");
+      errmsg.text("Please, try another browser");
       return false;
     }
     return true;
   }
-
+  
 });

@@ -81,25 +81,10 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/new-event.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/jquery-editable-select/dist/jquery-editable-select.css":
-/*!*******************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/jquery-editable-select/dist/jquery-editable-select.css ***!
-  \*******************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, "/**\n * jQuery Editable Select\n * Indri Muska <indrimuska@gmail.com>\n *\n * Source on GitHub @ https://github.com/indrimuska/jquery-editable-select\n */\n\ninput.es-input { padding-right: 20px !important; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAICAYAAADJEc7MAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG2YAABzjgAA4DIAAIM2AAB5CAAAxgwAADT6AAAgbL5TJ5gAAABGSURBVHjaYvz//z8DOYCJgUzA0tnZidPK8vJyRpw24pLEpwnuVHRFhDQxMDAwMPz//x+OOzo6/iPz8WFGuocqAAAA//8DAD/sORHYg7kaAAAAAElFTkSuQmCC) right center no-repeat; }\ninput.es-input.open {\n\t-webkit-border-bottom-left-radius: 0; -moz-border-radius-bottomleft: 0; border-bottom-left-radius: 0;\n\t-webkit-border-bottom-right-radius: 0; -moz-border-radius-bottomright: 0; border-bottom-right-radius: 0; }\n.es-list { position: absolute; padding: 0; margin: 0; border: 1px solid #d1d1d1; display: none; z-index: 1000; background: #fff; max-height: 160px; overflow-y: auto;\n\t-moz-box-shadow: 0 2px 3px #ccc; -webkit-box-shadow: 0 2px 3px #ccc; box-shadow: 0 2px 3px #ccc; }\n.es-list li { display: block; padding: 5px 10px; margin: 0; }\n.es-list li.selected { background: #f3f3f3; }\n.es-list li[disabled] { opacity: .5; }", ""]);
-
-
-
-/***/ }),
 
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/css/base.css":
 /*!****************************************************************!*\
@@ -111,21 +96,6 @@ exports.push([module.i, "/**\n * jQuery Editable Select\n * Indri Muska <indrimu
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
 exports.push([module.i, "header {\r\n    font-weight: bold;\r\n    font-size: 120%;\r\n    padding: 0 0 1em 0;\r\n}\r\n\r\nsection, header {\r\n    width: 320px; \r\n}\r\n\r\ninput, textarea, button {\r\n    width: 100%;\r\n}\r\n\r\n.right {\r\n    float: right;\r\n}\r\n\r\n.col-70 {\r\n    width: 70%;\r\n    display: inline-block;\r\n}\r\n\r\n.hidden {\r\n    display: none;\r\n}\r\n\r\n.lbl-tip {\r\n    color:grey;\r\n    font-size: small;\r\n}\r\n\r\nsection.form .opt-lbl-row {\r\n    padding-bottom: 0.5em;\r\n}\r\n\r\nsection.form label {\r\n    display: block;\r\n    padding: 0 0 1em 0;    \r\n}\r\n\r\n/*validation*/\r\n.submitted :invalid, .invalid {\r\n    border: 1px dashed red;\r\n    background:  rgb(252, 174, 174, 0.2) \r\n}\r\n\r\n.err {\r\n    color: red;\r\n    font-size: small;\r\n}", ""]);
-
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/css/new-event.css":
-/*!*********************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/css/new-event.css ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, "/*base rules*/\r\n\r\nsection.form .lbl {\r\n    width: 15%;\r\n    display: inline-block;\r\n}\r\n\r\nsection.form .date {\r\n    width: 40%;\r\n}\r\n\r\nsection.form .time {\r\n    width: 23%;\r\n}\r\n\r\n\r\n/*concrete elements rules*/\r\n.event-end input{\r\n    vertical-align: top;\r\n}\r\n\r\n.event-end .lbl {\r\n    margin-top: 0.15em;\r\n}\r\n", ""]);
 
 
 
@@ -224,48 +194,6 @@ function toComment(sourceMap) {
   var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
   return '/*# ' + data + ' */';
 }
-
-/***/ }),
-
-/***/ "./node_modules/jquery-editable-select/dist/jquery-editable-select.css":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/jquery-editable-select/dist/jquery-editable-select.css ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../css-loader/dist/cjs.js!./jquery-editable-select.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/jquery-editable-select/dist/jquery-editable-select.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./node_modules/jquery-editable-select/dist/jquery-editable-select.min.js":
-/*!********************************************************************************!*\
-  !*** ./node_modules/jquery-editable-select/dist/jquery-editable-select.min.js ***!
-  \********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/*! jQuery Editable Select - v2.2.5 - https://github.com/indrimuska/jquery-editable-select - (c) 2016 Indri Muska - MIT */
-+function(a){EditableSelect=function(b,c){this.options=c,this.$select=a(b),this.$input=a('<input type="text" autocomplete="off">'),this.$list=a('<ul class="es-list">'),this.utility=new EditableSelectUtility(this),["focus","manual"].indexOf(this.options.trigger)<0&&(this.options.trigger="focus"),["default","fade","slide"].indexOf(this.options.effects)<0&&(this.options.effects="default"),isNaN(this.options.duration)&&["fast","slow"].indexOf(this.options.duration)<0&&(this.options.duration="fast"),this.$select.replaceWith(this.$input),this.$list.appendTo(this.options.appendTo||this.$input.parent()),this.utility.initialize(),this.utility.initializeList(),this.utility.initializeInput(),this.utility.trigger("created")},EditableSelect.DEFAULTS={filter:!0,effects:"default",duration:"fast",trigger:"focus"},EditableSelect.prototype.filter=function(){var b=0,c=this.$input.val().toLowerCase().trim();this.$list.find("li").addClass("es-visible").show(),this.options.filter&&(b=this.$list.find("li").filter(function(b,d){return a(d).text().toLowerCase().indexOf(c)<0}).hide().removeClass("es-visible").length,this.$list.find("li").length==b&&this.hide())},EditableSelect.prototype.show=function(){if(this.$list.css({top:this.$input.position().top+this.$input.outerHeight()-1,left:this.$input.position().left,width:this.$input.outerWidth()}),!this.$list.is(":visible")&&this.$list.find("li.es-visible").length>0){var b={"default":"show",fade:"fadeIn",slide:"slideDown"},c=b[this.options.effects];this.utility.trigger("show"),this.$input.addClass("open"),this.$list[c](this.options.duration,a.proxy(this.utility.trigger,this.utility,"shown"))}},EditableSelect.prototype.hide=function(){var b={"default":"hide",fade:"fadeOut",slide:"slideUp"},c=b[this.options.effects];this.utility.trigger("hide"),this.$input.removeClass("open"),this.$list[c](this.options.duration,a.proxy(this.utility.trigger,this.utility,"hidden"))},EditableSelect.prototype.select=function(a){this.$list.has(a)&&a.is("li.es-visible:not([disabled])")&&(this.$input.val(a.text()),this.options.filter&&this.hide(),this.filter(),this.utility.trigger("select",a))},EditableSelect.prototype.add=function(b,c,d,e){var f=a("<li>").html(b),g=a("<option>").text(b),h=this.$list.find("li").length;c=isNaN(c)?h:Math.min(Math.max(0,c),h),0==c?(this.$list.prepend(f),this.$select.prepend(g)):(this.$list.find("li").eq(c-1).after(f),this.$select.find("option").eq(c-1).after(g)),this.utility.setAttributes(f,d,e),this.utility.setAttributes(g,d,e),this.filter()},EditableSelect.prototype.remove=function(a){var b=this.$list.find("li").length;a=isNaN(a)?b:Math.min(Math.max(0,a),b-1),this.$list.find("li").eq(a).remove(),this.$select.find("option").eq(a).remove(),this.filter()},EditableSelect.prototype.clear=function(){this.$list.find("li").remove(),this.$select.find("option").remove(),this.filter()},EditableSelect.prototype.destroy=function(){this.$list.off("mousemove mousedown mouseup"),this.$input.off("focus blur input keydown"),this.$input.replaceWith(this.$select),this.$list.remove(),this.$select.removeData("editable-select")},EditableSelectUtility=function(a){this.es=a},EditableSelectUtility.prototype.initialize=function(){var b=this;b.setAttributes(b.es.$input,b.es.$select[0].attributes,b.es.$select.data()),b.es.$input.addClass("es-input").data("editable-select",b.es),b.es.$select.find("option").each(function(c,d){var e=a(d).remove();b.es.add(e.text(),c,d.attributes,e.data()),e.attr("selected")&&b.es.$input.val(e.text())}),b.es.filter()},EditableSelectUtility.prototype.initializeList=function(){var b=this;b.es.$list.on("mousemove","li:not([disabled])",function(){b.es.$list.find(".selected").removeClass("selected"),a(this).addClass("selected")}).on("mousedown","li",function(c){a(this).is("[disabled]")?c.preventDefault():b.es.select(a(this))}).on("mouseup",function(){b.es.$list.find("li.selected").removeClass("selected")})},EditableSelectUtility.prototype.initializeInput=function(){var b=this;switch(this.es.options.trigger){default:case"focus":b.es.$input.on("focus",a.proxy(b.es.show,b.es)).on("blur",a.proxy(b.es.hide,b.es));break;case"manual":}b.es.$input.on("input keydown",function(a){switch(a.keyCode){case 38:var c=b.es.$list.find("li.es-visible:not([disabled])"),d=c.index(c.filter("li.selected"));b.highlight(d-1),a.preventDefault();break;case 40:var c=b.es.$list.find("li.es-visible:not([disabled])"),d=c.index(c.filter("li.selected"));b.highlight(d+1),a.preventDefault();break;case 13:b.es.$list.is(":visible")&&(b.es.select(b.es.$list.find("li.selected")),a.preventDefault());break;case 9:case 27:b.es.hide();break;default:b.es.filter(),b.highlight(0)}})},EditableSelectUtility.prototype.highlight=function(a){var b=this;b.es.show(),setTimeout(function(){var c=b.es.$list.find("li.es-visible"),d=b.es.$list.find("li.selected").removeClass("selected"),e=c.index(d);if(c.length>0){var f=(c.length+a)%c.length,g=c.eq(f),h=g.position().top;g.addClass("selected"),f<e&&h<0&&b.es.$list.scrollTop(b.es.$list.scrollTop()+h),f>e&&h+g.outerHeight()>b.es.$list.outerHeight()&&b.es.$list.scrollTop(b.es.$list.scrollTop()+g.outerHeight()+2*(h-b.es.$list.outerHeight()))}})},EditableSelectUtility.prototype.setAttributes=function(b,c,d){a.each(c||{},function(a,c){b.attr(c.name,c.value)}),b.data(d)},EditableSelectUtility.prototype.trigger=function(a){var b=Array.prototype.slice.call(arguments,1),c=[a+".editable-select"];c.push(b),this.es.$select.trigger.apply(this.es.$select,c),this.es.$input.trigger.apply(this.es.$input,c)},Plugin=function(b){var c=Array.prototype.slice.call(arguments,1);return this.each(function(){var d=a(this),e=d.data("editable-select"),f=a.extend({},EditableSelect.DEFAULTS,d.data(),"object"==typeof b&&b);e||(e=new EditableSelect(this,f)),"string"==typeof b&&e[b].apply(e,c)})},a.fn.editableSelect=Plugin,a.fn.editableSelect.Constructor=EditableSelect}(jQuery);
 
 /***/ }),
 
@@ -808,33 +736,85 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./src/css/new-event.css":
-/*!*******************************!*\
-  !*** ./src/css/new-event.css ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/js/index.js":
+/*!*************************!*\
+  !*** ./src/js/index.js ***!
+  \*************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-
-var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./new-event.css */ "./node_modules/css-loader/dist/cjs.js!./src/css/new-event.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _lib_common_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/common.js */ "./src/js/lib/common.js");
+/* harmony import */ var _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/estorage.js */ "./src/js/lib/estorage.js");
 
 
 
-var options = {"hmr":true}
+__webpack_require__(/*! ../css/base.css */ "./src/css/base.css");
 
-options.transform = transform
-options.insertInto = undefined;
 
-var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+//on load
+$(function () {    
 
-if(content.locals) module.exports = content.locals;
+    if (_lib_common_js__WEBPACK_IMPORTED_MODULE_0__["isIE"]())
+        _lib_common_js__WEBPACK_IMPORTED_MODULE_0__["removePlaceholders"]();
+  
+    //validate on blur
+    _lib_common_js__WEBPACK_IMPORTED_MODULE_0__["validateOnBlur"]('.form input'); 
 
-if(false) {}
+    var errmsg = $("#err-msg");
+
+    //validate and redirect
+    $('#submit').click(function () {        
+        errmsg.text("");
+        $(".form").addClass("submitted");
+        if ($(".form :invalid").length > 0) {
+            errmsg.text("Please, fill required fields");
+        }
+        else {
+            if (!checkStorage()) return;
+
+            var email = $(".form .email").val();
+            var hashRes = _lib_common_js__WEBPACK_IMPORTED_MODULE_0__["hash"]($(".form .pwd").val());
+            if (hashRes.then)
+                hashRes.then(function(p) { 
+                    checkPwd(email, p); 
+                });
+            else //if (hashRes.result) { //IE11                         
+                //hashRes.oncomplete = function(evt) { alert('check');
+                  //  checkPwd(email, _cmn.hexString(evt.target.result));
+                   // }; 
+                //}  
+                checkPwd(email, hashRes);                      
+        }
+
+        return false;
+    });
+
+    function checkStorage() {
+        if (!_lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__["supports_local_storage"]()) {
+          errmsg.text("Please, try another browser");
+          return false;
+        }
+        return true;
+    }
+
+    function checkPwd(email, hPwd) {
+        alert(hPwd);
+        var uPwd = _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__["get_from_storage"]("user");
+        if (uPwd == [] || uPwd["email"] !== email || uPwd["pwdhash"] !== hPwd) {
+            errmsg.text("Wrong email or password, check, please");
+            return;
+        }
+        else {            
+            redirect();
+        }
+    }
+
+    function redirect(){
+        location.href = 'events.html';
+    }
+});
 
 /***/ }),
 
@@ -998,229 +978,6 @@ function save_to_storage(itemName, obj) {
     localStorage.setItem(itemName, JSON.stringify(obj));
 }
 
-
-
-/***/ }),
-
-/***/ "./src/js/new-event.js":
-/*!*****************************!*\
-  !*** ./src/js/new-event.js ***!
-  \*****************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery_editable_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery-editable-select */ "./node_modules/jquery-editable-select/dist/jquery-editable-select.min.js");
-/* harmony import */ var jquery_editable_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_editable_select__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/estorage.js */ "./src/js/lib/estorage.js");
-/* harmony import */ var _lib_common_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/common.js */ "./src/js/lib/common.js");
-//The import and export statements have been standardized in ES2015. Although they are not supported in most browsers yet, webpack does support them out of the box.
-
-
-
-
-__webpack_require__(/*! jquery-editable-select/dist/jquery-editable-select.css */ "./node_modules/jquery-editable-select/dist/jquery-editable-select.css");
-__webpack_require__(/*! ../css/base.css */ "./src/css/base.css");
-__webpack_require__(/*! ../css/new-event.css */ "./src/css/new-event.css");
-
-//help functions
-function isValidDate(d) {
-  return d instanceof Date && !isNaN(d);
-}
-
-function checkType() {  
-  var types = _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__["get_from_storage"]('evt-types');
-  var tested = $("#event-type").val();
-  if ($.inArray(tested, types) === -1)
-    types.push(tested);
-
-  _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__["save_to_storage"]('evt-types', types);
-}
-
-function composeDatetime(parent) {
-  var d = parent.find(".date").first().val();
-  var t = parent.find(".time").first().val();
-  return d + "T" + t + ":00";
-}
-
-function saveEventDetails() {
-  var events = _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__["get_from_storage"]('events');
-  var evt = {};
-  $(".form input,textarea:visible").not(".date,.time").each(function () {
-    evt[$(this).attr('id')] = $(this).val();
-    evt["uid"] = _lib_common_js__WEBPACK_IMPORTED_MODULE_2__["uniqId"]();
-  });
-  
-  //dates
-  evt["event-start"] = composeDatetime($(".form .event-start"));
-  evt["event-end"] = composeDatetime($(".form .event-end"));
-
-  events.push(evt);
-  _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__["save_to_storage"]('events', events);
-}
-
-
-
-
-//on load
-$(function () {
-  var eType = $('#event-type');  
-
-  var startDInput = $('.event-start .date');
-  var endDInput = $('.event-end .date');
-  var startTInput = $('.event-start .time');
-  var endTInput = $('.event-end .time');
-
-  var submit = $('#submit');
-  var errmsg = $("#err-msg");
-
-  //set event type options
-  if (checkStorage())
-    fillEventTypes(eType);
-
-  eType.editableSelect();  
-
-  //for IE (placeholder disappears on focus): change placeholders to labels
-  if (_lib_common_js__WEBPACK_IMPORTED_MODULE_2__["isIE"]()) {   
-    $('#event-type.es-input').before('<span>Choose or enter event type:</span>');
-    _lib_common_js__WEBPACK_IMPORTED_MODULE_2__["removePlaceholders"]();
-  }
-  else { //just add a placeholder for a created element
-    $('#event-type.es-input').attr('placeholder', 'Choose or enter event type');   
-  }
-
-  setDefaultDateTime();
-  setDateTimeCheckers();
-
-  //validate on blur
-  _lib_common_js__WEBPACK_IMPORTED_MODULE_2__["validateOnBlur"]('.form input,textarea,select');  
-
-  //validate and save event
-  submit.click(function () {
-    errmsg.text("");
-    $(".form").addClass("submitted");
-
-    if ($(".form :invalid").length > 0) {
-      errmsg.text("Please, fill required fields");
-    }
-    else {
-      if (!checkStorage())
-        return;
-
-      checkType();
-      saveEventDetails();
-      location.href = 'events.html';
-    }
-
-    return false;
-  });
-
-  /*********functions*****************/
-  function fillEventTypes(el) {
-    var types = _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__["get_from_storage"]('evt-types');
-    $.each(types, function (i, t) {
-      el.append($("<option></option>")
-        .attr("value", t)
-        .text(t));
-    });
-  }
-
-  function setDefaultDateTime() {
-    var start = new Date();
-    var end = new Date();
-    start.setHours(start.getHours() + 1); //next hour for default event start time
-    end.setHours(end.getHours() + 2);
-
-    var frmStart = _lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatDate"](start);
-    startDInput.val(frmStart).attr('min', frmStart);
-    endDInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatDate"](end)).attr('min', frmStart);
-    startTInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatTime"](start.getHours(), 0));
-    endTInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatTime"](end.getHours(), 0));
-  }
-
-  function setDateTimeCheckers() {
-    startDInput.blur(function () {
-      checkMinValue(startDInput, startTInput);
-      checkEndDatetime();
-    });
-
-    startTInput.blur(function () {
-      checkMinValue(startDInput, startTInput);
-      checkEndDatetime();
-    });
-
-    endDInput.blur(function () {
-      checkMinValue(endDInput, endTInput);
-      checkEndDatetime();
-    });
-
-    endTInput.blur(function () {
-      checkMinValue(endDInput, endTInput);
-      checkEndDatetime();
-    });
-  }
-  function checkEndDatetime() {
-    var dtStart = getAndFixDateFrom(startDInput, startTInput);
-    var dtEnd = getAndFixDateFrom(endDInput, endTInput);
-
-    if (dtEnd !== undefined && dtEnd < dtStart) {
-      dtEnd = dtStart;
-      var frmEnd = _lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatDate"](dtEnd);
-      endDInput.val(frmEnd).attr('min', _lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatDate"](dtStart));
-      endTInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatTime"](dtEnd.getHours(), dtEnd.getMinutes()));
-    }
-  }
-
-  function getAndFixDateFrom(dateInput, timeInput) {
-    var dt = new Date(dateInput.val());
-
-    if (!isValidDate(dt)) {
-      if (dateInput.prop('required')) {
-        dt = new Date();
-        dt.setMinutes(dt.getMinutes() + 1);
-        dateInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatDate"](dt));
-      }
-      else {
-        dt = undefined;
-        dateInput.val('');
-      }
-    }
-
-    var t = (timeInput.val() === '' || timeInput.val() === undefined) ? [0, 0] : timeInput.val().split(':');
-    if (t.length != 2 || t[0].length != 2 || t[1].length != 2) {
-      if (timeInput.prop('required')) {
-        timeInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatTime"](0, 0));
-      }
-      else {
-        timeInput.val('');
-      }
-      t = [0, 0];
-    }
-    if (dt !== undefined)
-      dt.setHours(t[0], t[1]);
-
-    return dt;
-  }
-
-  function checkMinValue(dateInput, timeInput) {
-    var now = new Date();
-    var dt = getAndFixDateFrom(dateInput, timeInput);
-    if (dt !== undefined && dt < now) {
-      dateInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatDate"](now));
-      timeInput.val(_lib_common_js__WEBPACK_IMPORTED_MODULE_2__["formatTime"](now.getHours(), now.getMinutes()));
-    }
-  }
-
-  function checkStorage() {
-    if (!_lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__["supports_local_storage"]()) {
-      errmsg.text("Please, try another browser");
-      return false;
-    }
-    return true;
-  }
-  
-});
 
 
 /***/ })

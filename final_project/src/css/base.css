@@ -8,8 +8,17 @@ section, header {
     width: 320px; 
 }
 
+input, textarea, button {
+    width: 100%;
+}
+
 .right {
     float: right;
+}
+
+.col-70 {
+    width: 70%;
+    display: inline-block;
 }
 
 .hidden {
@@ -31,8 +40,12 @@ section.form label {
 }
 
 /*validation*/
-/*.step.submitted input:invalid {*/
-    .submitted :invalid, .invalid {
+.submitted :invalid, .invalid {
     border: 1px dashed red;
     background:  rgb(252, 174, 174, 0.2) 
+}
+
+.err {
+    color: red;
+    font-size: small;
 }

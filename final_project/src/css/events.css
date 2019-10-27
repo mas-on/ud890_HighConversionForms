@@ -1,9 +1,4 @@
 /*base rules*/
-.col-70 {
-    width: 70%;
-    display: inline-block;
-}
-
 .clickable {
     cursor: pointer;
 }

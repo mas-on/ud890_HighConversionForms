@@ -128,10 +128,12 @@ function showNextStep(step) {
 
 function saveUser(name, email, pwdhash) {
     var user = {};
-        user["name"] = name;
-        user["email"] = email;
-        user["pwdhash"] = pwdhash;
-        _db.save_to_storage("user", user);
+    user["name"] = name;
+    user["email"] = email;
+    user["pwdhash"] = pwdhash;
+    _db.save_to_storage("user", user);
+
+    redirect();
 }
 
 function redirect(){
@@ -139,10 +141,12 @@ function redirect(){
 }
 
 //on load
-$(function () {
-    //var errmsg = $("#err-msg");
+$(function () {    
     var today = new Date().getDate().toString();
     $("#birthday").attr('min', today);
+
+    if (_cmn.isIE())
+        _cmn.removePlaceholders();
 
     setValidateOnBlur();
 
@@ -165,10 +169,10 @@ $(function () {
         var hashRes = _cmn.hash($("#password").val());
         if (hashRes.then)
             hashRes.then(function(p) { 
-                saveUser(name, email, p); redirect(); 
+                saveUser(name, email, p);
             });
-        else if (hashRes.result) { //IE11
-            saveUser(name, email, hashRes.result); redirect();
+        else { //IE11   
+            saveUser(name, email, hashRes);                                 
         }
          
         return false;

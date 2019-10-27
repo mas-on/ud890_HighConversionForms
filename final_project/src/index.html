@@ -4,20 +4,20 @@
     </head>
     <body>
         <header>
-            <span>Event planner</span>            
+            <span>Log in to see your events</span>            
         </header>
-        <section class="login"> 
-            <span>Log in to see your events</span>
+        <section class="form">             
             <label>
-                <input class="email" type="email" placeholder="email@domain.com" autocomplete="email" required>
+                <input class="email" type="email" placeholder="E-mail" autocomplete="email" required autofocus>
             </label>
             <label>
-                <input class="pwd" type="password" placeholder="password" minlength="6" required>
+                <input class="pwd" type="password" placeholder="Password" minlength="8" required>
             </label>
-            <button id="submit">Log in</button> 
+            <span id="err-msg" class="err"></span>
+            <button id="submit">Log in</button>             
         </section>
         <section class="signup">
-            <span>Or <a href="signup.html">create a new account</a></span>
+            <span>Don't have an account? <a href="signup.html">Sign up</a></span>
         </section>
     </body>
 </html>

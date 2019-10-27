@@ -4,6 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = { 
   entry: {
+    index: "./src/js/index.js",
     newevent: "./src/js/new-event.js",    
     events: "./src/js/events.js",
     signup: "./src/js/signup.js",
@@ -46,8 +47,8 @@ module.exports = {
     new HtmlWebpackPlugin({    
       hash: true,  
       template: './src/index.html',
-      //chunks: ['vendor', 'index'],
-      //chunksSortMode: 'manual',
+      chunks: ['vendor', 'index'],
+      chunksSortMode: 'manual',
       filename: 'index.html'
     }),
     new HtmlWebpackPlugin({    
