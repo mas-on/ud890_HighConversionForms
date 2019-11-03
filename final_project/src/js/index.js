@@ -46,8 +46,7 @@ $(function () {
         return true;
     }
 
-    function checkPwd(email, hPwd) {
-        alert(hPwd);
+    function checkPwd(email, hPwd) {        
         var uPwd = _db.get_from_storage("user");
         if (uPwd == [] || uPwd["email"] !== email || uPwd["pwdhash"] !== hPwd) {
             errmsg.text("Wrong email or password, check, please");

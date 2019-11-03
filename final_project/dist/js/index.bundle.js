@@ -95,7 +95,7 @@
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "header {\r\n    font-weight: bold;\r\n    font-size: 120%;\r\n    padding: 0 0 1em 0;\r\n}\r\n\r\nsection, header {\r\n    width: 320px; \r\n}\r\n\r\ninput, textarea, button {\r\n    width: 100%;\r\n}\r\n\r\n.right {\r\n    float: right;\r\n}\r\n\r\n.col-70 {\r\n    width: 70%;\r\n    display: inline-block;\r\n}\r\n\r\n.hidden {\r\n    display: none;\r\n}\r\n\r\n.lbl-tip {\r\n    color:grey;\r\n    font-size: small;\r\n}\r\n\r\nsection.form .opt-lbl-row {\r\n    padding-bottom: 0.5em;\r\n}\r\n\r\nsection.form label {\r\n    display: block;\r\n    padding: 0 0 1em 0;    \r\n}\r\n\r\n/*validation*/\r\n.submitted :invalid, .invalid {\r\n    border: 1px dashed red;\r\n    background:  rgb(252, 174, 174, 0.2) \r\n}\r\n\r\n.err {\r\n    color: red;\r\n    font-size: small;\r\n}", ""]);
+exports.push([module.i, "html, body {\r\n    height: 100%;    \r\n}\r\n\r\nbody {\r\n    font-size: 16px;\r\n}\r\n\r\nheader {\r\n    font-weight: bold;\r\n    font-size: 120%;\r\n    padding: 0 0 1em 0;\r\n}\r\n\r\nsection, header {\r\n    min-width: 220px; \r\n    max-width: 320px;\r\n    margin: 0 auto;\r\n}\r\n\r\ninput, textarea, button {\r\n    width: 100%;\r\n}\r\n\r\n.right {\r\n    float: right;\r\n}\r\n\r\n.col-70 {\r\n    width: 70%;\r\n    display: inline-block;\r\n}\r\n\r\n.hidden {\r\n    display: none;\r\n}\r\n\r\n.lbl-tip {\r\n    color:grey;\r\n    font-size: small;\r\n}\r\n\r\nsection.form .opt-lbl-row {\r\n    padding-bottom: 0.5em;\r\n}\r\n\r\nsection.form label {\r\n    display: block;\r\n    padding: 0 0 1em 0;    \r\n}\r\n\r\n/*validation*/\r\n.submitted :invalid, .invalid {\r\n    border: 1px dashed red;\r\n    background:  rgb(252, 174, 174, 0.2) \r\n}\r\n\r\n.err {\r\n    color: red;\r\n    font-size: small;\r\n}", ""]);
 
 
 
@@ -780,11 +780,7 @@ $(function () {
                 hashRes.then(function(p) { 
                     checkPwd(email, p); 
                 });
-            else //if (hashRes.result) { //IE11                         
-                //hashRes.oncomplete = function(evt) { alert('check');
-                  //  checkPwd(email, _cmn.hexString(evt.target.result));
-                   // }; 
-                //}  
+            else //IE11 
                 checkPwd(email, hashRes);                      
         }
 
@@ -799,8 +795,7 @@ $(function () {
         return true;
     }
 
-    function checkPwd(email, hPwd) {
-        alert(hPwd);
+    function checkPwd(email, hPwd) {        
         var uPwd = _lib_estorage_js__WEBPACK_IMPORTED_MODULE_1__["get_from_storage"]("user");
         if (uPwd == [] || uPwd["email"] !== email || uPwd["pwdhash"] !== hPwd) {
             errmsg.text("Wrong email or password, check, please");
@@ -822,7 +817,7 @@ $(function () {
 /*!******************************!*\
   !*** ./src/js/lib/common.js ***!
   \******************************/
-/*! exports provided: isIE, removePlaceholders, formatDate, formatTime, uniqId, uniqArr, hash, hexString, validateOnBlur */
+/*! exports provided: isIE, removePlaceholders, formatDate, formatTime, uniqId, uniqArr, hash, validateOnBlur */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -834,7 +829,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uniqId", function() { return uniqId; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uniqArr", function() { return uniqArr; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hash", function() { return hash; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hexString", function() { return hexString; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validateOnBlur", function() { return validateOnBlur; });
 function isIE() {
   var ua = window.navigator.userAgent;
@@ -916,10 +910,10 @@ function hash(message) {
   var cryptoObj = window.crypto || window.msCrypto; // IE11
   var digest = cryptoObj.subtle.digest('SHA-256', data);
   
-  if (digest.oncomplete !== undefined) { //IE
+  if (digest.oncomplete !== undefined) { //IE11
     var res = '';
-    setTimeout(function() {
-      res = hexString(digest.result);}, 10);  // CryptoOperation
+    setTimeout(function() { //gets result synchronously
+      res = hexString(digest.result);}, 10); 
     return res;
   } 
   else { //all except IE
