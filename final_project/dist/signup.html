@@ -8,42 +8,45 @@
             <span>Create your personal account</span>                      
         </header>
         <section class="form">
-            <div class="step">
-                <span class="info">Step 1/2</span>
-                <label>
-                    <input class="name" type="text" placeholder="Your name" autocomplete="name" required autofocus> 
-                </label>
-                <label>
-                    <input class="email" type="email" placeholder="E-mail" autocomplete="email" required>
-                </label>
-                <label>
-                    <span class="lbl-tip">Please enter at least 8 symbols including digits and lowercase and uppercase letters</span>
-                    <input id="password" class="pwd" type="password" placeholder="Password" minlength="8" maxlength="100" required>
-                </label>
-                <label>
-                    <input id="rep-password" class="pwd" type="password" placeholder="Repeat password" minlength="8" maxlength="100" required>
-                </label>
-            </div>
-            <div class="step hidden"> 
-                <span class="info">Step 2/2</span>               
-                <label for="birthday" class="opt-lbl-row">
-                    <div class="lbl">
-                        Birthday:
-                        <span class="lbl-tip">optional</span>
-                    </div>
-                    <input id="birthday" class="date" type="date" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
-                        title="Please enter date in yyyy-mm-dd format (e.g. 2019-12-31)">
-                </label>
-                <label>
-                    <input class="employer" type="text" placeholder="Employer [optional]">
-                </label>
-                <label>
-                    <input class="title" type="text" placeholder="Job title [optional]">
-                </label>
-            </div>
-            <span id="err-msg" class="err"></span>
-            <button id='next'>Next</button>
-            <button id='submit' class="hidden">Create</button>
+            <form id="signup">
+                <div class="step">
+                    <span class="info">Step 1/2</span>
+                    <label>
+                        <input id="name" class="name" type="text" placeholder="Your name" autocomplete="name" required autofocus> 
+                    </label>
+                    <label>
+                        <input id="email" class="email" type="email" placeholder="E-mail" autocomplete="email" required>
+                    </label>
+                    <label>
+                        <span class="lbl-tip">Please enter at least 8 symbols including digits and lowercase and uppercase letters</span>
+                        <input id="password" class="pwd" type="password" placeholder="Password" minlength="8" maxlength="100" required>
+                    </label>
+                    <label>
+                        <input id="rep-password" class="pwd" type="password" placeholder="Repeat password" minlength="8" maxlength="100" required>
+                    </label>
+                </div>
+                <div class="step hidden"> 
+                    <span class="info">Step 2/2</span>               
+                    <label for="birthday" class="opt-lbl-row">
+                        <div class="lbl">
+                            Birthday:
+                            <span class="lbl-tip">optional</span>
+                        </div>
+                        <input id="birthday" class="date" type="date" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+                            title="Please enter date in yyyy-mm-dd format (e.g. 2019-12-31)" autocomplete="bday">
+                    </label>
+                    <label>
+                        <input class="employer" type="text" autocomplete="organization" placeholder="Employer [optional]">
+                    </label>
+                    <label>
+                        <input class="title" type="text" autocomplete="organization-title" placeholder="Job title [optional]">
+                    </label>
+                </div>
+                <span id="err-msg" class="err"></span>
+                <button id='next' class="btn">Next</button>
+                <!--<button id='submit' class="hidden">Create</button>-->
+                <input id="submit" type="submit" class="btn hidden" value="Create"/>
+            </form>
         </section>
-    <script type="text/javascript" src="./js/vendor.bundle.js?93f7a9f841330103f109"></script><script type="text/javascript" src="./js/signup.bundle.js?93f7a9f841330103f109"></script></body>
+    <script type="text/javascript" src="./js/vendor.bundle.js?26748b098ef577726258"></script><script type="text/javascript" src="./js/signup.bundle.js?26748b098ef577726258"></script></body>
 </html>

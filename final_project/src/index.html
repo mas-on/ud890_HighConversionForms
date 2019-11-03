@@ -7,15 +7,17 @@
         <header>
             <span>Log in to see your events</span>            
         </header>
-        <section class="form">            
-            <label>
-                <input class="email" type="email" placeholder="E-mail" autocomplete="email" required autofocus>
-            </label>
-            <label>
-                <input class="pwd" type="password" placeholder="Password" required>
-            </label>
-            <span id="err-msg" class="err"></span>
-            <button id="submit">Log in</button>                        
+        <section class="form"> 
+            <form id="login">           
+                <label>
+                    <input id="email" class="email" type="email" placeholder="E-mail" autocomplete="email" required autofocus>
+                </label>
+                <label>
+                    <input id="pwd" class="pwd" type="password" placeholder="Password" required>
+                </label>
+                <span id="err-msg" class="err"></span>                
+                <input id="submit" type="submit" value="Log in"/>
+            </form>                    
         </section>
         <section class="signup">
             <span>Don't have an account? <a href="signup.html">Sign up</a></span>

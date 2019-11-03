@@ -7,18 +7,21 @@
         <header>
             <span>Log in to see your events</span>            
         </header>
-        <section class="form">            
-            <label>
-                <input class="email" type="email" placeholder="E-mail" autocomplete="email" required autofocus>
-            </label>
-            <label>
-                <input class="pwd" type="password" placeholder="Password" required>
-            </label>
-            <span id="err-msg" class="err"></span>
-            <button id="submit">Log in</button>                        
+        <section class="form"> 
+            <form id="login">           
+                <label>
+                    <input id="email" class="email" type="email" placeholder="E-mail" autocomplete="email" required autofocus>
+                </label>
+                <label>
+                    <input id="pwd" class="pwd" type="password" placeholder="Password" required>
+                </label>
+                <span id="err-msg" class="err"></span>
+                <!--<button id="submit">Log in</button>  -->
+                <input id="submit" type="submit" value="Log in"/>
+            </form>                    
         </section>
         <section class="signup">
             <span>Don't have an account? <a href="signup.html">Sign up</a></span>
         </section>
-    <script type="text/javascript" src="./js/vendor.bundle.js?93f7a9f841330103f109"></script><script type="text/javascript" src="./js/index.bundle.js?93f7a9f841330103f109"></script></body>
+    <script type="text/javascript" src="./js/vendor.bundle.js?26748b098ef577726258"></script><script type="text/javascript" src="./js/index.bundle.js?26748b098ef577726258"></script></body>
 </html>
